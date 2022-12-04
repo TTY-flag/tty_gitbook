@@ -1,0 +1,1369 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>seccomp&ptcl · Gitbook电子书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="TTY">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../../arm_pwn/" />
+    
+    
+    <link rel="prev" href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../pwn基础/">
+            
+                <a href="../../pwn基础/">
+            
+                    
+                    pwn基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../pwn基础/gdb使用/gdb使用.html">
+            
+                <a href="../../pwn基础/gdb使用/gdb使用.html">
+            
+                    
+                    gdb使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                <a href="../../pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                    
+                    glibc更换_patchelf方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                <a href="../../pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                    
+                    linux系统调用号查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                <a href="../../pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                    
+                    pwn题编译时的保护选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../fmt/fmt/fmt.html">
+            
+                <a href="../../fmt/fmt/fmt.html">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../fmt/fmtstr模块/fmtstr模块.html">
+            
+                <a href="../../fmt/fmtstr模块/fmtstr模块.html">
+            
+                    
+                    fmtstr模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                <a href="../../fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                    
+                    格式化字符串中的占位符特殊用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../rop/">
+            
+                <a href="../../rop/">
+            
+                    
+                    rop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../rop/ret2csu/ret2csu.html">
+            
+                <a href="../../rop/ret2csu/ret2csu.html">
+            
+                    
+                    ret2csu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                <a href="../../rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                    
+                    通过mmap&mprotect来绕过nx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../rop/srop/srop.html">
+            
+                <a href="../../rop/srop/srop.html">
+            
+                    
+                    srop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                <a href="../../rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                    
+                    dl_runtime_resolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                <a href="../../rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                    
+                    dl_runtime_resolve_64位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../../rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                <a href="../../rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                    
+                    Ret2dlresolvePayload使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../heap_related/">
+            
+                <a href="../../heap_related/">
+            
+                    
+                    heap_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../heap_related/house_of_botcake/house_of_botcake.html">
+            
+                <a href="../../heap_related/house_of_botcake/house_of_botcake.html">
+            
+                    
+                    house_of_botcake
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                <a href="../../heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                    
+                    House_of_Einherjar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../heap_related/House_Of_Force/House_Of_Force.html">
+            
+                <a href="../../heap_related/House_Of_Force/House_Of_Force.html">
+            
+                    
+                    House_Of_Force
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../heap_related/House_of_lore/House_of_lore.html">
+            
+                <a href="../../heap_related/House_of_lore/House_of_lore.html">
+            
+                    
+                    House_of_lore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../heap_related/House_of_Orange/House_of_Orange.html">
+            
+                <a href="../../heap_related/House_of_Orange/House_of_Orange.html">
+            
+                    
+                    House_of_Orange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../../heap_related/House_of_storm/House_of_storm.html">
+            
+                <a href="../../heap_related/House_of_storm/House_of_storm.html">
+            
+                    
+                    House_of_storm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../../heap_related/how2heap学习/how2heap解析.html">
+            
+                <a href="../../heap_related/how2heap学习/how2heap解析.html">
+            
+                    
+                    how2heap解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../../heap_related/large_bin_attack/large_bin_attack.html">
+            
+                <a href="../../heap_related/large_bin_attack/large_bin_attack.html">
+            
+                    
+                    large_bin_attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../../heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                <a href="../../heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                    
+                    ptmalloc_check
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../../heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                <a href="../../heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                    
+                    unlink攻击敏感指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../../heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                <a href="../../heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                    
+                    unsorted_bin相关攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../../heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                <a href="../../heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                    
+                    IO_2_1_stdout泄露内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../FILE_related/">
+            
+                <a href="../../FILE_related/">
+            
+                    
+                    FILE_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../FILE_related/close_free/fog.html">
+            
+                <a href="../../FILE_related/close_free/fog.html">
+            
+                    
+                    fog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                <a href="../../FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                    
+                    FILE攻击的一些进阶操作_待补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                <a href="../../FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                    
+                    FILE结构体概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../FILE_related/FSOP/FSOP.html">
+            
+                <a href="../../FILE_related/FSOP/FSOP.html">
+            
+                    
+                    FSOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../FILE_related/vtable伪造/vtable伪造.html">
+            
+                <a href="../../FILE_related/vtable伪造/vtable伪造.html">
+            
+                    
+                    vtable伪造
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.27下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.29下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.31下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6.4" data-path="seccomp&ptcl.html">
+            
+                <a href="seccomp&ptcl.html">
+            
+                    
+                    seccomp&ptcl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../arm_pwn/">
+            
+                <a href="../../../arm_pwn/">
+            
+                    
+                    arm_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                <a href="../../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                    
+                    arm&aarch64汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                <a href="../../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                    
+                    ARMpwn基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                <a href="../../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                    
+                    树莓派搭建ARM环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../kernel_pwn/">
+            
+                <a href="../../../kernel_pwn/">
+            
+                    
+                    kernel_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                <a href="../../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                    
+                    c文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                <a href="../../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                    
+                    kernel_pwn_rop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                <a href="../../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                    
+                    linux_kernel保护机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                <a href="../../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                    
+                    linux_kernel基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                <a href="../../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                    
+                    ropper简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../awd/">
+            
+                <a href="../../../awd/">
+            
+                    
+                    awd
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                <a href="../../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                    
+                    awdpwn流量转发手动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                <a href="../../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                    
+                    evilPatcher_pwn通防
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                <a href="../../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                    
+                    如何在awd中苟活_pwn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../IOT漏洞挖掘/">
+            
+                <a href="../../../IOT漏洞挖掘/">
+            
+                    
+                    IOT漏洞挖掘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                    
+                    IoT-vulhub学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                    
+                    Cisco-CVE-2020-3331
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                    
+                    HUAWEI-CVE-2017-17215
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                    
+                    Netgear-CVE-2019-20760
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                    
+                    Tenda-CVE-2018-16333
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                    
+                    Tenda-CVE-2018-5767
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                    
+                    Tenda-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                    
+                    TP-Link-CVE-2020-8423
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.8" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                    
+                    VIVOTEK-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../../密码学/">
+            
+                <a href="../../../密码学/">
+            
+                    
+                    密码学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../../密码学/AES/AES.html">
+            
+                <a href="../../../密码学/AES/AES.html">
+            
+                    
+                    AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../../密码学/RC4/RC4.html">
+            
+                <a href="../../../密码学/RC4/RC4.html">
+            
+                    
+                    RC4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../../web/">
+            
+                <a href="../../../web/">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../../web/sql注入/sql注入.html">
+            
+                <a href="../../../web/sql注入/sql注入.html">
+            
+                    
+                    sql注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../../机器学习/">
+            
+                <a href="../../../机器学习/">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../../机器学习/pytorch/pytorch.html">
+            
+                <a href="../../../机器学习/pytorch/pytorch.html">
+            
+                    
+                    pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../../机器学习/数据处理/数据处理.html">
+            
+                <a href="../../../机器学习/数据处理/数据处理.html">
+            
+                    
+                    数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >seccomp&ptcl</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x8BE6;&#x7EC6;&#x7EC6;&#x8282;&#x770B;&#x8FD9;&#x7BC7;</p>
+<p><a href="https://www.anquanke.com/post/id/208364#h2-2" target="_blank">https://www.anquanke.com/post/id/208364#h2-2</a></p>
+<p>&#x6C99;&#x7BB1;&#x53EF;&#x4EE5;&#x7981;&#x7528;&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x611F;&#x89C9;&#x3002;</p>
+<h2 id="seccomp">seccomp</h2>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7528;seccomp&#x6C99;&#x7BB1;&#x6765;&#x7981;&#x7528;</p>
+<p>&#x5B89;&#x88C5;&#x76F8;&#x5E94;&#x5E93;</p>
+<pre><code class="lang-shell">sudo apt-get install libseccomp-dev
+</code></pre>
+<p>&#x5177;&#x4F53;&#x53C2;&#x6570;&#x5565;&#x7684;&#x5C31;&#x4E0D;&#x591A;&#x8BB2;&#x4E86;&#x3002;&#x3002;&#x3002;&#x770B;&#x5927;&#x4F6C;&#x7684;&#x535A;&#x5BA2;&#x5C31;&#x884C;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">//gcc -g simple_syscall_seccomp.c -o simple_syscall_seccomp -lseccomp</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;seccomp.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/seccomp.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>{
+    scmp_filter_ctx ctx;
+    ctx = seccomp_init(SCMP_ACT_ALLOW);
+    seccomp_rule_add(ctx, SCMP_ACT_KILL, SCMP_SYS(execve), <span class="hljs-number">0</span>);
+    <span class="hljs-comment">//seccomp_rule_add(ctx, SCMP_ACT_KILL, SCMP_SYS(write), 0);</span>
+    seccomp_load(ctx);
+
+    <span class="hljs-keyword">char</span> * filename = <span class="hljs-string">&quot;/bin/sh&quot;</span>;
+    <span class="hljs-keyword">char</span> * argv[] = {<span class="hljs-string">&quot;/bin/sh&quot;</span>,<span class="hljs-literal">NULL</span>};
+    <span class="hljs-keyword">char</span> * envp[] = {<span class="hljs-literal">NULL</span>};
+    write(<span class="hljs-number">1</span>,<span class="hljs-string">&quot;i will give you a shell\n&quot;</span>,<span class="hljs-number">24</span>);
+    syscall(<span class="hljs-number">59</span>,filename,argv,envp);<span class="hljs-comment">//execve</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<pre><code class="lang-shell">$ ./simple_syscall_seccomp 
+i will give you a shell
+Bad system call (core dumped)
+</code></pre>
+<p>&#xFF08;&#x4EE5;&#x4E0B;&#x76F4;&#x63A5;&#x642C;&#x8FD0;&#x4E86;&#xFF09;</p>
+<p>scmp_filter_ctx&#x662F;&#x8FC7;&#x6EE4;&#x5668;&#x7684;&#x7ED3;&#x6784;&#x4F53;</p>
+<p>seccomp_init&#x5BF9;&#x7ED3;&#x6784;&#x4F53;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x82E5;&#x53C2;&#x6570;&#x4E3A;SCMP_ACT_ALLOW&#xFF0C;&#x5219;&#x8FC7;&#x6EE4;&#x4E3A;&#x9ED1;&#x540D;&#x5355;&#x6A21;&#x5F0F;&#xFF1B;&#x82E5;&#x4E3A;SCMP_ACT_KILL&#xFF0C;&#x5219;&#x4E3A;&#x767D;&#x540D;&#x5355;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x5230;&#x89C4;&#x5219;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x90FD;&#x4F1A;&#x6740;&#x6B7B;&#x8FDB;&#x7A0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x5141;&#x8BB8;&#x6240;&#x6709;&#x7684;syscall&#x3002;</p>
+<p>seccomp_rule_add&#x7528;&#x6765;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x89C4;&#x5219;&#xFF0C;arg_cnt&#x4E3A;0,&#x8868;&#x793A;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x9650;&#x5236;execve,&#x4E0D;&#x7BA1;&#x53C2;&#x6570;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5982;&#x679C;arg_cnt&#x4E0D;&#x4E3A;0,&#x90A3;arg_cnt&#x8868;&#x793A;&#x540E;&#x9762;&#x9650;&#x5236;&#x7684;&#x53C2;&#x6570;&#x7684;&#x4E2A;&#x6570;,&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x6709;&#x8C03;&#x7528;execve,&#x4E14;&#x53C2;&#x6570;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#x65F6;,&#x624D;&#x4F1A;&#x62E6;&#x622A;</p>
+<p>seccomp_load&#x662F;&#x5E94;&#x7528;&#x8FC7;&#x6EE4;&#x5668;,&#x5982;&#x679C;&#x4E0D;&#x8C03;&#x7528;seccomp_load&#x5219;&#x4E0A;&#x9762;&#x6240;&#x6709;&#x7684;&#x8FC7;&#x6EE4;&#x90FD;&#x4E0D;&#x4F1A;&#x751F;&#x6548;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x8981;&#x5728;&#x6700;&#x540E;&#x9762;&#x52A0; -lseccomp</p>
+<p>&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x7981;&#x7528;&#x65B9;&#x5F0F;&#x4F1A;&#x6D89;&#x53CA;&#x5230;&#x5806;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F1A;&#x7559;&#x4E0B;&#x5806;&#x4F7F;&#x7528;&#x75D5;&#x8FF9;&#xFF0C;&#x51FA;&#x9898;&#x4E0D;&#x7528;&#x8FD9;&#x79CD;&#xFF0C;&#x5047;&#x5982;&#x6808;&#x9898;&#x5012;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x3002;&#x6B63;&#x5E38;&#x7528;&#x5012;&#x662F;&#x65B9;&#x4FBF;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x5E93;&#x5C31;&#x884C;&#x3002;</p>
+<p><img src="1.png" alt=""></p>
+<h2 id="prctl">prctl</h2>
+<p>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x7981;&#x7528;&#x624B;&#x6BB5;&#xFF0C;&#x4E0D;&#x4F1A;&#x6709;&#x5806;&#x64CD;&#x4F5C;&#xFF0C;&#x5177;&#x4F53;&#x539F;&#x7406;&#x770B;&#x5927;&#x4F6C;&#x6587;&#x7AE0;&#x3002;&#x3002;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/prctl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/filter.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/seccomp.h&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sandbox</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">struct</span> sock_filter filter[] = {
+    BPF_STMT(BPF_LD+BPF_W+BPF_ABS,<span class="hljs-number">4</span>),
+    BPF_JUMP(BPF_JMP+BPF_JEQ,<span class="hljs-number">0xc000003e</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>),
+    BPF_STMT(BPF_LD+BPF_W+BPF_ABS,<span class="hljs-number">0</span>),
+    BPF_JUMP(BPF_JMP+BPF_JEQ,<span class="hljs-number">59</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),
+    BPF_STMT(BPF_RET+BPF_K,SECCOMP_RET_KILL),
+    BPF_STMT(BPF_RET+BPF_K,SECCOMP_RET_ALLOW),
+    };
+    <span class="hljs-keyword">struct</span> sock_fprog prog = {
+    .len = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span>)(<span class="hljs-keyword">sizeof</span>(filter)/<span class="hljs-keyword">sizeof</span>(filter[<span class="hljs-number">0</span>])),
+    .filter = filter,
+    };
+    prctl(PR_SET_NO_NEW_PRIVS,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+    prctl(PR_SET_SECCOMP,SECCOMP_MODE_FILTER,&amp;prog);
+}
+</code></pre>
+<p>&#x76F4;&#x63A5;&#x52A0;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x884C;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x7981;&#x7528;&#x4E86;execve&#x3002;</p>
+<h2 id="seccomp-tools">Seccomp Tools</h2>
+<p>&#x4E00;&#x4E2A;&#x67E5;&#x6C99;&#x7BB1;&#x7981;&#x7528;&#x89C4;&#x5219;&#x7684;&#x5DE5;&#x5177;</p>
+<p>&#x5B89;&#x88C5;</p>
+<pre><code class="lang-shell">sudo apt install gcc ruby-dev
+sudo gem install seccomp-tools
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;seccomp-tools dump ./file</p>
+<p><img src="2.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html" class="navigation navigation-prev " aria-label="Previous page: glibc2.31下堆题绕过沙箱">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../../arm_pwn/" class="navigation navigation-next " aria-label="Next page: arm_pwn">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"seccomp&ptcl","level":"1.2.6.4","depth":3,"next":{"title":"arm_pwn","level":"1.3","depth":1,"path":"arm_pwn/README.md","ref":"arm_pwn/README.md","articles":[{"title":"arm&aarch64汇编","level":"1.3.1","depth":2,"path":"arm_pwn/arm&aarch64汇编/arm&aarch64汇编.md","ref":"arm_pwn/arm&aarch64汇编/arm&aarch64汇编.md","articles":[]},{"title":"ARMpwn基础环境搭建","level":"1.3.2","depth":2,"path":"arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.md","ref":"arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.md","articles":[]},{"title":"树莓派搭建ARM环境","level":"1.3.3","depth":2,"path":"arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.md","ref":"arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.md","articles":[]}]},"previous":{"title":"glibc2.31下堆题绕过沙箱","level":"1.2.6.3","depth":3,"path":"pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.md","ref":"pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","search-pro","code","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"TTY","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook电子书","gitbook":"*","description":"Gitbook电子书示例项目"},"file":{"path":"pwn/沙箱/seccomp&ptcl/seccomp&ptcl.md","mtime":"2021-10-30T09:30:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T09:49:46.732Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

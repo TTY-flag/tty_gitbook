@@ -1,0 +1,7 @@
+services:
+  jnctf_2020_pwn4:
+    build: .
+    image: 172.18.146.247:5000/jnctf_2020_pwn4
+    ports: ['9999']
+    restart: unless-stopped
+version: '3'
