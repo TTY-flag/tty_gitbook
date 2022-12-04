@@ -74,6 +74,7 @@
     - [Tenda-CVE-2020-10987](IOT漏洞挖掘/IoT-vulhub学习/Tenda-CVE-2020-10987/Tenda-CVE-2020-10987.md)
     - [TP-Link-CVE-2020-8423](IOT漏洞挖掘/IoT-vulhub学习/TP-Link-CVE-2020-8423/TP-Link-CVE-2020-8423.md)
     - [VIVOTEK-CVE-2020-10987](IOT漏洞挖掘/IoT-vulhub学习/VIVOTEK-CVE-2020-10987/VIVOTEK-CVE-2020-10987.md)
+  - [SaTC](IOT漏洞挖掘/SaTC/SaTC.md)
 
 - [密码学](密码学/README.md)
   - [AES](密码学/AES/AES.md)
