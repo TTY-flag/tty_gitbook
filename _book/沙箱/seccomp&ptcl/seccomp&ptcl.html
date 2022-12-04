@@ -1,0 +1,446 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>seccomp&ptcl · Gitbook电子书</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="TTY">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../arm/">
+            
+                <a href="../../arm/">
+            
+                    
+                    arm
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../arm/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                <a href="../../arm/arm&aarch64汇编/arm&aarch64汇编.html">
+            
+                    
+                    arm&aarch64汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../arm/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                <a href="../../arm/ARMpwn基础环境搭建/ARMpwn基础环境搭建.html">
+            
+                    
+                    ARMpwn基础环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../arm/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                <a href="../../arm/树莓派搭建ARM环境/树莓派搭建ARM环境.html">
+            
+                    
+                    树莓派搭建ARM环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    沙箱
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.27下堆题绕过沙箱/glibc2.27下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.27下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.29下堆题绕过沙箱/glibc2.29下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.29下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                <a href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html">
+            
+                    
+                    glibc2.31下堆题绕过沙箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="seccomp&ptcl.html">
+            
+                <a href="seccomp&ptcl.html">
+            
+                    
+                    seccomp&ptcl
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >seccomp&ptcl</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x8BE6;&#x7EC6;&#x7EC6;&#x8282;&#x770B;&#x8FD9;&#x7BC7;</p>
+<p><a href="https://www.anquanke.com/post/id/208364#h2-2" target="_blank">https://www.anquanke.com/post/id/208364#h2-2</a></p>
+<p>&#x6C99;&#x7BB1;&#x53EF;&#x4EE5;&#x7981;&#x7528;&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x611F;&#x89C9;&#x3002;</p>
+<h2 id="seccomp">seccomp</h2>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7528;seccomp&#x6C99;&#x7BB1;&#x6765;&#x7981;&#x7528;</p>
+<p>&#x5B89;&#x88C5;&#x76F8;&#x5E94;&#x5E93;</p>
+<pre><code class="lang-shell">sudo apt-get install libseccomp-dev
+</code></pre>
+<p>&#x5177;&#x4F53;&#x53C2;&#x6570;&#x5565;&#x7684;&#x5C31;&#x4E0D;&#x591A;&#x8BB2;&#x4E86;&#x3002;&#x3002;&#x3002;&#x770B;&#x5927;&#x4F6C;&#x7684;&#x535A;&#x5BA2;&#x5C31;&#x884C;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">//gcc -g simple_syscall_seccomp.c -o simple_syscall_seccomp -lseccomp</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;seccomp.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/seccomp.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>{
+    scmp_filter_ctx ctx;
+    ctx = seccomp_init(SCMP_ACT_ALLOW);
+    seccomp_rule_add(ctx, SCMP_ACT_KILL, SCMP_SYS(execve), <span class="hljs-number">0</span>);
+    <span class="hljs-comment">//seccomp_rule_add(ctx, SCMP_ACT_KILL, SCMP_SYS(write), 0);</span>
+    seccomp_load(ctx);
+
+    <span class="hljs-keyword">char</span> * filename = <span class="hljs-string">&quot;/bin/sh&quot;</span>;
+    <span class="hljs-keyword">char</span> * argv[] = {<span class="hljs-string">&quot;/bin/sh&quot;</span>,<span class="hljs-literal">NULL</span>};
+    <span class="hljs-keyword">char</span> * envp[] = {<span class="hljs-literal">NULL</span>};
+    write(<span class="hljs-number">1</span>,<span class="hljs-string">&quot;i will give you a shell\n&quot;</span>,<span class="hljs-number">24</span>);
+    syscall(<span class="hljs-number">59</span>,filename,argv,envp);<span class="hljs-comment">//execve</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<pre><code class="lang-shell">$ ./simple_syscall_seccomp 
+i will give you a shell
+Bad system call (core dumped)
+</code></pre>
+<p>&#xFF08;&#x4EE5;&#x4E0B;&#x76F4;&#x63A5;&#x642C;&#x8FD0;&#x4E86;&#xFF09;</p>
+<p>scmp_filter_ctx&#x662F;&#x8FC7;&#x6EE4;&#x5668;&#x7684;&#x7ED3;&#x6784;&#x4F53;</p>
+<p>seccomp_init&#x5BF9;&#x7ED3;&#x6784;&#x4F53;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x82E5;&#x53C2;&#x6570;&#x4E3A;SCMP_ACT_ALLOW&#xFF0C;&#x5219;&#x8FC7;&#x6EE4;&#x4E3A;&#x9ED1;&#x540D;&#x5355;&#x6A21;&#x5F0F;&#xFF1B;&#x82E5;&#x4E3A;SCMP_ACT_KILL&#xFF0C;&#x5219;&#x4E3A;&#x767D;&#x540D;&#x5355;&#x6A21;&#x5F0F;&#xFF0C;&#x5373;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x5230;&#x89C4;&#x5219;&#x7684;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x90FD;&#x4F1A;&#x6740;&#x6B7B;&#x8FDB;&#x7A0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x5141;&#x8BB8;&#x6240;&#x6709;&#x7684;syscall&#x3002;</p>
+<p>seccomp_rule_add&#x7528;&#x6765;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x89C4;&#x5219;&#xFF0C;arg_cnt&#x4E3A;0,&#x8868;&#x793A;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x9650;&#x5236;execve,&#x4E0D;&#x7BA1;&#x53C2;&#x6570;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5982;&#x679C;arg_cnt&#x4E0D;&#x4E3A;0,&#x90A3;arg_cnt&#x8868;&#x793A;&#x540E;&#x9762;&#x9650;&#x5236;&#x7684;&#x53C2;&#x6570;&#x7684;&#x4E2A;&#x6570;,&#x4E5F;&#x5C31;&#x662F;&#x53EA;&#x6709;&#x8C03;&#x7528;execve,&#x4E14;&#x53C2;&#x6570;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#x65F6;,&#x624D;&#x4F1A;&#x62E6;&#x622A;</p>
+<p>seccomp_load&#x662F;&#x5E94;&#x7528;&#x8FC7;&#x6EE4;&#x5668;,&#x5982;&#x679C;&#x4E0D;&#x8C03;&#x7528;seccomp_load&#x5219;&#x4E0A;&#x9762;&#x6240;&#x6709;&#x7684;&#x8FC7;&#x6EE4;&#x90FD;&#x4E0D;&#x4F1A;&#x751F;&#x6548;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x8981;&#x5728;&#x6700;&#x540E;&#x9762;&#x52A0; -lseccomp</p>
+<p>&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x7981;&#x7528;&#x65B9;&#x5F0F;&#x4F1A;&#x6D89;&#x53CA;&#x5230;&#x5806;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F1A;&#x7559;&#x4E0B;&#x5806;&#x4F7F;&#x7528;&#x75D5;&#x8FF9;&#xFF0C;&#x51FA;&#x9898;&#x4E0D;&#x7528;&#x8FD9;&#x79CD;&#xFF0C;&#x5047;&#x5982;&#x6808;&#x9898;&#x5012;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x3002;&#x6B63;&#x5E38;&#x7528;&#x5012;&#x662F;&#x65B9;&#x4FBF;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x5E93;&#x5C31;&#x884C;&#x3002;</p>
+<p><img src="1.png" alt=""></p>
+<h2 id="prctl">prctl</h2>
+<p>&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x7981;&#x7528;&#x624B;&#x6BB5;&#xFF0C;&#x4E0D;&#x4F1A;&#x6709;&#x5806;&#x64CD;&#x4F5C;&#xFF0C;&#x5177;&#x4F53;&#x539F;&#x7406;&#x770B;&#x5927;&#x4F6C;&#x6587;&#x7AE0;&#x3002;&#x3002;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/prctl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/filter.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;linux/seccomp.h&gt;</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sandbox</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-keyword">struct</span> sock_filter filter[] = {
+    BPF_STMT(BPF_LD+BPF_W+BPF_ABS,<span class="hljs-number">4</span>),
+    BPF_JUMP(BPF_JMP+BPF_JEQ,<span class="hljs-number">0xc000003e</span>,<span class="hljs-number">0</span>,<span class="hljs-number">2</span>),
+    BPF_STMT(BPF_LD+BPF_W+BPF_ABS,<span class="hljs-number">0</span>),
+    BPF_JUMP(BPF_JMP+BPF_JEQ,<span class="hljs-number">59</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),
+    BPF_STMT(BPF_RET+BPF_K,SECCOMP_RET_KILL),
+    BPF_STMT(BPF_RET+BPF_K,SECCOMP_RET_ALLOW),
+    };
+    <span class="hljs-keyword">struct</span> sock_fprog prog = {
+    .len = (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span>)(<span class="hljs-keyword">sizeof</span>(filter)/<span class="hljs-keyword">sizeof</span>(filter[<span class="hljs-number">0</span>])),
+    .filter = filter,
+    };
+    prctl(PR_SET_NO_NEW_PRIVS,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>);
+    prctl(PR_SET_SECCOMP,SECCOMP_MODE_FILTER,&amp;prog);
+}
+</code></pre>
+<p>&#x76F4;&#x63A5;&#x52A0;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x884C;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x7981;&#x7528;&#x4E86;execve&#x3002;</p>
+<h2 id="seccomp-tools">Seccomp Tools</h2>
+<p>&#x4E00;&#x4E2A;&#x67E5;&#x6C99;&#x7BB1;&#x7981;&#x7528;&#x89C4;&#x5219;&#x7684;&#x5DE5;&#x5177;</p>
+<p>&#x5B89;&#x88C5;</p>
+<pre><code class="lang-shell">sudo apt install gcc ruby-dev
+sudo gem install seccomp-tools
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x65B9;&#x6CD5;seccomp-tools dump ./file</p>
+<p><img src="2.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: glibc2.31下堆题绕过沙箱">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"seccomp&ptcl","level":"1.3.4","depth":2,"previous":{"title":"glibc2.31下堆题绕过沙箱","level":"1.3.3","depth":2,"path":"沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.md","ref":"沙箱/glibc2.31下堆题绕过沙箱/glibc2.31下堆题绕过沙箱.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","-search","search-pro","code","expandable-chapters","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","qq","linkedin","qzone","douban"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"TTY","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook电子书","gitbook":"*","description":"Gitbook电子书示例项目"},"file":{"path":"沙箱/seccomp&ptcl/seccomp&ptcl.md","mtime":"2021-10-30T09:30:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-03T08:37:12.473Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
